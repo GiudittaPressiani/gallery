@@ -91,20 +91,34 @@ h2{
   font-weight: bold;
 }
 
-.official_sns{
+.official_sns {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Titolo sopra, link sotto */
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.official_sns .links {
+    display: flex;   /* link affiancati */
+    gap: 15px;       /* spazio tra i pulsanti */
+    margin-top: 10px;
 }
 
 .official_sns a {
     color: #555;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 2px solid #555;
+    border-radius: 20px; /* arrotondato */
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
-.official_sns a:hover{
-  color:aliceblue;
+
+.official_sns a:hover {
+    background-color: #555;
+    color: white; /* testo chiaro quando hover */
+    transform: scale(1.05); /* leggero zoom */
 }
 
 @keyframes fadeIn {

@@ -16,10 +16,12 @@ h1{
     /*crea una griglia verticale: 
     autofill riempie tutta la pagina, 
     minmax da una dimensione minima e una massima, 
-    1fr è la frazione di pagina*/
+    1fr è la frazione di pagina
+    
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
 

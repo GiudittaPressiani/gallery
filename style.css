@@ -12,6 +12,11 @@ h1{
     padding: 20px;
 }
 
+h2{
+    text-align: center;
+    padding: 20px;
+}
+
 .immagine{
     /*crea una griglia verticale: 
     autofill riempie tutta la pagina, 
@@ -65,6 +70,16 @@ h1{
   display: flex; /* appare quando “attivata” */
 }
 
+.citation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.citation img{
+  width: 60%;
+  height: 60%;
+}
+
 /* Pulsante chiudi */
 .close {
   position: absolute;
@@ -74,6 +89,22 @@ h1{
   color: white;
   text-decoration: none;
   font-weight: bold;
+}
+
+.official_sns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.official_sns a {
+    color: #555;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+.official_sns a:hover{
+  color:aliceblue;
 }
 
 @keyframes fadeIn {

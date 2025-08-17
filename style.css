@@ -1,111 +1,132 @@
-body{
-    background: linear-gradient(105deg, #aecbef, #a2daea);
+/* ===== BODY & SFONDO ===== */
+body {
+    background: linear-gradient(-45deg, #aebfef, #d3def4, #cec0f0, #f3d9ef);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Delius Unicase', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* ===== HEADERS ===== */
+h1, h2 {
     text-align: center;
+    padding: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2b3e80;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* ===== SEZIONE FOTO CON NOMI ===== */
+.immagine {
+    display: flex;
+    flex-wrap: wrap; /* va a capo su schermi piccoli */
+    justify-content: center;
+    gap: 25px;
     padding: 20px;
 }
 
-h2{
-    text-align: center;
-    padding: 20px;
+.foto-card {
+    display: flex;
+    flex-direction: column; /* immagine sopra, nome sotto */
+    align-items: center;
+    width: 200px;
 }
 
-.immagine{
-    /*crea una griglia verticale: 
-    autofill riempie tutta la pagina, 
-    minmax da una dimensione minima e una massima, 
-    1fr è la frazione di pagina
-    
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
-
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    text-align: center;
-}
-
-.immagine img{
+.foto-card img {
     width: 100%;
-    border-radius: 10px;
-    height: 300px; /* altezza fissa */
+    height: 250px;
     object-fit: cover;
+    border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.3s;
-    
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.immagine img:hover {
-    transform: scale(1.05);
-    /*transform: translateY(-5px);*/
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+.foto-card img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 12px 30px rgba(73,117,212,0.3);
 }
 
-.Lightbox{
+.foto-card p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+/* ===== LIGHTBOX ===== */
+.Lightbox {
     display: none;
     position: fixed;
     z-index: 1000;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     justify-content: center;
     align-items: center;
 }
 
 .Lightbox img {
-  max-width: 80%;
-  max-height: 80%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #000;
-  animation: fadeIn 0.5s;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #000;
+    animation: fadeIn 0.5s;
 }
 
 .Lightbox:target {
-  display: flex; /* appare quando “attivata” */
+    display: flex;
 }
 
-.citation{
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== CITATION ===== */
+.citation {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.citation img{
-  width: 60%;
-  height: 60%;
+.citation img {
+    width: 60%;
+    height: 60%;
 }
 
-/* Pulsante chiudi */
-.close {
-  position: absolute;
-  top: 30px;
-  right: 50px;
-  font-size: 40px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/*sezione about*/
+/* ===== ABOUT ===== */
 .about {
     max-width: 800px;
     margin: 60px auto;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     line-height: 1.6;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(145deg, #f9f9f9, #eaeaea);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .about h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #4975d4; /* colore tema TXT */
+    color: #4975d4;
     font-weight: bold;
 }
 
@@ -119,49 +140,52 @@ h2{
     width: 300px;
     height: 170px; 
     margin-top: 20px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/*sezione social*/
+/* ===== SOCIAL ===== */
 .official_sns {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 40px 0; /* più respiro sopra e sotto */
+    margin: 50px 0;
 }
 
 .official_sns h2 {
     font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #4975d4; /* blu pastello TXT */
+    margin-bottom: 20px;
+    color: #4975d4;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 .official_sns .links {
     display: flex;
-    gap: 20px; /* spazio tra i link */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .official_sns a {
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
     background: #f3f3f3;
     color: #4b4b4b;
     font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .official_sns a:hover {
-    background: #4975d4;
+    background: linear-gradient(45deg, #c5d6f2, #c1c8f5);
     color: white;
-    transform: scale(1.05);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(73,117,212,0.3);
 }
 
-/*sezione timeline*/
+/* ===== TIMELINE ===== */
 .timeline {
     max-width: 1000px;
     margin: 60px auto;
@@ -177,21 +201,23 @@ h2{
 
 .timeline-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
 }
 
 .card {
-    background: #f9f9f9;
+    background: linear-gradient(145deg, #f9f9f9, #eaeaea);
+    border: 1px solid rgba(73,117,212,0.2);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(73,117,212,0.2);
 }
 
 .card h3 {
@@ -205,7 +231,7 @@ h2{
     color: #555;
 }
 
-
+/* ===== ANIMAZIONI ===== */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}

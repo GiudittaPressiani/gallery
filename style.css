@@ -91,6 +91,7 @@ h2{
   font-weight: bold;
 }
 
+/*sezione about*/
 .about {
     max-width: 800px;
     margin: 60px auto;
@@ -121,7 +122,7 @@ h2{
     box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
-
+/*sezione social*/
 .official_sns {
     display: flex;
     flex-direction: column;
@@ -158,6 +159,50 @@ h2{
     background: #4975d4;
     color: white;
     transform: scale(1.05);
+}
+
+/*sezione timeline*/
+.timeline {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.timeline h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #4975d4;
+}
+
+.timeline-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
 }
 
 

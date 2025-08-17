@@ -200,10 +200,26 @@ h1, h2 {
 }
 
 .timeline-container {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    overflow-x: auto;  
     padding: 0 20px;
+    scroll-behavior: smooth; 
+}
+
+
+.timeline-container::-webkit-scrollbar {
+  height: 8px;               /* altezza scrollbar orizzontale */
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.timeline-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
 }
 
 .card {
@@ -232,6 +248,56 @@ h1, h2 {
 }
 
 /*Tracklist*/
+
+.flip-card {
+  flex: 0 0 auto;
+  background: transparent;
+  width: 300px;   
+  height: 450px; 
+  perspective: 1000px; /*serve per dare tridimensionalità quando la carta viene girata, altrimenti sembra un rettangolo piatto*/
+  margin: 20px auto;
+  margin-right: 40px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; /*snza questo, quando giro la carta mi rimane il fronte specchiato*/
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(-180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /*serve per nascondere la faccia posteriore su safari*/
+  backface-visibility: hidden; /*serve per nascondere la faccia posteriore su tutti gli altri browser*/
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /*i testi partono dall’alto */
+  align-items: center;
+  padding: 20px; /* respiro attorno al testo */
+  overflow-y: auto; /* se la lista è  troppo lunga, diventa scrollabile */
+}
+
+.flip-card-front img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.flip-card-back {
+  transform: rotateY(-180deg);
+}
+
 
 
 /* ===== ANIMAZIONI ===== */

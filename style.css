@@ -208,6 +208,40 @@ h1, h2 {
     scroll-behavior: smooth; 
 }
 
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #4975d4;
+  z-index: 0;
+}
+
+.timeline-cards {
+  display: inline-flex;
+  gap: 80px;
+  position: relative;
+  z-index: 1;
+  padding: 0 40px;
+}
+
+.timeline-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 4px solid #4975d4;
+  border-radius: 50%;
+  z-index: 2;
+  margin-bottom: 15px; /* spazio tra punto e card */
+}
 
 .timeline-container::-webkit-scrollbar {
   height: 8px;               /* altezza scrollbar orizzontale */

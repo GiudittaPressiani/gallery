@@ -1,6 +1,6 @@
 /* ===== BODY & SFONDO ===== */
 body {
-    background: linear-gradient(-45deg, #aebfef, #d3def4, #cec0f0, #f3d9ef);
+    background: linear-gradient(-45deg, #aebfef, #d3def4, #d3dae6, #ffffff);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     display: flex;
@@ -200,20 +200,21 @@ h1, h2 {
 }
 
 .timeline-container {
+    position: relative;
     display: flex;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     overflow-x: auto;  
-    padding: 0 20px;
+    padding-top: 60px;
     scroll-behavior: smooth; 
 }
 
 .timeline-line {
   position: absolute;
-  top: 50%;
+  top: 20px; 
   left: 0;
-  height: 4px;
   width: 100%;
+  height: 4px;
   background: #4975d4;
   z-index: 0;
 }

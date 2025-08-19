@@ -40,8 +40,8 @@ h1, h2 {
     box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
     transform: rotate(-1deg);
 
-       /*effetto carta*/
-       background-image: repeating-linear-gradient(
+    /*effetto carta*/
+    background-image: repeating-linear-gradient(
       45deg,
       rgba(0,0,0,0.02) 0px,
       rgba(0,0,0,0.02) 1px,
@@ -68,12 +68,13 @@ h1, h2 {
     display: flex;
     flex-direction: column; /* immagine sopra, nome sotto */
     align-items: center;
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
 }
 
 .foto-card img {
     width: 100%;
-    height: 250px;
+    height: auto;
     object-fit: cover;
     border-radius: 12px;
     cursor: pointer;
@@ -135,7 +136,7 @@ h1, h2 {
 }
 .citation img {
     width: 60%;
-    height: 60%;
+    height: auto;
 }
 
 /* ===== ABOUT ===== */
@@ -165,7 +166,7 @@ h1, h2 {
 
 .about img {
     width: 300px;
-    height: 170px; 
+    height: auto; 
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -214,6 +215,8 @@ h1, h2 {
 
 /* ===== TIMELINE ===== */
 .timeline {
+    display: flex;
+    flex-direction: column;
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
@@ -229,7 +232,6 @@ h1, h2 {
 .timeline-container {
     position: relative;
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     overflow-x: auto;  
     padding-top: 60px;
@@ -241,7 +243,6 @@ h1, h2 {
   align-self: center;
   position: relative;
   top: 20px; 
- 
   width: 100%;
   height: 4px;
   background: #0e2b69;
@@ -278,7 +279,7 @@ h1, h2 {
 }
 
 .timeline-container::-webkit-scrollbar {
-  height: 8px;               /* altezza scrollbar orizzontale */
+  height: 8px; 
 }
 
 .timeline-container::-webkit-scrollbar-thumb {
@@ -316,13 +317,12 @@ h1, h2 {
 }
 
 /*Tracklist*/
-
 .flip-card {
   flex: 0 0 auto;
   background: transparent;
   width: 300px;   
   height: 450px; 
-  perspective: 1000px; /*serve per dare tridimensionalità quando la carta viene girata, altrimenti sembra un rettangolo piatto*/
+  perspective: 1000px;
   margin: 20px auto;
   margin-right: 40px;
   margin-bottom: 20px;
@@ -334,7 +334,7 @@ h1, h2 {
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
-  transform-style: preserve-3d; /*snza questo, quando giro la carta mi rimane il fronte specchiato*/
+  transform-style: preserve-3d; 
 }
 
 .flip-card:hover .flip-card-inner {
@@ -345,17 +345,17 @@ h1, h2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /*serve per nascondere la faccia posteriore su safari*/
-  backface-visibility: hidden; /*serve per nascondere la faccia posteriore su tutti gli altri browser*/
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden; 
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   background: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /*i testi partono dall’alto */
+  justify-content: flex-start;
   align-items: center;
-  padding: 20px; /* respiro attorno al testo */
-  overflow-y: auto; /* se la lista è  troppo lunga, diventa scrollabile */
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .flip-card-front img {
@@ -368,7 +368,7 @@ h1, h2 {
 }
 
 /* ===== PLAYLIST ===== */
-  .playlist {
+.playlist {
     max-width: 700px;
     margin: 60px auto;
     background: white;
@@ -376,25 +376,78 @@ h1, h2 {
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.6);
     text-align: center;
-  }
+}
 
-  .playlist h2 {
+.playlist h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     letter-spacing: 2px;
     color: #0e2b69; 
-  }
+}
 
-  iframe {
+iframe {
     border-radius: 12px;
     border: none;
     width: 100%;
     height: 380px;
-  }
-
+}
 
 /* ===== ANIMAZIONI ===== */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 1024px) {
+  .timeline-cards {
+    gap: 40px;
+    padding: 0 20px;
+  }
+  .flip-card {
+    width: 250px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+    padding: 10px 20px;
+  }
+  h1, h2 {
+    font-size: 1.6rem;
+    padding: 10px;
+  }
+  .timeline-cards {
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .flip-card {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+  }
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .card p {
+    font-size: 0.9rem;
+  }
+  .about img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .about {
+    padding: 15px;
+  }
+  iframe {
+    height: 250px;
+  }
 }

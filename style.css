@@ -366,6 +366,7 @@ h1, h2 {
   align-items: center;
   padding: 20px;
   overflow-y: auto;
+  min-height: 200px;
 }
 
 .flip-card-front img {

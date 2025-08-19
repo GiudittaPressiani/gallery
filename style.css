@@ -35,10 +35,19 @@ h1, h2 {
     position: relative;
     letter-spacing: 3px;
     padding: 20px 40px;
-    border: 3px dotted #0e2b69; /* bordo tipo cartellina */
+    border: 3px dotted #0e2b69; 
     background-color: rgba(236, 237, 251, 0.7);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
     transform: rotate(-1deg);
+
+       /*effetto carta*/
+       background-image: repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.02) 0px,
+      rgba(0,0,0,0.02) 1px,
+      transparent 1px,
+      transparent 4px
+    );
 }
 
 .title:hover{

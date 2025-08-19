@@ -1,3 +1,8 @@
+/*
+* {
+  box-sizing: border-box; /*con questo le card bianche sono rientrate nel robo trasparente dietro 
+}
+*/
 /* ===== BODY & SFONDO ===== */
 body {
     background: linear-gradient(-45deg, #aebfef, #d3def4, #d3dae6, #ffffff);
@@ -221,6 +226,7 @@ h1, h2 {
     margin: 20px auto;
     padding: 20px;
     text-align: center;
+    justify-content: center;
 }
 
 .timeline h2 {
@@ -234,7 +240,7 @@ h1, h2 {
     display: flex;
     gap: 20px;
     overflow-x: auto;  
-    padding-top: 60px;
+    padding: 20px 10px;
     scroll-behavior: smooth; 
 }
 
@@ -250,8 +256,9 @@ h1, h2 {
 }
 
 .timeline-cards {
-  display: inline-flex;
+  display: flex;
   align-items: flex-start;
+  /*flex-wrap: nowrap;*/
   gap: 80px;
   position: relative;
   z-index: 1;
@@ -264,6 +271,8 @@ h1, h2 {
   flex-direction: column;
   align-items: center;
   position: relative;
+  min-width: 200px;
+  flex: 0 0 auto;
 }
 
 .dot {
@@ -367,6 +376,11 @@ h1, h2 {
   transform: rotateY(-180deg);
 }
 
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(-180deg);
+}
+
+
 /* ===== PLAYLIST ===== */
 .playlist {
     max-width: 700px;
@@ -419,14 +433,28 @@ iframe {
     font-size: 1.6rem;
     padding: 10px;
   }
+  .timeline-container {
+    flex-wrap: wrap;       
+    justify-content: center;
+    overflow-x: visible;   
+    
+  }
   .timeline-cards {
     gap: 20px;
     padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible; 
   }
   .flip-card {
     width: 90%;
-    height: auto;
+    height: 400px;
     margin: 10px auto;
+    max-height: 80vh;
+  }
+  .flip-card-back {
+    overflow-y: auto;
+    max-height: 380px; 
   }
   .card h3 {
     font-size: 1.2rem;
@@ -449,5 +477,25 @@ iframe {
   }
   iframe {
     height: 250px;
+  }
+   .timeline-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flip-card{
+    min-height: 400px;
+    width: 90%;
+    margin: 10px auto;
+  }
+   .flip-card-inner {
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    max-height: 80vh;
+  }
+  .flip-card-back {
+    overflow-y: auto;
+    max-height: 70vh; 
+    max-height: 100%;
   }
 }

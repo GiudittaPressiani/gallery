@@ -351,6 +351,17 @@
                 </div>
         </section>
 
+        <script>
+            // Seleziona tutte le flip-card
+            const flipCards = document.querySelectorAll('.flip-card');
+
+            flipCards.forEach(card => {
+                card.addEventListener('click', () => {
+                card.classList.toggle('flipped'); // aggiunge/toglie la classe "flipped"
+                });
+            });
+        </script>
+
         <footer style="text-align: center; font-size: 0.8em; color: #aaa; margin-top: 2em;">
             © BigHit Music / HYBE — fan-made, non-commercial page
         </footer>

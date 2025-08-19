@@ -352,15 +352,25 @@
         </section>
 
         <script>
-            // Seleziona tutte le flip-card
-            const flipCards = document.querySelectorAll('.flip-card');
+            document.addEventListener("DOMContentLoaded", () => {
+                const cards = document.querySelectorAll(".flip-card");
 
-            flipCards.forEach(card => {
-                card.addEventListener('click', () => {
-                card.classList.toggle('flipped'); // aggiunge/toglie la classe "flipped"
+                cards.forEach(card => {
+                card.addEventListener("click", () => {
+                    // chiudi le altre card, se vuoi che solo una sia aperta alla volta
+                    cards.forEach(c => {
+                    if (c !== card) {
+                        c.classList.remove("flipped");
+                    }
+                    });
+
+                    // apri/chiudi la card cliccata
+                    card.classList.toggle("flipped");
+                });
                 });
             });
         </script>
+
 
         <footer style="text-align: center; font-size: 0.8em; color: #aaa; margin-top: 2em;">
             © BigHit Music / HYBE — fan-made, non-commercial page

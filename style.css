@@ -331,6 +331,7 @@ h1, h2 {
   background: transparent;
   width: 300px;   
   height: 450px; 
+  min-height: 200px;
   perspective: 1000px;
   margin: 20px auto;
   margin-right: 40px;

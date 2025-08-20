@@ -7,9 +7,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <title> Gallery</title>
+        <title>One Dream Archive</title>
 
         <link rel="stylesheet" href="style.css">
     </head>
@@ -17,26 +17,27 @@
     <body>
         <h1 class="title"> ONE DREAM ARCHIVE</h1>
 
+        <!--===== PHOTO + NAME SECTION ===== -->
         <div class="immagine">
             <div class="foto-card">
                 <a href="#img1"><img src="yeonjun_etched.jpg" alt="Yeonjun"></a>
-                <p>Yeonjun</p>
+                <p class="nome" onclick="openModal('yeonjun')">Yeonjun</p>
             </div>
             <div class="foto-card">
                 <a href="#img2"><img src="soobin_knight.jpg" alt="Soobin"></a>
-                <p>Soobin</p>
+                <p class="nome" onclick="openModal('soobin')">Soobin</p>
             </div>
             <div class="foto-card">
                 <a href="#img3"><img src="beomgyu_melancholy.jpg" alt="Beomgyu"></a>
-                <p>Beomgyu</p>
+                <p class="nome" onclick="openModal('beomgyu')">Beomgyu</p>
             </div>
             <div class="foto-card">
                 <a href="#img4"><img src="taehyun_daydream.jpg" alt="Taehyun"></a>
-                <p>Taehyun</p>
+                <p class="nome" onclick="openModal('taehyun')">Taehyun</p>
             </div>
             <div class="foto-card">
                 <a href="#img5"><img src="hueningkai_mess.jpg" alt="Huening Kai"></a>
-                <p>Huening Kai</p>
+                <p class="nome" onclick="openModal('huening')">Huening Kai</p>
             </div>
         </div>
 
@@ -65,11 +66,41 @@
             <img src="hueningkai_mess.jpg" alt="immagine 5 big">
         </div>
 
+        <!--===== MODAL WITH INFO SECTION ===== -->
+        <div id="modal-yeonjun" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('yeonjun')">&times;</span>
+                <h2>YEONJUN</h2>
+
+                <p><b>Full name:</b> Choi Yeonjun (최연준) </p>
+                <p><b>Birthday:</b> September 13rd, 1999</p>
+                <p><b>Position:</b> Rapper, Vocalist, Dancer </p>
+
+                <h3>Introduction</h3>
+                <p> Yeonjun is a singer, rapper, dancer and composer under BigHit Entertainment and HYBE Labels. 
+                    He is known as the oldest member of the boy group TXT</p>
+                
+                <p> He debuted on March 4th, 2019 as a member of TXT with the album <b>The Dream Chapter: STAR</b></p>
+                <a href="https://www.youtube.com/watch?v=W3iSnJ663II" target="_blank">
+                    <p>Crown 👑 (어느 날 머리에서 뿔이 자랐다)</p>
+                <img src="https://img.youtube.com/vi/W3iSnJ663II/hqdefault.jpg" alt="TXT The Dream Chapter: STAR Video" style="width:560px; max-width:100%; border-radius:12px; cursor:pointer;">
+                </a>
+
+                <p> On September 19th, 2024 he released his first mixtape, the album <b>'GGUM'</b></p>
+
+                <a href="https://www.youtube.com/watch?v=1T9tLMh99Wo" target="_blank" style="display: inline-block; max-width: 100%;">
+                    <p>GGUM🩷</p>
+                    <img src="https://img.youtube.com/vi/1T9tLMh99Wo/hqdefault.jpg" alt="TXT Video" style="width:560px; max-width:100%; border-radius:12px; display: block;">
+                </a>
+            </div>
+        </div>
+
+        <!--===== CITATION PIC SECTION ===== -->
         <div class="citation">
             <img src="together.png" alt="move on tomorrow together">
         </div>
 
-        <!--ABOUT SECTION-->
+        <!--===== ABOUT SECTION ===== -->
         <section class="about">
             <h2>ABOUT✨</h2>
                 <p> <b>TOMORROW X TOGETHER </b>is a boyband composed of five members with five different personalities that shine together</p>
@@ -77,7 +108,7 @@
                 <img src="black_logo.png" alt="TXT Logo">
         </section>
 
-        <!--TIMELINE SECTION-->
+        <!--===== TIMELINE SECTION ===== -->
         <section class="timeline">
             <h2>ALBUM TIMELINE 🗓️</h2>
 
@@ -326,10 +357,11 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                </div>
+            </div>
+            </div>
         </section>
 
+        <!--===== PLAYLIST SECTION ===== -->
         <section class="playlist">
             <h2> MY TXT PLAYLIST 🎶</h2>
             
@@ -339,10 +371,9 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy">
             </iframe>
-
         </section>
 
-        <!--DISCOVER MORE SECTION-->
+        <!--===== SOCIAL MEDIA SECTION ===== -->
         <section class="official_sns">
             <h2>Discover more...</h2>
                 <div class="links">
@@ -354,6 +385,7 @@
                 </div>
         </section>
 
+        <!--===== FLIP-CARD PHONE JAVASCRIPT ===== -->
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const cards = document.querySelectorAll(".flip-card");
@@ -374,7 +406,46 @@
             });
         </script>
 
+        <!--===== MODAL FOR MEMBER INFO JAVASCRIPT ===== -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Chiudi tutte le modals al caricamento
+                const allModals = document.querySelectorAll('.modal');
+                allModals.forEach(modal => {
+                    modal.style.display = 'none';
+                });
 
+                // Funzione per aprire la modal
+                window.openModal = function(name) {
+                    const modal = document.getElementById('modal-' + name);
+                    if(modal) {
+                        modal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden'; // blocca lo scroll della pagina
+                    }
+                }
+
+                // Funzione per chiudere la modal
+                window.closeModal = function(name) {
+                    const modal = document.getElementById('modal-' + name);
+                    if(modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = ''; // ripristina lo scroll della pagina
+                    }
+                }
+
+                // Chiudi cliccando fuori dalla finestra della modal
+                window.addEventListener('click', function(event) {
+                    allModals.forEach(modal => {
+                        if(event.target === modal) {
+                            modal.style.display = 'none';
+                            document.body.style.overflow = ''; // ripristina lo scroll
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <!--===== CREDITS ===== -->
         <footer style="text-align: center; font-size: 0.8em; color: #aaa; margin-top: 2em;">
             © BigHit Music / HYBE — fan-made, non-commercial page
         </footer>

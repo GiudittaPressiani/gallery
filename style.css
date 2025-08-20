@@ -155,6 +155,10 @@ h1, h2 {
   color: #000;
 }
 
+.modal p{
+  margin-top: 20px;
+}
+
 
 .modal h3 {
   color: #0e2b69;

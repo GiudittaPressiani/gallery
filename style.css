@@ -79,7 +79,7 @@ h1, h2 {
 
 .foto-card img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 2/3; /*2/3 è usato molto nelle foto*/
     object-fit: cover;
     border-radius: 12px;
     cursor: pointer;

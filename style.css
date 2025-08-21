@@ -504,7 +504,7 @@ iframe {
 
   .timeline-cards {
     display: flex;
-    max-width: 500px;
+    width: max-content; /* prima era max-width: 500px;*/
     height: 60vh;
 
     gap: 20px;
@@ -561,6 +561,7 @@ iframe {
    .timeline-cards {
     flex-direction: column;
     align-items: center;
+    width: max-content;
   }
   .flip-card{
     min-height: 400px;

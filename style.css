@@ -429,10 +429,12 @@ h1, h2 {
   border-radius: 10px;
 }
 
+/*
 .flip-card-back {
   transform: rotateY(180deg);
 
 }
+*/
 
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
@@ -495,7 +497,7 @@ iframe {
 
   .timeline-cards {
     display: flex;
-    width: max-content;       /* necessaria per scroll */
+    /*width: max-content;     */  /* necessaria per scroll */
     height: 60vh;
     gap: 20px;
     flex-wrap: nowrap;
@@ -520,7 +522,7 @@ iframe {
 
   .flip-card-back {
     overflow-y: auto;
-    pointer-events: none;   
+    /*pointer-events: none; */  
   }
 }
 

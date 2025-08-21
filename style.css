@@ -430,11 +430,12 @@ h1, h2 {
 }
 
 .flip-card-back {
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
+  pointer-events: none; /* il retro non intercetta i click */
 }
 
 .flip-card.flipped .flip-card-inner {
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
 }
 
 
@@ -491,6 +492,7 @@ iframe {
     padding: 10px;
   }
   .timeline-container {
+    display: flex;
     flex-wrap: nowwrap;  /*prima era wrap*/     
     justify-content: center;
     overflow-x: auto;   /*prima era visible*/
@@ -499,13 +501,14 @@ iframe {
     gap: 20px;
   }
   .timeline-cards {
+  
+    display: flex;
+
     gap: 20px;
     padding: 0 10px;
     flex-wrap: nowwrap; /*prima era wrap*/
     justify-content: center;
     overflow-x: visible; 
-
-    display: flex
   }
 
    .timeline-cards::-webkit-scrollbar {
@@ -516,7 +519,7 @@ iframe {
     background: #aaa;
     border-radius: 3px;
   }
-  
+
   .flip-card {
     width: 90%;
     height: 400px;
@@ -560,7 +563,7 @@ iframe {
   }
    .flip-card-inner {
     width: 100%;
-    height: auto;
+    height: 100%; /*prima era auto*/
     margin: 10px auto;
     max-height: 80vh;
   }

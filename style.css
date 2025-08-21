@@ -493,6 +493,7 @@ iframe {
   }
   .timeline-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowwrap;  /*prima era wrap*/     
     justify-content: center;
     overflow-x: auto;   /*prima era visible*/
@@ -503,6 +504,8 @@ iframe {
   .timeline-cards {
   
     display: flex;
+    max-width: 500px;
+    height: 60vh;
 
     gap: 20px;
     padding: 0 10px;
@@ -521,8 +524,8 @@ iframe {
   }
 
   .flip-card {
-    width: 90%;
-    height: 400px;
+    max-width: 500px;
+    height: 60vh;
     margin: 10px auto;
     max-height: 80vh;
   }

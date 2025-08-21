@@ -485,38 +485,35 @@ iframe {
 @media (max-width: 768px) {
   .timeline-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;  /* corretto */
-    justify-content: flex-start; /* meglio left aligned su scroll */
-    overflow-x: auto;   
+    justify-content: center;  /* CENTRATO rispetto alla pagina */
+    overflow-x: auto;         /* scroll orizzontale */
     -webkit-overflow-scrolling: touch;
+    padding: 0 10px;
     gap: 20px;
   }
 
   .timeline-cards {
     display: flex;
-    width: max-content;
+    width: max-content;       /* necessaria per scroll */
     height: 60vh;
     gap: 20px;
-    padding: 0 10px;
-    flex-wrap: nowrap; /* corretto */
-    justify-content: flex-start; /* meglio left aligned su scroll */
+    flex-wrap: nowrap;
+    justify-content: flex-start; /* flex-start per le cards */
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
   .flip-card {
-    flex: 0 0 calc(80vw - 20px); /* larghezza relativa corretta */
+    flex: 0 0 calc(80vw - 20px);
     max-width: 500px;
     min-height: 300px;
-    height: 60vw; 
-    margin: 10px 0; /* tolto auto per non centrare verticale, meglio scroll */
-    max-height: 80vh;
+    height: 60vw;
+    margin: 10px 0; /* niente auto */
   }
 
   .flip-card-inner {
     width: 100%;
-    height: 100%; /* altezza piena della card */
+    height: 100%;
     margin: 0;
   }
 
@@ -524,19 +521,18 @@ iframe {
     overflow-y: auto;
     pointer-events: none;   
   }
-
 }
 
 /* Correzione mobile piccolissimo (<500px) */
 @media (max-width: 500px) {
   .timeline-cards {
-    flex-direction: row; /* non colonna */
+    flex-direction: row;
     align-items: flex-start;
     width: max-content;
   }
 
   .flip-card {
-    flex: 0 0 calc(80vw - 20px); /* coerente con 768px */
+    flex: 0 0 calc(80vw - 20px);
     min-height: 300px;
     margin: 10px 0;
   }

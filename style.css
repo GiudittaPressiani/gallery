@@ -491,18 +491,32 @@ iframe {
     padding: 10px;
   }
   .timeline-container {
-    flex-wrap: wrap;       
+    flex-wrap: nowwrap;  /*prima era wrap*/     
     justify-content: center;
-    overflow-x: visible;   
+    overflow-x: auto;   /*prima era visible*/
     
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
   }
   .timeline-cards {
     gap: 20px;
     padding: 0 10px;
-    flex-wrap: wrap;
+    flex-wrap: nowwrap; /*prima era wrap*/
     justify-content: center;
     overflow-x: visible; 
+
+    display: flex
   }
+
+   .timeline-cards::-webkit-scrollbar {
+    height: 6px;                  /* opzionale: scrollbar sottile */
+  }
+
+  .timeline-cards::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 3px;
+  }
+  
   .flip-card {
     width: 90%;
     height: 400px;

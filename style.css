@@ -526,6 +526,7 @@ iframe {
   .flip-card-inner {
     width: 100%;
     height: 100%;
+    /*overflow-y: auto; prima non 'era */
   }
 
   .flip-card-back {
@@ -557,5 +558,7 @@ iframe {
     transform: none;
   }
 }
+
+----COSì SU IPHONE FUNZIONA, SE QUESTO NON C'E' LA CARD SI GIRA
   */
 }

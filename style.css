@@ -543,6 +543,7 @@ iframe {
   .flip-card-front{
     overflow-y: auto;
     max-height: 50vw;
+    -webkit-overflow-scrolling: touch; /*prima non c'era*/
   }
 
 }

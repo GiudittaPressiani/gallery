@@ -158,7 +158,14 @@ h1, h2 {
   animation: zoomIn 0.3s ease;
 }
 .modal a {
-  color: #000;
+  text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: #d3dae6;
+    color: #4b4b4b;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   
 }
 
@@ -439,6 +446,8 @@ h1, h2 {
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
+
+---tolto questo, la card non si gira più due volte-----
 */
 
 /* ===== PLAYLIST ===== */

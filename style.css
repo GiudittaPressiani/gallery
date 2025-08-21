@@ -431,18 +431,13 @@ h1, h2 {
 
 .flip-card-back {
   transform: rotateY(180deg);
-  pointer-events: none; /* il retro non intercetta i click */
+
 }
 
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-@media (hover: none) {
-  .flip-card:hover .flip-card-inner {
-    transform: none; /* disabilita l'hover sui touch */
-  }
-}
 
 /* ===== PLAYLIST ===== */
 .playlist {
@@ -489,6 +484,7 @@ iframe {
 
 @media (max-width: 768px) {
   .timeline-container {
+    width: 100%;
     display: flex;
     justify-content: center;  /* CENTRATO rispetto alla pagina */
     overflow-x: auto;         /* scroll orizzontale */

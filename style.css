@@ -484,6 +484,7 @@ iframe {
   }
 }
 
+
 @media (max-width: 768px) {
 
   /* Container principale della timeline */
@@ -520,7 +521,9 @@ iframe {
   .flip-card-back {
     overflow-y: auto;
   }
+
 }
+
 
 /* Mobile piccolissimo <500px */
 @media (max-width: 500px) {

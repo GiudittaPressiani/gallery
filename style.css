@@ -435,11 +435,11 @@ h1, h2 {
 
 }
 
-
+/*
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
-
+*/
 
 /* ===== PLAYLIST ===== */
 .playlist {

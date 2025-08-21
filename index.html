@@ -405,7 +405,7 @@
 
         <!--===== FLIP-CARD PHONE JAVASCRIPT ===== -->
         <script>
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".flip-card");
 
     cards.forEach(card => {
@@ -417,13 +417,15 @@
 
             const isOpen = card.classList.contains("flipped");
 
-            // chiudi tutte le altre card
+            // chiudi tutte le card (comprese quella cliccata)
             cards.forEach(c => c.classList.remove("flipped"));
 
-            // apri solo se era chiusa
-            if (!isOpen) card.classList.add("flipped");
+            // apri la card cliccata solo se era chiusa all’inizio
+            if (!isOpen) {
+                card.classList.add("flipped");
+            }
 
-            // sblocca click dopo transizione CSS (0.8s)
+            // sblocca click dopo la durata della transizione CSS
             setTimeout(() => flipping = false, 800);
         });
     });

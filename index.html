@@ -405,24 +405,32 @@
 
         <!--===== FLIP-CARD PHONE JAVASCRIPT ===== -->
         <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const cards = document.querySelectorAll(".flip-card");
+ document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".flip-card");
 
-                cards.forEach(card => {
-                card.addEventListener("click", () => {
-                    // chiudi le altre card, se vuoi che solo una sia aperta alla volta
-                    cards.forEach(c => {
-                    if (c !== card) {
-                        c.classList.remove("flipped");
-                    }
-                    });
+    cards.forEach(card => {
+        let flipping = false;
 
-                    // apri/chiudi la card cliccata
-                    card.classList.toggle("flipped");
-                });
-                });
-            });
-        </script>
+        card.addEventListener("click", () => {
+            if (flipping) return;
+            flipping = true;
+
+            const isOpen = card.classList.contains("flipped");
+
+            // chiudi tutte le altre card
+            cards.forEach(c => c.classList.remove("flipped"));
+
+            // apri solo se era chiusa
+            if (!isOpen) card.classList.add("flipped");
+
+            // sblocca click dopo transizione CSS (0.8s)
+            setTimeout(() => flipping = false, 800);
+        });
+    });
+});
+
+</script>
+
 
         <!--===== MODAL FOR MEMBER INFO JAVASCRIPT ===== -->
         <script>

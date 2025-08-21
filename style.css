@@ -490,7 +490,8 @@ iframe {
   /* Container principale della timeline */
   .timeline-container {
     display: flex;
-    width: 100%;             /* occupa tutta la larghezza dello schermo */
+    width: 80%;             /* occupa tutta la larghezza dello schermo */
+    margin: 0 auto;
     justify-content: flex-start; /* parte da sinistra */
     overflow-x: auto;        /* scroll interno */
     -webkit-overflow-scrolling: touch;

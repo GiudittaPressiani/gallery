@@ -438,6 +438,11 @@ h1, h2 {
   transform: rotateY(180deg);
 }
 
+@media (hover: none) {
+  .flip-card:hover .flip-card-inner {
+    transform: none; /* disabilita l'hover sui touch */
+  }
+}
 
 /* ===== PLAYLIST ===== */
 .playlist {

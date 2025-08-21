@@ -429,12 +429,12 @@ h1, h2 {
   border-radius: 10px;
 }
 
-/*
+
 .flip-card-back {
   transform: rotateY(180deg);
 
 }
-*/
+
 
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);

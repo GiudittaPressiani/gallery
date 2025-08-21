@@ -525,6 +525,7 @@ iframe {
   }
 
   .flip-card {
+    flex: 0 0 80%;
     max-width: 500px;
     min-height: 300px;
     height: 60vw; /*proporzionale alla larghezza*/

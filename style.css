@@ -442,7 +442,7 @@ h1, h2 {
 
 }
 
-
+/*
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -532,6 +532,10 @@ iframe {
     overflow-y: auto;
   }
 
+  .flip-card-front{
+    overflow-y: auto;
+  }
+
 }
 
 
@@ -545,6 +549,11 @@ iframe {
     max-height: 70vh;
   }
 
+  /* Disabilita hover su touch devices */
+@media (hover: none) {
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
 }
 
-
+}

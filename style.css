@@ -486,7 +486,6 @@ iframe {
 
 
 @media (max-width: 768px) {
-
   .timeline{
     width: 80%; 
     overflow-x: auto;        /* scroll interno */

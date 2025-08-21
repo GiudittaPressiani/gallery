@@ -495,7 +495,7 @@ iframe {
     display: flex;
     flex-direction: row;
     flex-wrap: nowwrap;  /*prima era wrap*/     
-    /*justify-content: center;*/
+    justify-content: center;
     overflow-x: auto;   /*prima era visible*/
     
     -webkit-overflow-scrolling: touch;
@@ -510,7 +510,7 @@ iframe {
     gap: 20px;
     padding: 0 10px;
     flex-wrap: nowwrap; /*prima era wrap*/
-    /*justify-content: center;*/
+    justify-content: center;
     overflow-x: auto; /*prima era visible*/
     -webkit-overflow-scrolling: touch;
   }

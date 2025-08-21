@@ -166,10 +166,16 @@ h1, h2 {
     font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  
+    margin-bottom: 20px;
 }
 
 .modal p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.modal iframe{
   margin-top: 20px;
 }
 

@@ -412,6 +412,8 @@ h1, h2 {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d; 
+  -webkit-transform-style: preserve-3d; /*prima non c'era*/
+
 }
 
 .flip-card:hover .flip-card-inner {

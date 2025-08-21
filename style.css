@@ -545,11 +545,6 @@ iframe {
     max-height: 70vh;
   }
 
-  /* Disabilita hover su touch devices */
-@media (hover: none) {
-  .flip-card:hover .flip-card-inner {
-    transform: none;
-  }
 }
 
-}
+

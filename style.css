@@ -42,6 +42,7 @@ h1, h2 {
     letter-spacing: 3px;
     padding: 20px 40px;
     border: 3px dotted #0e2b69; 
+    border-radius: 15px;
     background-color: rgba(236, 237, 251, 0.7);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
     transform: rotate(-1deg);
@@ -156,6 +157,9 @@ h1, h2 {
   scroll-behavior: smooth;
 
   animation: zoomIn 0.3s ease;
+
+  justify-content: center;
+  align-items: center;
 }
 .modal a {
   text-decoration: none;
@@ -172,13 +176,17 @@ h1, h2 {
 .modal p{
   margin-top: 20px;
   margin-bottom: 20px;
-  
 }
 
 .modal iframe{
   margin-top: 20px;
 }
 
+.modal img {
+  border-radius: 50px;
+  width: 40%;
+  height:auto;
+}
 
 .modal h3 {
   color: #0e2b69;
@@ -207,6 +215,7 @@ h1, h2 {
     align-items: center;
 }
 .citation img {
+  border-radius: 20px;
     width: 60%;
     height: auto;
 }

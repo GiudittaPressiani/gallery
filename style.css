@@ -427,7 +427,7 @@ h1, h2 {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d; 
-  -webkit-transform-style: preserve-3d; /*prima non c'era*/
+  -webkit-transform-style: preserve-3d; 
 
 }
 
@@ -451,7 +451,7 @@ h1, h2 {
   padding: 20px;
   overflow-y: auto;
   min-height: 200px;
-  -webkit-overflow-scrolling: touch; /*aggiunto per prova*/
+  
 }
 
 .flip-card-front img {
@@ -542,7 +542,7 @@ iframe {
   /* Le singole cards */
   .flip-card {
     flex: 0 0 80%;           /* larghezza relativa al container */
-    max-width: 300px;        /*  per non esagerare */
+    max-width: 300px;        /* per non esagerare */
     height: 50vw;            /* altezza proporzionale */
     margin: 0;               /* niente auto, così rimane allineata a sinistra */
   }
@@ -560,7 +560,7 @@ iframe {
   .flip-card-front{
     overflow-y: auto;
     max-height: 50vw;
-    -webkit-overflow-scrolling: touch; /*prima non c'era*/
+    -webkit-overflow-scrolling: touch; 
   }
 
 }

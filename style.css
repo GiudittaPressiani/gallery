@@ -216,7 +216,7 @@ h1, h2 {
 }
 .citation img {
   border-radius: 20px;
-    width: 60%;
+    width: 80%;
     height: auto;
 }
 
@@ -451,6 +451,7 @@ h1, h2 {
   padding: 20px;
   overflow-y: auto;
   min-height: 200px;
+  -webkit-overflow-scrolling: touch; /*aggiunto per prova*/
 }
 
 .flip-card-front img {

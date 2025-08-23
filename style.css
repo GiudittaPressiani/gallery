@@ -1,9 +1,9 @@
 /*
 * {
-  box-sizing: border-box; /*con questo le card bianche sono rientrate nel robo trasparente dietro 
+  box-sizing: border-box; /*WITH THIS THE WHITE CARD GOES INTO THE TRANSPARENT 
 }
 */
-/* ===== BODY & SFONDO ===== */
+/* ===== BODY & BACKGROUND ===== */
 body {
     background: linear-gradient(-45deg, #aebfef, #d3def4, #d3dae6, #ffffff);
     background-size: 400% 400%;
@@ -62,10 +62,10 @@ h1, h2 {
     transition: transform 0.3s;
 }
 
-/* ===== SEZIONE FOTO CON NOMI ===== */
-.immagine {
+/* ===== NAME + PHOTO SECTION ===== */
+.members_pic {
     display: flex;
-    flex-wrap: wrap; /* va a capo su schermi piccoli */
+    flex-wrap: wrap; /* it goes new line on small devices */
     justify-content: center;
     gap: 25px;
     padding: 20px;
@@ -73,7 +73,7 @@ h1, h2 {
 
 .foto-card {
     display: flex;
-    flex-direction: column; /* immagine sopra, nome sotto */
+    flex-direction: column; /* pic is over the name */
     align-items: center;
     width: 100%;
     max-width: 200px;
@@ -81,7 +81,7 @@ h1, h2 {
 
 .foto-card img {
     width: 100%;
-    aspect-ratio: 2/3; /*2/3 è usato molto nelle foto*/
+    aspect-ratio: 2/3; /*2/3 most used in photography*/
     object-fit: cover;
     border-radius: 12px;
     cursor: pointer;
@@ -101,7 +101,7 @@ h1, h2 {
     text-align: center;
 }
 
-.immagine p:hover{
+.members_pic p:hover{
   text-decoration: underline;
   cursor:pointer;
 }
@@ -130,7 +130,7 @@ h1, h2 {
     display: flex;
 }
 
-/* ===== SEZIONE MEMBER INFO===== */
+/* ===== MODAL: MEMBER INFO===== */
 .modal {
   display: none;
   position: fixed;
@@ -142,7 +142,7 @@ h1, h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /*serve per farlo stare sopra a tutto*/
+  z-index: 1000; /*this is to make it stand in front of the rest*/
 }
  
 .modal-content {
@@ -151,9 +151,9 @@ h1, h2 {
   border-radius: 12px;
   width: auto;
   max-width: 80%;
-  max-height: 80vh; /* <-- limita l'altezza al 80% della viewport */
+  max-height: 80vh; /* <-- limits the height at 80% of the viewport */
   text-align: center;
-  overflow-y: auto; /* permette lo scroll interno se il contenuto è troppo lungo */
+  overflow-y: auto; /* scroll in the modal if the content is too long */
   scroll-behavior: smooth;
 
   animation: zoomIn 0.3s ease;
@@ -364,7 +364,7 @@ h1, h2 {
   border: 4px solid #0e2b69;
   border-radius: 50%;
   z-index: 2;
-  margin-bottom: 15px; /* spazio tra punto e card */
+  margin-bottom: 15px; /* space between card and point  */
   position: relative;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
 }
@@ -496,7 +496,7 @@ iframe {
     height: 380px;
 }
 
-/* ===== ANIMAZIONI ===== */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -514,36 +514,35 @@ iframe {
   }
 }
 
-
 @media (max-width: 768px) {
   .timeline{
     width: 80%; 
-    overflow-x: auto;        /* scroll interno */
-    -webkit-overflow-scrolling: touch; /* occupa tutta la larghezza dello schermo */
+    overflow-x: auto;        /* scroll inside */
+    -webkit-overflow-scrolling: touch; /* occupies all the width of the view */
   }
 
-  /* Container principale della timeline */
+  /*  main container of the timeline timeline */
   .timeline-container {
     display: flex;
     margin: 0 auto;
-    justify-content: flex-start; /* parte da sinistra */
+    justify-content: flex-start; /* starts from the left */
     padding: 10px;
     gap: 20px;
   }
 
-  /* Wrapper delle cards */
+  /* Wrapper of the cards */
   .timeline-cards {
     display: flex;
     gap: 20px;
-    flex-wrap: nowrap;       /* le cards in fila senza andare a capo */
+    flex-wrap: nowrap;       /* cards are in row without new line*/
   }
 
-  /* Le singole cards */
+  /* Single cards */
   .flip-card {
-    flex: 0 0 80%;           /* larghezza relativa al container */
-    max-width: 300px;        /* per non esagerare */
-    height: 50vw;            /* altezza proporzionale */
-    margin: 0;               /* niente auto, così rimane allineata a sinistra */
+    flex: 0 0 80%;           /* relative width of the container */
+    max-width: 300px;        /* to not be too big */
+    height: 50vw;            /* proportional height */
+    margin: 0;               /* no auto, in this way is aligned at the left*/
   }
 
   .flip-card-inner {
@@ -564,8 +563,7 @@ iframe {
 
 }
 
-
-/* Mobile piccolissimo <500px */
+/* small screen <500px */
 @media (max-width: 500px) {
   .flip-card {
     flex: 0 0 85%;
@@ -575,7 +573,7 @@ iframe {
     max-height: 70vh;
   }
 
-  /* Disabilita hover su touch devices */
+  /* Disable hover on touch devices */
 
   /*
 @media (hover: none) {
@@ -584,6 +582,6 @@ iframe {
   }
 }
 
-----COSì SU IPHONE FUNZIONA, SE QUESTO NON C'E' LA CARD SI GIRA
+----in this way on iphone works, without this the card turns around
   */
 }

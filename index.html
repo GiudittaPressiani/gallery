@@ -18,7 +18,7 @@
         <h1 class="title"> ONE DREAM ARCHIVE</h1>
 
         <!--===== PHOTO + NAME SECTION ===== -->
-        <div class="immagine">
+        <div class="members_pic">
             <div class="foto-card">
                 <a href="#img1"><img src="member_photo/yeonjun_starlight.jpg" alt="Yeonjun"></a>
                 <p class="nome" onclick="openModal('yeonjun')">Yeonjun</p>
@@ -430,7 +430,9 @@
             <h2>DISCOGRAPHY TIMELINE 🗓️</h2>
 
                 <div class="timeline-container">
+
                     <!--<div class="timeline-line"></div>-->
+
                     <div class="timeline-cards">
 
                     <!--THE DREAM CHAPTER: STAR-->
@@ -515,6 +517,7 @@
                             </div>    
                         </div>
                     </div>
+
                     <!--MINISODE 1-->
                     <div class="timeline-event">
                     <div class="dot"></div>
@@ -764,7 +767,6 @@
         <!--===== PLAYLIST SECTION ===== -->
         <section class="playlist">
             <h2> MY TXT PLAYLIST 🎶</h2>
-            
             <iframe style="border-radius:12px"
             src="https://open.spotify.com/embed/playlist/5y0Wx2z3Yw0t9b3MY319Op?utm_source=generator"
             width="100%" height="352" frameborder="0"
@@ -788,68 +790,68 @@
 
         <!--===== FLIP-CARD PHONE JAVASCRIPT ===== -->
         <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".flip-card");
+            document.addEventListener("DOMContentLoaded", () => {
+                const cards = document.querySelectorAll(".flip-card");
 
-    cards.forEach(card => {
-        let flipping = false;
+                cards.forEach(card => {
+                    let flipping = false;
 
-        card.addEventListener("click", () => {
-            if (flipping) return;
-            flipping = true;
+                    card.addEventListener("click", () => {
+                        if (flipping) return;
+                        flipping = true;
 
-            const isOpen = card.classList.contains("flipped");
+                        const isOpen = card.classList.contains("flipped");
 
-            // chiudi tutte le card (comprese quella cliccata)
-            cards.forEach(c => c.classList.remove("flipped"));
+                        // close all cards (also the clicked one)
+                        cards.forEach(c => c.classList.remove("flipped"));
 
-            // apri la card cliccata solo se era chiusa all’inizio
-            if (!isOpen) {
-                card.classList.add("flipped");
-            }
+                        // open the card only if it's closed
+                        if (!isOpen) {
+                            card.classList.add("flipped");
+                        }
 
-            // sblocca click dopo la durata della transizione CSS
-            setTimeout(() => flipping = false, 800);
-        });
-    });
-});
+                        // see the click after the duration of the CSS transition
+                        setTimeout(() => flipping = false, 800);
+                    });
+                });
+            });
 
-</script>
+        </script>
 
 
         <!--===== MODAL FOR MEMBER INFO JAVASCRIPT ===== -->
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                // Chiudi tutte le modals al caricamento
+                // close all modals at the page loading
                 const allModals = document.querySelectorAll('.modal');
                 allModals.forEach(modal => {
                     modal.style.display = 'none';
                 });
 
-                // Funzione per aprire la modal
+                // function that opens the modal
                 window.openModal = function(name) {
                     const modal = document.getElementById('modal-' + name);
                     if(modal) {
                         modal.style.display = 'flex';
-                        document.body.style.overflow = 'hidden'; // blocca lo scroll della pagina
+                        document.body.style.overflow = 'hidden'; // block page scroll
                     }
                 }
 
-                // Funzione per chiudere la modal
+                // function that closes the modal
                 window.closeModal = function(name) {
                     const modal = document.getElementById('modal-' + name);
                     if(modal) {
                         modal.style.display = 'none';
-                        document.body.style.overflow = ''; // ripristina lo scroll della pagina
+                        document.body.style.overflow = ''; // the scroll goes up after closing the modal
                     }
                 }
 
-                // Chiudi cliccando fuori dalla finestra della modal
+                // close the modal clicking out of the window
                 window.addEventListener('click', function(event) {
                     allModals.forEach(modal => {
                         if(event.target === modal) {
                             modal.style.display = 'none';
-                            document.body.style.overflow = ''; // ripristina lo scroll
+                            document.body.style.overflow = ''; //the scroll goes up after closing the modal
                         }
                     });
                 });
@@ -860,7 +862,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <footer style="text-align: center; font-size: 0.8em; color: #aaa; margin-top: 2em;">
             © BigHit Music / HYBE — fan-made, non-commercial page
         </footer>
-
 
     </body>
 

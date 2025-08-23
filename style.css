@@ -25,6 +25,7 @@ body {
 
 /* ===== HEADERS ===== */
 h1, h2 {
+    font-size: 2em;
     text-align: center;
     padding: 20px;
     letter-spacing: 2px;
@@ -47,7 +48,7 @@ h1, h2 {
     box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
     transform: rotate(-1deg);
 
-    /*effetto carta*/
+    /*paper effect*/
     background-image: repeating-linear-gradient(
       45deg,
       rgba(0,0,0,0.02) 0px,
@@ -464,6 +465,54 @@ h1, h2 {
   transform: rotateY(180deg);
 
 }
+
+/*===== DISCOVER ALBUMS ===== */
+.discover_album {
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.album_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.album-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.album-card img {
+  width: 100%;
+  display: block;
+}
+
+.album-card h3 {
+  font-size: 1.1em;
+  margin: 10px 0 5px;
+}
+
+.album-card p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
 
 /*
 .flip-card.flipped .flip-card-inner {

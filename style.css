@@ -652,7 +652,7 @@ body.star{
     align-items: center;
 
    
-    background: linear-gradient(-45deg, #a8f1ff, #cdf4fe, #FFF9D4, #FFF3B0);
+    background: linear-gradient(-45deg, #76c4fb, #b3d6ef, #FFF9D4, #fadb06);
     background-size: 600% 600%; /*smooth movements*/
     animation: gradientBG 30s ease-in-out infinite;
 }
@@ -672,25 +672,25 @@ body.star .title {
     font-size: 3.2rem;
     text-align: center;
     padding: 20px 50px;
-    border: 4px dashed #1b55de; 
+    border: 4px dashed #005687; 
     border-radius: 20px;
 
     /* text with gradient */
-    background: linear-gradient(90deg,#1b55de, #7176de, #3381d9);
+    background: linear-gradient(90deg,#043464, #005687, #045383);
     background-clip: text;             /* standard property*/
     -webkit-background-clip: text;     /* compatibility for Chrome/Safari */
     -webkit-text-fill-color: transparent;
     color: transparent; /* fallback */
 
     /* background paper */
-    background-color: rgba(255, 255, 240, 0.8);
+    background-color: rgba(118, 196, 251, 0.6);
     box-shadow: 6px 6px 15px rgba(0,0,0,0.15);
 
     letter-spacing: 4px;
     transform: rotate(-2deg);
 
     /* colored shadow */
-    text-shadow: 3px 3px 6px rgba(255, 249, 212, 0.6);
+    text-shadow: 3px 3px 6px rgba(118, 196, 251, 0.6);
     
     /* bouncing title 
     animation: bounceTitle 2s ease-in-out infinite alternate;*/
@@ -744,7 +744,7 @@ body.star .title {
 }
 
 .song-card a:hover {
-  background: #aebfef;
+  background: #76c4fb;
   color: #0e2b69;
 }
 

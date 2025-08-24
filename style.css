@@ -812,3 +812,94 @@ canvas {
   display: block;
 }
 
+/*concepts & photos*/
+
+.concepts-fanbook {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.concepts-fanbook h2 {
+  margin-bottom: 20px;
+}
+
+/* ====== Griglia mista tipo scrapbook ====== */
+.fanbook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 26px;
+  justify-items: center; /* centra le polaroid nella cella */
+  padding: 10px 6px;
+}
+
+/* Le card stile polaroid */
+.polaroid {
+  position: relative;
+  background: #fff;
+  padding: 10px 10px 18px 10px; /* spazio extra sotto per la didascalia */
+  border-radius: 10px;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.18);
+  width: 100%;
+  max-width: 240px;            /* dimensione base delle polaroid */
+  transform: rotate(0deg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Ingrandisci alcune card (es. foto orizzontali/gruppo) */
+.polaroid.wide {
+  grid-column: span 2;         /* occupa 2 colonne su schermi ampi */
+  max-width: 520px;            /* più larga senza sballare il layout */
+}
+
+/* Leggere inclinazioni per effetto "sparso" */
+.tilt-left  { transform: rotate(-2.5deg); }
+.tilt-right { transform: rotate(2.5deg); }
+
+.polaroid:hover {
+  transform: translateY(-4px) rotate(0deg);
+  box-shadow: 0 14px 24px rgba(0,0,0,0.22);
+}
+
+/* “Nastro adesivo” in alto (opzionale) */
+.polaroid.tape::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 80px;
+  height: 18px;
+  background: rgba(255, 235, 140, 0.9); /* giallo tipo washi tape */
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* L'immagine dentro la polaroid */
+.photo {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #f3f3f3;
+}
+
+/* Controlla facilmente i formati con aspect-ratio */
+.photo.ratio-wide     { aspect-ratio: 16 / 9; }
+.photo.ratio-portrait { aspect-ratio: 3 / 4; }
+.photo.ratio-square   { aspect-ratio: 1 / 1; }
+
+/* Didascalia stile handwriting */
+.polaroid span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Piccoli sticker/doodles (opzionali) */
+.polaroid .sticker {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  font-size: 20px;  /* es: ⭐, 💙, ✨ */
+}

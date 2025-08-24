@@ -709,7 +709,7 @@ h2.star{
 
 .album-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;          /* space between cover and info*/
   margin: 40px 0;
   flex-wrap: wrap;    /* on smartphone is vertical*/

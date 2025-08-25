@@ -708,6 +708,39 @@ h2.star{
   font-size: 2em;
 }
 
+.page-index {
+  background: #ffffffcc;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.page-index ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.page-index li {
+  font-weight: 600;
+}
+
+.page-index a {
+  text-decoration: none;
+  color: #76c4fb;
+  transition: color 0.2s ease;
+}
+
+.page-index a:hover {
+  color: #2d3d99;
+}
+
+
 .album-header {
   display: flex;
   justify-content: center;

@@ -5,121 +5,142 @@
 */
 /* ===== BODY & BACKGROUND ===== */
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 100%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 0%; }
-    100% { background-position: 0% 50%; }
-}
-body {
-    background: linear-gradient(-45deg, #aebfef, #d3def4, #d3dae6, #ffffff);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Delius Unicase', Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+/* =========================================
+   BASE & BACKGROUND
+========================================= */
+html {
+  scroll-behavior: smooth;
 }
 
-/* ===== HEADERS ===== */
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 100%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Delius Unicase', Arial, Helvetica, sans-serif;
+  background: linear-gradient(-45deg, #aebfef, #d3def4, #d3dae6, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* =========================================
+   HEADERS
+========================================= */
 h1, h2 {
-    font-size: 2em;
-    text-align: center;
-    padding: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #2b3e80;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  font-size: 2em;
+  text-align: center;
+  padding: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2b3e80;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 h3 {
   margin-top: 20px;
 }
 
-.title{
-    font-size: 3rem;
-    color: #0e2b69;
-    text-align: center;
-    position: relative;
-    letter-spacing: 3px;
-    padding: 20px 40px;
-    border: 3px dotted #0e2b69; 
-    border-radius: 15px;
-    background-color: rgba(236, 237, 251, 0.7);
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-    transform: rotate(-1deg);
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: #0e2b69;
+  position: relative;
+  letter-spacing: 3px;
+  padding: 20px 40px;
+  border: 3px dotted #0e2b69; 
+  border-radius: 15px;
+  transform: rotate(-1deg);
 
-    /*paper effect*/
-    background-image: repeating-linear-gradient(
-      45deg,
-      rgba(0,0,0,0.02) 0px,
-      rgba(0,0,0,0.02) 1px,
-      transparent 1px,
-      transparent 4px
-    );
+  background-color: rgba(236, 237, 251, 0.7);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+
+  /* subtle paper texture */
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0,0,0,0.02) 0px,
+    rgba(0,0,0,0.02) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+
+  transition: transform 0.3s ease;
 }
 
-.title:hover{
-    transform: translateY(-5px);
-    transition: transform 0.3s;
+.title:hover {
+  transform: translateY(-5px);
 }
 
-/* ===== NAME + PHOTO SECTION ===== */
+/* =========================================
+   MEMBERS PHOTO SECTION
+========================================= */
 .members_pic {
-    display: flex;
-    flex-wrap: wrap; /* it goes new line on small devices */
-    justify-content: center;
-    gap: 25px;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;  /* goes to new line on small devices */
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
 }
 
 .foto-card {
-    display: flex;
-    flex-direction: column; /* pic is over the name */
-    align-items: center;
-    width: 100%;
-    max-width: 200px;
+  display: flex;
+  flex-direction: column; /* pic above name */
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
 }
 
 .foto-card img {
-    width: 100%;
-    aspect-ratio: 2/3; /*2/3 most used in photography*/
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  aspect-ratio: 2 / 3;  /* standard portrait ratio */
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .foto-card img:hover {
-    transform: scale(1.05) rotate(1deg);
-    box-shadow: 0 12px 30px rgba(73,117,212,0.3);
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 12px 30px rgba(73,117,212,0.3);
 }
 
 .foto-card p {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #333;
-    text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
 }
 
-.members_pic p:hover{
+.foto-card p:hover {
   text-decoration: underline;
-  cursor:pointer;
 }
 
-/* ===== LIGHTBOX ===== */
+/* ===========================
+   LIGHTBOX
+   =========================== */
+
 .Lightbox {
     display: none;
     position: fixed;
     z-index: 1000;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
     background: rgba(0, 0, 0, 0.85);
+
     justify-content: center;
     align-items: center;
 }
@@ -129,6 +150,7 @@ h3 {
     max-height: 80%;
     border-radius: 12px;
     box-shadow: 0 0 25px #000;
+
     animation: fadeIn 0.5s;
 }
 
@@ -136,7 +158,10 @@ h3 {
     display: flex;
 }
 
-/* ===== MODAL: MEMBER INFO===== */
+/* ==============================
+   MODAL: MEMBER INFO
+   ============================== */
+
 .modal {
   display: none;
   position: fixed;
@@ -145,9 +170,10 @@ h3 {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  display: flex;
+
   justify-content: center;
   align-items: center;
+
   z-index: 1000; /*this is to make it stand in front of the rest*/
 }
  
@@ -155,9 +181,11 @@ h3 {
   background: white;
   padding: 20px;
   border-radius: 12px;
+
   width: auto;
   max-width: 80%;
   max-height: 80vh; /* <-- limits the height at 80% of the viewport */
+
   text-align: center;
   overflow-y: auto; /* scroll in the modal if the content is too long */
   scroll-behavior: smooth;
@@ -167,6 +195,7 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
 .modal a {
   text-decoration: none;
     padding: 10px 18px;
@@ -214,24 +243,31 @@ h3 {
   to { transform: scale(1); opacity: 1; }
 }
 
-/* ===== CITATION ===== */
+/* ===========================
+   CITATION
+   =========================== */
+
 .citation {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .citation img {
-  border-radius: 20px;
     width: 80%;
     height: auto;
+    border-radius: 20px;
 }
 
-/* ===== ABOUT ===== */
+/* ===========================
+   ABOUT
+   =========================== */
+
 .about {
     max-width: 800px;
     margin: 60px auto;
-    text-align: center;
     padding: 30px;
+    text-align: center;    
     line-height: 1.6;
     border-radius: 15px;
     background: linear-gradient(145deg, #f9f9f9, #eaeaea);
@@ -264,7 +300,10 @@ h3 {
   
 }
 
-/* ===== SOCIAL ===== */
+/* ===========================
+   SOCIAL
+   =========================== */
+
 .official_sns {
     display: flex;
     flex-direction: column;
@@ -306,7 +345,10 @@ h3 {
     box-shadow: 0 6px 15px rgba(73,117,212,0.3);
 }
 
-/* ===== TIMELINE ===== */
+/* ===========================
+   TIMELINE
+   =========================== */
+
 .timeline {
     display: flex;
     flex-direction: column;
@@ -413,7 +455,10 @@ h3 {
     color: #555;
 }
 
-/*Tracklist*/
+/* ===========================
+   TRACKLIST / FLIP CARD
+   =========================== */
+
 .flip-card {
   flex: 0 0 auto;
   background: transparent;
@@ -441,7 +486,8 @@ h3 {
   transform: rotateY(-180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front, 
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -471,7 +517,10 @@ h3 {
 
 }
 
-/*===== DISCOVER ALBUMS ===== */
+/* ===========================
+   DISCOVER ALBUMS
+   =========================== */
+
 .discover_album {
   margin: 50px auto;
   max-width: 1200px;
@@ -518,14 +567,9 @@ h3 {
   margin-bottom: 10px;
 }
 
-
-/*
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-
-/* ===== PLAYLIST ===== */
+/* ===========================
+   PLAYLIST
+   =========================== */
 .playlist {
     max-width: 700px;
     margin: 60px auto;
@@ -550,13 +594,17 @@ iframe {
     height: 380px;
 }
 
-/* ===== ANIMATIONS ===== */
+/* ===========================
+   ANIMATIONS
+   =========================== */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
 
-/* ===== MEDIA QUERIES ===== */
+/* ===========================
+   MEDIA QUERIES
+   =========================== */
 @media (max-width: 1024px) {
   .timeline-cards {
     gap: 40px;
@@ -627,87 +675,82 @@ iframe {
     max-height: 70vh;
   }
 
-  /* Disable hover on touch devices */
-
   /*
-@media (hover: none) {
-  .flip-card:hover .flip-card-inner {
-    transform: none;
+  DISABLES HOVER ON SMARTPHONE: WITHOUT THIS ON IPHONE WORKS, OTHERWISE THE CARD TURNS AROUND
+  @media (hover: none) {
+    .flip-card:hover .flip-card-inner {
+      transform: none;
+    }
   }
-}
 
-----in this way on iphone works, without this the card turns around
   */
 }
 
 /* ===========THE DREAM CHAPTER: STAR PAGE CSS =========== */
+/* =========================================
+   BASE LAYOUT & BACKGROUND
+========================================= */
+body.star {
+  margin: 0;
+  padding: 0;
+  font-family: 'Delius Unicase', Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-body.star{
-   margin: 0;
-    padding: 0;
-    font-family: 'Delius Unicase', Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-   
-    background: linear-gradient(-45deg, #76c4fb, #b3d6ef, #FFF9D4, #fadb06);
-    background-size: 600% 600%; /*smooth movements*/
-    animation: gradientBG 30s ease-in-out infinite;
+  background: linear-gradient(-45deg, #76c4fb, #b3d6ef, #FFF9D4, #fadb06);
+  background-size: 600% 600%;
+  animation: gradientBG 30s ease-in-out infinite;
 }
 
-/*blurred effect*/
+/* Blurred background overlay */
 body.star::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: inherit;
-    filter: blur(4px);
-    z-index: -1;
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: inherit;
+  filter: blur(4px);
+  z-index: -1;
 }
 
+/* =========================================
+   TITLES & HEADINGS
+========================================= */
 body.star .title {
-    font-size: 3.2rem;
-    text-align: center;
-    padding: 20px 50px;
-    border: 4px dashed #005687; 
-    border-radius: 20px;
+  font-size: 3.2rem;
+  text-align: center;
+  padding: 20px 50px;
+  border: 4px dashed #005687;
+  border-radius: 20px;
 
-    /* text with gradient */
-    background: linear-gradient(90deg,#043464, #005687, #045383);
-    background-clip: text;             /* standard property*/
-    -webkit-background-clip: text;     /* compatibility for Chrome/Safari */
-    -webkit-text-fill-color: transparent;
-    color: transparent; /* fallback */
+  /* gradient text */
+  background: linear-gradient(90deg,#043464, #005687, #045383);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* fallback */
 
-    /* background paper */
-    background-color: rgba(118, 196, 251, 0.6);
-    box-shadow: 6px 6px 15px rgba(0,0,0,0.15);
+  /* background paper effect */
+  background-color: rgba(118, 196, 251, 0.6);
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.15);
 
-    letter-spacing: 4px;
-    transform: rotate(-2deg);
+  letter-spacing: 4px;
+  transform: rotate(-2deg);
 
-    /* colored shadow */
-    text-shadow: 3px 3px 6px rgba(118, 196, 251, 0.6);
-    
-    /* bouncing title 
-    animation: bounceTitle 2s ease-in-out infinite alternate;*/
+  /* colored shadow */
+  text-shadow: 3px 3px 6px rgba(118, 196, 251, 0.6);
 }
 
-/* Bouncing animation 
-@keyframes bounceTitle {
-    from { transform: rotate(-2deg) translateY(0px); }
-    to { transform: rotate(2deg) translateY(-8px); }
-}
-*/
-
-h2.star{
+h2.star {
   color: #005687;
   font-size: 2em;
 }
 
+/* =========================================
+   PAGE INDEX
+========================================= */
 .page-index {
   background: #ffffffcc;
   border-radius: 1rem;
@@ -737,28 +780,30 @@ h2.star{
 }
 
 .page-index a:hover {
-  color: #2d3d99;
+  color: #0e2b69;
 }
 
-
+/* =========================================
+   ALBUM HEADER
+========================================= */
 .album-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;          /* space between cover and info*/
+  gap: 30px;
   margin: 40px 0;
-  flex-wrap: wrap;    /* on smartphone is vertical*/
+  flex-wrap: wrap; /* on smartphone is vertical */
 }
 
 .album-cover {
-  width: 280px;       
+  width: 280px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .album-info_star {
-  flex: 1;            /* takes all the rest of the width */
-  max-width: 400px;   
+  flex: 1;
+  max-width: 400px;
 }
 
 .album-info_star h2 {
@@ -777,22 +822,26 @@ h2.star{
 }
 
 .album-info_star a {
+  display: inline-block;
   text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 25px;
-    background: rgba(118, 196, 251, 0.6);
-    color: #4b4b4b;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: rgba(250, 250, 176, 0.6);
+  color: #4b4b4b;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* =========================================
+   SONGS SECTION
+========================================= */
 .songs-container {
-    display: flex;
-    flex-wrap: wrap;      /* new line if too big*/
-    justify-content: center; /* horizontal and centered card*/
-    gap: 20px;            /* space between card */
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .song-card {
@@ -832,21 +881,26 @@ h2.star{
   color: #0e2b69;
 }
 
-.lyrics{
+.lyrics {
   white-space: pre-line;
 }
 
+/* =========================================
+   CANVAS BACKGROUND (stars, effects, etc.)
+========================================= */
 canvas {
-  position: fixed;   /* it is fixed*/
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;       /* behind all elements */
+  z-index: -1;
   display: block;
 }
 
-/*music video section*/
+/* =========================================
+   MUSIC VIDEO SECTION
+========================================= */
 .mv-grid {
   display: grid;
   gap: 1.5rem;
@@ -882,8 +936,9 @@ canvas {
   color: #333;
 }
 
-/*concepts & photos*/
-
+/* =========================================
+   CONCEPTS & FANBOOK
+========================================= */
 .concepts-fanbook {
   margin: 60px 0;
   text-align: center;
@@ -899,35 +954,34 @@ canvas {
   text-shadow: 3px 3px 6px rgba(118, 196, 251, 0.6);
 }
 
-/* ====== SCRAPBOOK FOR CONCEPT PHOTOS ====== */
+/* Grid for concept photos */
 .fanbook-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 26px;
-  justify-items: center; 
+  justify-items: center;
   padding: 10px 6px;
 }
 
-/* polaroid style*/
+/* Polaroid style */
 .polaroid {
   position: relative;
   background: #fff;
-  padding: 10px 10px 18px 10px; /* space under for description */
+  padding: 10px 10px 18px;
   border-radius: 10px;
   box-shadow: 0 10px 18px rgba(0,0,0,0.18);
   width: 100%;
-  max-width: 240px;            /* usual dimension for polaroids */
+  max-width: 240px;
   transform: rotate(0deg);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* bigger cards for horizontal photos */
 .polaroid.wide {
-  grid-column: span 2;         /* occupies 2 columns on bigger devices */
-  max-width: 520px;            /* larger without troubles for layout */
+  grid-column: span 2;
+  max-width: 520px;
 }
 
-/* Leggere inclinazioni per effetto "sparso" */
+/* Tilt effects */
 .tilt-left  { transform: rotate(-2.5deg); }
 .tilt-right { transform: rotate(2.5deg); }
 
@@ -936,7 +990,7 @@ canvas {
   box-shadow: 0 14px 24px rgba(0,0,0,0.22);
 }
 
-/* tape on the top */
+/* Tape */
 .polaroid.tape::before {
   content: "";
   position: absolute;
@@ -945,12 +999,12 @@ canvas {
   transform: translateX(-50%) rotate(-3deg);
   width: 80px;
   height: 18px;
-  background: rgba(255, 235, 140, 0.9); 
+  background: rgba(255, 235, 140, 0.9);
   border-radius: 3px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
-/* picture inside polaroid */
+/* Photos */
 .photo {
   display: block;
   width: 100%;
@@ -959,12 +1013,12 @@ canvas {
   background: #f3f3f3;
 }
 
-/* to control dimensions with aspect-ratio */
+/* Aspect ratios */
 .photo.ratio-wide     { aspect-ratio: 16 / 9; }
 .photo.ratio-portrait { aspect-ratio: 3 / 4; }
 .photo.ratio-square   { aspect-ratio: 1 / 1; }
 
-/* Didascalia handwriting style*/
+/* Caption */
 .polaroid span {
   display: block;
   margin-top: 10px;
@@ -972,10 +1026,10 @@ canvas {
   font-weight: 600;
 }
 
-/* small sticker/doodles */
+/* Stickers/doodles */
 .polaroid .sticker {
   position: absolute;
   right: -6px;
   bottom: -6px;
-  font-size: 35px;  
+  font-size: 35px;
 }

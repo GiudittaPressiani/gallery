@@ -705,6 +705,7 @@ body.star .title {
 
 h2.star{
   color: #005687;
+  font-size: 2em;
 }
 
 .album-header {
@@ -728,7 +729,7 @@ h2.star{
 }
 
 .album-info_star h2 {
-  font-size: 1.8rem;
+  font-size: 2em;
   margin-bottom: 15px;
 }
 
@@ -812,6 +813,42 @@ canvas {
   display: block;
 }
 
+/*music video section*/
+.mv-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.mv-card {
+  display: block;
+  background: #FFF9D4;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.mv-card img {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.mv-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
 /*concepts & photos*/
 
 .concepts-fanbook {
@@ -823,32 +860,38 @@ canvas {
   margin-bottom: 20px;
 }
 
-/* ====== Griglia mista tipo scrapbook ====== */
+.concepts-fanbook h3 {
+  font-size: 1.5em;
+  color: #555;
+  text-shadow: 3px 3px 6px rgba(118, 196, 251, 0.6);
+}
+
+/* ====== SCRAPBOOK FOR CONCEPT PHOTOS ====== */
 .fanbook-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 26px;
-  justify-items: center; /* centra le polaroid nella cella */
+  justify-items: center; 
   padding: 10px 6px;
 }
 
-/* Le card stile polaroid */
+/* polaroid style*/
 .polaroid {
   position: relative;
   background: #fff;
-  padding: 10px 10px 18px 10px; /* spazio extra sotto per la didascalia */
+  padding: 10px 10px 18px 10px; /* space under for description */
   border-radius: 10px;
   box-shadow: 0 10px 18px rgba(0,0,0,0.18);
   width: 100%;
-  max-width: 240px;            /* dimensione base delle polaroid */
+  max-width: 240px;            /* usual dimension for polaroids */
   transform: rotate(0deg);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Ingrandisci alcune card (es. foto orizzontali/gruppo) */
+/* bigger cards for horizontal photos */
 .polaroid.wide {
-  grid-column: span 2;         /* occupa 2 colonne su schermi ampi */
-  max-width: 520px;            /* più larga senza sballare il layout */
+  grid-column: span 2;         /* occupies 2 columns on bigger devices */
+  max-width: 520px;            /* larger without troubles for layout */
 }
 
 /* Leggere inclinazioni per effetto "sparso" */
@@ -860,7 +903,7 @@ canvas {
   box-shadow: 0 14px 24px rgba(0,0,0,0.22);
 }
 
-/* “Nastro adesivo” in alto (opzionale) */
+/* tape on the top */
 .polaroid.tape::before {
   content: "";
   position: absolute;
@@ -869,12 +912,12 @@ canvas {
   transform: translateX(-50%) rotate(-3deg);
   width: 80px;
   height: 18px;
-  background: rgba(255, 235, 140, 0.9); /* giallo tipo washi tape */
+  background: rgba(255, 235, 140, 0.9); 
   border-radius: 3px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
-/* L'immagine dentro la polaroid */
+/* picture inside polaroid */
 .photo {
   display: block;
   width: 100%;
@@ -883,12 +926,12 @@ canvas {
   background: #f3f3f3;
 }
 
-/* Controlla facilmente i formati con aspect-ratio */
+/* to control dimensions with aspect-ratio */
 .photo.ratio-wide     { aspect-ratio: 16 / 9; }
 .photo.ratio-portrait { aspect-ratio: 3 / 4; }
 .photo.ratio-square   { aspect-ratio: 1 / 1; }
 
-/* Didascalia stile handwriting */
+/* Didascalia handwriting style*/
 .polaroid span {
   display: block;
   margin-top: 10px;
@@ -896,10 +939,10 @@ canvas {
   font-weight: 600;
 }
 
-/* Piccoli sticker/doodles (opzionali) */
+/* small sticker/doodles */
 .polaroid .sticker {
   position: absolute;
   right: -6px;
   bottom: -6px;
-  font-size: 35px;  /* es: ⭐, 💙, ✨ */
+  font-size: 35px;  
 }

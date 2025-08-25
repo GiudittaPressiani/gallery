@@ -718,29 +718,37 @@ body.star::before {
 /* =========================================
    TITLES & HEADINGS
 ========================================= */
+
 body.star .title {
-  font-size: 3.2rem;
+  font-family: 'Quicksand', sans-serif; 
+  font-size: 3rem;
   text-align: center;
-  padding: 20px 50px;
-  border: 4px dashed #005687;
-  border-radius: 20px;
+  padding: 15px 5px;
+  margin: 0;
+  color: #76c4fb; 
+  letter-spacing: 1.5px;
+  border: none;
 
-  /* gradient text */
-  background: linear-gradient(90deg,#043464, #005687, #045383);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent; /* fallback */
+  /* text-shadow  */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 
-  /* background paper effect */
-  background-color: rgba(118, 196, 251, 0.6);
-  box-shadow: 6px 6px 15px rgba(0,0,0,0.15);
+  /* scale-in animation*/
+  animation: titlePop 1s ease-out forwards;
+}
 
-  letter-spacing: 4px;
-  transform: rotate(-2deg);
+@keyframes titlePop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
-  /* colored shadow */
-  text-shadow: 3px 3px 6px rgba(118, 196, 251, 0.6);
+.title_star{
+  color:#fadb06;
 }
 
 h2.star {

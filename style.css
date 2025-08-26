@@ -1314,3 +1314,129 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
+
+/* ===========THE DREAM CHAPTER: MAGIC PAGE CSS =========== */
+
+/* =========================================
+   BASE LAYOUT & BACKGROUND
+========================================= */
+
+:root {
+  --bg-magic: #050406;
+  --star-magic-green: #04dc8c;
+  --star-magic-blue: #04ccfa;
+  --star-magic-accent: #f0d328;
+}
+
+/* reset */
+body.magic{
+  margin: 0;
+  height: 100%;
+  background: var(--bg-magic);
+  color: white;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* things are over the bg */
+.page-magic {
+  position: relative;
+  z-index: 5;
+  padding: 64px;
+}
+
+/* background stars MAGIC */
+.star-magic-field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--bg-magic);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.star-magic-stars {
+  position: absolute;
+  inset: 0;
+}
+
+/* every stars MAGIC */
+.star-magic {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: 0 0 6px rgba(160,255,190,0.3);
+  animation: star-magic-twinkle 5s infinite ease-in-out;
+}
+
+/* sparkling animation */
+@keyframes star-magic-twinkle {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* little grain*/
+.star-magic-grain {
+  position:absolute; inset:0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='g'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+}
+
+/* Green smoke in the center */
+.star-magic-portal {
+  position:absolute;
+  left:50%; top:50%;
+  width: 420px; height: 420px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(27,255,141,0.12), transparent 60%);
+  filter: blur(40px);
+  opacity: 0.7;
+  mix-blend-mode: screen;
+}
+
+/*Page Title*/
+.title-magic {
+  font-family: 'Oswald', sans-serif; 
+  font-size: 3.8rem;
+  text-align: center;
+  padding: 20px 10px;
+  margin: 30px auto;
+  color: #00ff88; 
+  letter-spacing: 2px;
+  border: none;
+
+  /* evident glow */
+  text-shadow: 
+    0 0 6px rgba(0, 255, 136, 0.6),
+    0 0 20px rgba(0, 255, 136, 0.4);
+
+  /* magic appearing animation */
+  animation: titleMagicPop 1.2s ease-out forwards;
+}
+
+.span-title-magic{
+  color: #04ccfa;
+}
+
+@keyframes titleMagicPop {
+  0% {
+    transform: scale(0.6) rotate(-3deg);
+    opacity: 0;
+    text-shadow: none;
+  }
+  70% {
+    transform: scale(1.1) rotate(2deg);
+    opacity: 1;
+    text-shadow: 
+      0 0 12px rgba(0, 255, 136, 0.9),
+      0 0 26px rgba(0, 255, 136, 0.6);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    text-shadow: 
+      0 0 6px rgba(0, 255, 136, 0.6),
+      0 0 20px rgba(0, 255, 136, 0.4);
+  }
+}
+

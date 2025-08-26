@@ -720,13 +720,13 @@ body.star::before {
 ========================================= */
 
 body.star .title {
-  font-family: 'Quicksand', sans-serif; 
-  font-size: 3rem;
+  font-family: 'Fredoka One', sans-serif; 
+  font-size: 3.5rem;
   text-align: center;
   padding: 15px 5px;
-  margin: 0;
+  margin: 20px 0;
   color: #76c4fb; 
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   border: none;
 
   /* text-shadow  */

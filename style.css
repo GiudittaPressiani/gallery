@@ -724,7 +724,7 @@ body.star .title {
   font-size: 3.5rem;
   text-align: center;
   padding: 15px 5px;
-  margin: 20px 0;
+  margin: 20px 5px;
   color: #76c4fb; 
   letter-spacing: 2px;
   border: none;
@@ -1091,6 +1091,7 @@ canvas {
    CURIOSITIES AND OPINIONS
 ========================================= */
 
+/*Awards*/
 .curiosities {
   margin: 3rem auto;
   max-width: 900px;
@@ -1184,3 +1185,27 @@ ul.trivia-list li strong {
   50% { transform: translateY(-5px); }
 }
 
+/*Curiosities*/
+.song-version {
+  background: rgba(118, 196, 251, 0.15);
+  border-radius: 1rem;         
+  padding: 15px;               
+  margin: 20px 0;              
+  text-align: center;          
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+.song-version p {
+  margin-bottom: 12px;   
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.mv-card-star iframe {
+  display: block;
+  width: 50%;    
+  margin: 0 auto; 
+  border: none;
+  border-radius: 12px;
+}

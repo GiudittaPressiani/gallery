@@ -829,6 +829,22 @@ h2.star {
   line-height: 1.6;
 }
 
+ul.album-info_star {
+  list-style-type: none;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ul.album-info_star li {
+  margin: 8px 0;   /* distanziamento solo nei <li> della lista trivia */
+}
+ul.album-info_star li::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f005"; /* star unicode code */
+  margin-right: 8px;
+  color: gold;
+}
+
 .album-info_star a {
   display: inline-block;
   text-decoration: none;
@@ -1040,4 +1056,61 @@ canvas {
   right: -6px;
   bottom: -6px;
   font-size: 35px;
+}
+
+/* =========================================
+   CURIOSITIES AND OPINIONS
+========================================= */
+
+.curiosities {
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background: #ffffffcc;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.curiosities h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.curiosities h3{
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #76c4fb;
+}
+
+ul.trivia-list {
+  list-style-type: none;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin: 8px 0;   /* 8px sopra e sotto */
+ }
+
+ul.trivia-list li::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f005"; /* star unicode code */
+  margin-right: 8px;
+  color: gold;
+}
+
+.trivia-list a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: rgba(250, 250, 176, 0.6);
+  color: #4b4b4b;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }

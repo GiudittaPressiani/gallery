@@ -1078,29 +1078,48 @@ canvas {
   font-weight: 700;
 }
 
-.curiosities h3{
+.curiosities h3 {
   text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 1rem;
+  font-size: 1.6em;
+  margin-bottom: 1.5rem;
   font-weight: 700;
   color: #76c4fb;
+  text-shadow: 0 0 5px rgba(118, 196, 251, 0.6);
 }
 
+/* Minicard list*/
 ul.trivia-list {
   list-style-type: none;
-  padding-left: 1.5rem;
+  padding-left: 0;
   margin-bottom: 1.5rem;
 }
 
-li {
-  margin: 8px 0;   /* 8px sopra e sotto */
- }
+ul.trivia-list li {
+  background: rgba(118,196,251,0.08);  
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 10px 0;
+  position: relative;
+  line-height: 1.5;
+  transition: all 0.2s ease;
+}
+
+ul.trivia-list li:hover {
+  background: rgba(118,196,251,0.15);
+}
 
 ul.trivia-list li::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f005"; /* star unicode code */
-  margin-right: 8px;
-  color: gold;
+  content: "💫";        /* emoji bullet */
+  position: absolute;
+  left: -25px;           /* without this the stars are on the text */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+}
+
+ul.trivia-list li strong {
+  color: #76c4fb;
+  font-weight: 600;
 }
 
 .trivia-list a {
@@ -1114,3 +1133,25 @@ ul.trivia-list li::before {
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/*Gifs*/
+.trivia-gifs {
+  display: flex;
+  justify-content: center;  
+  gap: 15px;                
+  margin-top: 20px;         
+}
+
+.trivia-gifs img {
+  width: 35%;              
+  height: auto;
+  border-radius: 1.25rem;
+
+  animation: float 3s ease-in-out infinite; 
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+

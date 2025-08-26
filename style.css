@@ -1238,3 +1238,41 @@ font-weight: 500;
 transition: all 0.3s ease;
 box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/*Concert video*/
+.concert-video-card {
+  border-radius: 20px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.concert-video-card h4 {
+  margin-bottom: 8px;
+  color: #4b4b4b;
+}
+
+.concert-video-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.mv-card video {
+  width: 50%;
+  display: block;
+  border-radius: 20px;
+  margin: 0 auto; 
+}
+
+.video-disclaimer {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+}

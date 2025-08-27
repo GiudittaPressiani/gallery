@@ -1440,3 +1440,88 @@ body.magic{
   }
 }
 
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* Main card */
+.album-card-magic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 25px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,255,136,0.35);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.album-card-magic:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(0,255,136,0.6);
+}
+
+.album-card-magic img {
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,255,136,0.45);
+}
+
+/* Text */
+.album-info-magic {
+  margin-left: 30px;
+  color: #eafef7;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+.album-info-magic h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #00ff88;
+  text-shadow: 0 0 12px rgba(0,255,136,0.6);
+}
+
+.album-info-magic p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/*Links*/
+.album-button-magic {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 0.65em 1.4em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e0f7ff; /* bianco-azzurrino delicato */
+  background-color: #04ccfa; /* azzurro intenso */
+  border: 2px solid transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 136, 204, 0.5);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.album-button-magic:hover {
+  background-color: #73ecf2; /* azzurro più chiaro */
+  box-shadow: 0 0 16px rgba(144, 233, 245, 0.7);
+  transform: translateY(-2px);
+}
+
+.album-button-magic:active {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(0, 136, 204, 0.4);
+}
+
+
+

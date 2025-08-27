@@ -1468,6 +1468,7 @@ body.magic{
   width: 250px;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,255,136,0.45);
+   aspect-ratio: 1/1;
 }
 
 /* Text */

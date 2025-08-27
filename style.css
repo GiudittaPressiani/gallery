@@ -1533,6 +1533,7 @@ body.magic{
   .album-card-magic img {
     width: 70%;
     max-width: 300px;
+    height: auto;
   }
 
   .album-info-magic {

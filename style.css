@@ -1534,6 +1534,7 @@ body.magic{
     width: 70%;
     max-width: 300px;
     height: auto;
+    aspect-ratio: 1/1;
   }
 
   .album-info-magic {

@@ -1468,7 +1468,7 @@ body.magic{
   width: 250px;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,255,136,0.45);
-   aspect-ratio: 1/1;
+  aspect-ratio: 1/1;
 }
 
 /* Text */
@@ -1550,6 +1550,98 @@ body.magic{
     font-size: 0.95rem;
   }
 }
+
+/*album 2nd infos*/
+.album-info-magic ul {
+  list-style: none;  
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #f1f1f1;
+}
+
+.album-info-magic li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+}
+
+.album-info-magic li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5cc9f5;  /* azzurro intenso */
+  font-size: 1.1rem;
+  
+  /* animazione bagliore */
+  animation: twinkle 2.5s infinite ease-in-out;
+  text-shadow: 0 0 6px rgba(92, 201, 245, 0.8);
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 6px rgba(92, 201, 245, 0.8);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+    text-shadow: 0 0 12px rgba(92, 201, 245, 1);
+  }
+}
+
+/*Page index*/
+.page-index-magic {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 15px 25px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(225, 209, 30, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.page-index-magic ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page-index-magic ul li a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #76c4fb;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.page-index-magic ul li a:hover {
+  color: #e0f7ff;
+  background-color: rgba(255, 242, 0, 0.2);
+  box-shadow: 0 0 12px rgba(225, 209, 30, 0.5);
+  transform: translateY(-2px);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .page-index-magic ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 
 
 

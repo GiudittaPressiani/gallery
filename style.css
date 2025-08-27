@@ -1751,12 +1751,12 @@ body.magic{
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #e0ffe8; /* verde molto chiaro per contrasto */
+  color: #e0ffe8; 
   text-shadow: 0 0 6px rgba(0, 255, 136, 0.4);
   margin: 15px 0 20px 0;
   padding: 10px 15px;
-  background: rgba(0, 0, 0, 0.4); /* leggero riquadro trasparente */
-  border-left: 3px solid #00ff88; /* accento verde a lato */
+  background: rgba(0, 0, 0, 0.4); 
+  border-left: 3px solid #00ff88; 
   border-radius: 6px;
 }
 
@@ -1765,11 +1765,11 @@ body.magic{
   font-size: 1.4rem;
   margin-top: 20px;
   margin-bottom: 12px;
-  color: #00e6a8; /* verde acqua più tenue del titolo principale */
+  color: #00ff88; 
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 0 6px rgba(0, 230, 168, 0.6);
-  border-left: 4px solid #00ffb7;
+  border-left: 4px solid #00ff88;
   padding-left: 8px;
 }
 
@@ -1778,8 +1778,8 @@ body.magic{
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #e0e0e0; /* grigio chiaro leggibile sullo sfondo scuro */
-  white-space: pre-line; /* mantiene gli a capo dal testo */
+  color: #e0e0e0; 
+  white-space: pre-line; 
   background: rgba(0, 0, 0, 0.35);
   border-left: 3px solid #04ccfa;
   padding: 12px 16px;

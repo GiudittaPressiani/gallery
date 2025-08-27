@@ -1574,7 +1574,7 @@ body.magic{
   position: absolute;
   left: 0;
   top: 0;
-  color: #5cc9f5;  /* azzurro intenso */
+  color: #04ccfa;  /* azzurro intenso */
   font-size: 1.1rem;
   
   /* animazione bagliore */
@@ -1642,7 +1642,103 @@ body.magic{
   }
 }
 
+/*Song cards*/
 
+/* Titoli */
+.tracklist-title-magic {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  color: #04dc8c;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(0, 255, 136,0.6);
+}
 
+.song-card-magic h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: #f0d328;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(246, 232, 153,0.6);
+}
 
+/* Card */
+.songs-container-magic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
+.song-card-magic {
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;  
+
+  background: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  color: #e0f7ff;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 15px rgba(0,255,136,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.song-card-magic:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(0,255,136,0.5);
+}
+
+.song-card-magic iframe {
+  max-width: 100%;
+  display: block;   
+  margin: 10px 0;  
+  border-radius: 12px;
+}
+
+/* Modal */
+.modal-magic {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-content-magic {
+  background: #0a0a0a;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  padding: 25px;
+  color: #e0f7ff;
+  position: relative;
+}
+
+.close-magic {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #00ff88;
+
+  cursor: pointer;
+}
+
+.modal-magic h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #04ccfa;
+  text-shadow: 0 0 12px rgba(0, 242, 255, 0.6);
+}

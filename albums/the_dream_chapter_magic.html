@@ -68,14 +68,112 @@
         </ul>
         </nav>
 
+        <!--=====TRACKLIST======-->
+        <section id="tracklist-magic">
+        <h2 class="tracklist-title-magic">TRACKLIST</h2>
+
+        <div class="songs-container-magic">
+            <div class="song-card-magic" onclick="openModal('new_rules')">
+                <h3>New Rules</h3>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/72rUKYfdSaMVhgUhajRvrX?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="song-card-magic" onclick="openModal('9_and_three_quarters')">
+                <h3>9 and Three Quarters (Run Away)</h3>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1rqb2FCXVn2HNL1afJEnTr?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="song-card-magic" onclick="openModal('rollercoaster')">
+                <h3>Roller Coaster</h3>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/569Xgt70tGY3GyqHfDDc7y?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="song-card-magic" onclick="openModal('poppin_star')">
+                <h3>Poppin' Star</h3>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0Uzy6FHTYob2CbWisMz4Ap?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="song-card-magic" onclick="openModal('cwjltma')">
+                <h3>Can't We Just Leave The Monster Alive</h3>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4O7sUONPtqPBUKXuAMsoak?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="song-card-magic" onclick="openModal('magic_island')">
+                <h3>Magic Island</h3>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5DcLYkS1rnSgRMfhXNvh0d?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="song-card-magic" onclick="openModal('20_cm')">
+                <h3>20 cm</h3>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2U28aK9o2gI7sBL4XRzFfL?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="song-card-magic" onclick="openModal('angel_or_devil')">
+                <h3>Angel or Devil</h3>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3sVCSgIArXIhiWHvbUmauZ?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        </section>
+
+        <!--===== SONGS MODAL ======-->
+
+        <!--NEW RULES-->
+        <div id="modal-new_rules" class="modal-magic">
+            <div class="modal-content-magic">
+                <span class="close-magic" onclick="closeModal('new_rules')">&times;</span>
+                <h2>NEW RULES</h2>
+            </div>
+        </div>
+
+
+
         
 
 
     </main>
     
+    <!--===== MODAL FOR SONG INFO JAVASCRIPT ===== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // close all modals at the page loading
+            const allModals = document.querySelectorAll('.modal');
+            allModals.forEach(modal => {
+                modal.style.display = 'none';
+            });
 
-  <!-- ======= SCRIPT FOR STARS ============ -->
-  <script src="elements/the_dream_chapter_magic/stars.js"></script>
+            // function that opens the modal
+            window.openModal = function(name) {
+                const modal = document.getElementById('modal-' + name);
+                if(modal) {
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // block page scroll
+                }
+            }
+
+            // function that closes the modal
+            window.closeModal = function(name) {
+                const modal = document.getElementById('modal-' + name);
+                if(modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; // the scroll goes up after closing the modal
+                }
+            }
+
+            // close the modal clicking out of the window
+            window.addEventListener('click', function(event) {
+                allModals.forEach(modal => {
+                    if(event.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = ''; //the scroll goes up after closing the modal
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <!-- ======= SCRIPT FOR STARS ============ -->
+    <script src="elements/the_dream_chapter_magic/stars.js"></script>
 
 </body>
 </html>

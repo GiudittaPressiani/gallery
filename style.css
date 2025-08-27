@@ -1523,5 +1523,31 @@ body.magic{
   box-shadow: 0 0 10px rgba(0, 136, 204, 0.4);
 }
 
+/*Resposive media query*/
+@media (max-width: 768px) {
+  .album-card-magic {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .album-card-magic img {
+    width: 70%;
+    max-width: 300px;
+  }
+
+  .album-info-magic {
+    text-align: center;
+  }
+
+  .album-info-magic h2 {
+    font-size: 1.5rem;
+  }
+
+  .album-info-magic p {
+    font-size: 0.95rem;
+  }
+}
+
+
 
 

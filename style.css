@@ -1834,24 +1834,61 @@ body.magic{
   padding-left: 8px;
 }
 
+.concept-photos-magic {
+  margin: 60px auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+  color: #e0f7ff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.concept-grid-magic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  grid-auto-rows: 420px; 
+}
+
+/* Two rows */
+.concept-card-magic.tall {
+  grid-row: span 2;
+}
+
+/* One row */
+.concept-card-magic.wide {
+  grid-row: span 1;
+}
+
+@media (max-width: 600px) {
+  .concept-grid-magic {
+    grid-template-columns: 1fr;   /* all the column */
+    grid-auto-rows: auto;         
+  }
+
+  .concept-card-magic.tall,
+  .concept-card-magic.wide {
+    grid-row: auto;  /* no span */
+  }
+}
+
 .concept-card-magic {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   background: rgba(0,0,0,0.6);
   border-radius: 12px;
-  padding: 15px;
+  padding: 20px 5px;
   text-align: center;
   box-shadow: 0 0 15px rgba(135, 207, 241, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-  overflow: hidden; /* importante per il glow sull'immagine */
+  overflow: hidden; 
 }
 
 .concept-card-magic img {
-  max-width: 100%;
+  max-width: 90%;
   display: block;
   margin: 10px 0;
   border-radius: 12px;

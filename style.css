@@ -1880,7 +1880,7 @@ body.magic{
 
   background: rgba(0,0,0,0.6);
   border-radius: 12px;
-  padding: 20px 5px;
+  padding: 20px 10px;
   text-align: center;
   box-shadow: 0 0 15px rgba(135, 207, 241, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;

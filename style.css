@@ -1863,7 +1863,9 @@ body.magic{
 @media (max-width: 600px) {
   .concept-grid-magic {
     grid-template-columns: 1fr;   /* all the column */
-    grid-auto-rows: auto;         
+    grid-auto-rows: auto;   
+    aspect-ratio: auto;  
+    object-fit: contain;      
   }
 
   .concept-card-magic.tall,

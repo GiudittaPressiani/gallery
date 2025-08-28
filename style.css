@@ -1825,8 +1825,8 @@ body.magic{
 .concept-title{
   font-family: 'Orbitron', sans-serif;
   font-size: 1.4rem;
-  margin-top: 20px;
-  margin-bottom: 12px;
+  margin-top: 50px;
+  margin-bottom: 40px;
   color: #04ccfa; 
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1910,4 +1910,65 @@ body.magic{
   font-size: 1.1rem;
   color: #e0f7ff;
 }
+
+/*Music Videos*/
+.mv-section-magic {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.mv-grid-magic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.mv-card-magic {
+  background: #04dc8c;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card-magic:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+}
+
+.mv-card-magic img {
+  width: 100%;
+  display: block;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+   aspect-ratio: 16 / 9;
+}
+
+.mv-info-magic {
+  padding: 12px;
+  text-align: center;
+}
+
+.mv-info-magic h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.mv-card-magic a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.mv-card-magic a:hover h3 {
+  color: #fadb06; 
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+
+
 

@@ -2342,3 +2342,56 @@ title-h3-eternity {
   border-left: 3px solid var(--accent);
   padding-left: 0.6rem;
 }
+
+/* =========================================
+   ALBUM INFO SECTION
+========================================= */
+
+.page-index-eternity {
+  margin: 3rem auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.page-index-eternity ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.page-index-eternity li {
+  background: rgba(60, 30, 80, 0.35); /* viola scuro trasparente */
+  border: 1px solid rgba(155, 92, 246, 0.3); /* delicato glow viola */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4), inset 0 1px 6px rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.page-index-eternity li:hover {
+  background: rgba(90, 50, 130, 0.45); /* più chiaro in hover */
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(155,92,246,0.5), inset 0 0 8px rgba(255,255,255,0.08);
+  transform: translateY(-3px);
+}
+
+.page-index-eternity a {
+  display: block;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #eee;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.page-index-eternity a:hover {
+  color: var(--accent);
+}

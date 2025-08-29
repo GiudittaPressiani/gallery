@@ -2142,7 +2142,7 @@ body.magic{
 ========================================= */
 
 :root {
-  --bg: #6a0bc9;             
+  --bg: #4d0595;             
   --accent: #fff;         
   --accent2: #06dc8b;        
   --fragment-opacity: 0.12;  
@@ -2155,7 +2155,6 @@ body.eternity {
   color: #fff;
   font-family: Inter, sans-serif;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 /* Background */
@@ -2208,6 +2207,8 @@ body.eternity {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #ffffffcc;
+  overflow-y: auto;
+  min-height: 100vh;
 }
 
 /*Title*/
@@ -2217,4 +2218,127 @@ body.eternity {
   color: var(--accent);
   text-shadow: 0 0 8px var(--accent), 0 0 12px var(--accent2);
   margin-bottom: 1rem;
+}
+
+/* =========================================
+   ALBUM INFO SECTION
+========================================= */
+
+.album-info-eternity {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+  padding: 0 1rem;
+}
+
+.album-card-eternity {
+  display: flex;
+  flex-wrap: wrap; /* on the phone the picture is over */
+  background: rgba(0, 0, 0, 0.201); 
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(155,92,246,0.3); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-card-eternity:hover {
+  box-shadow: 0 0 10px rgba(254, 254, 250, 0.4);
+  transform: translateY(-5px);
+}
+
+.album-cover-eternity {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.album-desc-eternity {
+  padding: 1.5rem;
+  flex: 1;
+  color: #fff;
+}
+
+.album-desc-eternity h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.album-desc-eternity p {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .album-card-eternity {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;  
+  }
+
+  .album-cover-eternity {
+    width: 100%;
+    margin: 0 auto;   
+  }
+
+  .album-desc-eternity {
+    padding: 1rem;
+  }
+}
+
+/*album description list*/
+.album-details-eternity {
+  list-style: none; 
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 600px;
+  font-family: 'Nunito', sans-serif;
+  color: #f0f0f0;
+  text-align: left;
+}
+
+.album-details-eternity li {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--accent);
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(155, 92, 246, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-details-eternity li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 12px rgba(155, 92, 246, 0.4);
+}
+
+.album-details-eternity strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+
+/* Sections' title*/
+h2 {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 2.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  text-shadow: 0 0 6px rgba(155, 92, 246, 0.6),
+               0 0 12px rgba(155, 92, 246, 0.4);
+}
+
+h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8em;
+  color: #fff;
+  margin-bottom: 0.5rem;
+
+  border-left: 3px solid var(--accent);
+  padding-left: 0.6rem;
 }

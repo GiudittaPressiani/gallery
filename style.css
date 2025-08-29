@@ -2320,7 +2320,7 @@ body.eternity {
 
 
 /* Sections' title*/
-h2 {
+.title-h2-eternity {
   font-family: 'Exo 2', sans-serif;
   font-size: 2.2em;
   color: var(--accent);
@@ -2333,7 +2333,7 @@ h2 {
                0 0 12px rgba(155, 92, 246, 0.4);
 }
 
-h3 {
+title-h3-eternity {
   font-family: 'Nunito', sans-serif;
   font-size: 1.8em;
   color: #fff;

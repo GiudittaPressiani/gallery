@@ -2333,18 +2333,18 @@ body.eternity {
                0 0 12px rgba(155, 92, 246, 0.4);
 }
 
-title-h3-eternity {
+.title-h3-eternity {
   font-family: 'Nunito', sans-serif;
   font-size: 1.8em;
-  color: #fff;
+  color: #06dc8b;
   margin-bottom: 0.5rem;
 
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--accent2);
   padding-left: 0.6rem;
 }
 
 /* =========================================
-   ALBUM INFO SECTION
+      PAGE INDEX
 ========================================= */
 
 .page-index-eternity {
@@ -2394,4 +2394,65 @@ title-h3-eternity {
 
 .page-index-eternity a:hover {
   color: var(--accent);
+}
+
+/* =========================================
+        TRACKLIST
+========================================= */
+
+.tracklist-eternity {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.songs-container-eternity {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
+}
+
+.song-card-eternity {
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center; 
+
+  background: rgba(60, 30, 80, 0.35); 
+  border: 1px solid rgba(155,92,246,0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  max-width: 300px;
+  height: auto;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4), inset 0 1px 6px rgba(255,255,255,0.05);
+}
+
+.song-card-eternity:hover {
+  background: rgba(90, 50, 130, 0.45);
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(155,92,246,0.5), inset 0 0 8px rgba(255,255,255,0.08);
+  transform: translateY(-3px);
+}
+
+.song-card-eternity h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5em;
+  color: #eee;
+  margin-bottom: 0.8rem;
+}
+
+.song-card-eternity iframe {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .song-card-eternity {
+    width: 90%; 
+  }
 }

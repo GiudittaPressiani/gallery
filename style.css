@@ -1443,7 +1443,9 @@ body.magic{
 /* Font import */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
 
-/* Main card */
+/* =========================================
+            ALBUM INFOS
+========================================= */
 .album-card-magic {
   display: flex;
   align-items: center;
@@ -1500,8 +1502,8 @@ body.magic{
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #e0f7ff; /* bianco-azzurrino delicato */
-  background-color: #04ccfa; /* azzurro intenso */
+  color: #e0f7ff; 
+  background-color: #04ccfa; 
   border: 2px solid transparent;
   border-radius: 8px;
   text-decoration: none;
@@ -1514,7 +1516,7 @@ body.magic{
 }
 
 .album-button-magic:hover {
-  background-color: #73ecf2; /* azzurro più chiaro */
+  background-color: #73ecf2; 
   box-shadow: 0 0 16px rgba(144, 233, 245, 0.7);
   transform: translateY(-2px);
 }
@@ -1574,10 +1576,10 @@ body.magic{
   position: absolute;
   left: 0;
   top: 0;
-  color: #04ccfa;  /* azzurro intenso */
+  color: #04ccfa;  
   font-size: 1.1rem;
   
-  /* animazione bagliore */
+  /* twinkling */
   animation: twinkle 2.5s infinite ease-in-out;
   text-shadow: 0 0 6px rgba(92, 201, 245, 0.8);
 }
@@ -1595,7 +1597,9 @@ body.magic{
   }
 }
 
-/*Page index*/
+/* =========================================
+                PAGE INDEX
+========================================= */
 .page-index-magic {
   max-width: 900px;
   margin: 40px auto;
@@ -1642,7 +1646,9 @@ body.magic{
   }
 }
 
-/*Song cards*/
+/* =========================================
+   SONGS CARD
+========================================= */
 
 /* Titoli */
 .tracklist-title-magic {
@@ -1698,7 +1704,9 @@ body.magic{
   border-radius: 12px;
 }
 
-/* Modal */
+/* =========================================
+   MODAL & SONGS INFOS
+========================================= */
 .modal-magic {
   display: none;
   position: fixed;
@@ -1821,7 +1829,9 @@ body.magic{
   box-shadow: 0 0 8px rgba(0,255,136,0.2) inset; 
 }
 
-/*concept photos*/
+/* =========================================
+   CONCEPT PHOTOS
+========================================= */
 .concept-title{
   font-family: 'Orbitron', sans-serif;
   font-size: 1.4rem;
@@ -1911,7 +1921,9 @@ body.magic{
   color: #e0f7ff;
 }
 
-/*Music Videos*/
+/* =========================================
+              MUSIC VIDEOS
+========================================= */
 .mv-section-magic {
   margin: 60px auto;
   max-width: 1200px;
@@ -1970,7 +1982,9 @@ body.magic{
   transition: 0.3s ease;
 }
 
-/*Trivia*/
+/* =========================================
+   TRIVIA & AWARDS
+========================================= */
 
 .trivia-section-magic {
   margin: 50px auto;
@@ -2099,7 +2113,9 @@ body.magic{
   margin-top: 10px;
 }
 
-/* Link video */
+/* =========================================
+   OFFICIAL LINKS
+========================================= */
 .mv-card-magic {
   text-decoration: none;
   color: inherit;
@@ -2113,9 +2129,88 @@ body.magic{
 .mv-card-magic video {
   width: 100%;
   background: #000;
-  aspect-ratio: 16 / 9; /* mantiene le proporzioni come le immagini */
+  aspect-ratio: 16 / 9; 
   border-bottom: 2px solid rgba(255,255,255,0.2);
   display: block;
   border-radius: 8px 8px 0 0; /* arrotonda solo in alto */
 }
 
+/* ===========THE DREAM CHAPTER: ETERNITY PAGE CSS =========== */
+
+/* =========================================
+   BASE LAYOUT & BACKGROUND
+========================================= */
+
+:root {
+  --bg: #6a0bc9;             
+  --accent: #fff;         
+  --accent2: #06dc8b;        
+  --fragment-opacity: 0.12;  
+}
+
+/* Page */
+body.eternity {
+  margin: 0;
+  background: var(--bg);
+  color: #fff;
+  font-family: Inter, sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Background */
+.background-eternity {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Stars */
+.stars-eternity circle {
+  fill: white;
+  opacity: 0.8;
+  animation: twinkle-eternity 6s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle-eternity {
+  from { opacity: 0.2; }
+  to   { opacity: 1; }
+}
+
+/* Mirror Fragments */
+.fragments-eternity polygon {
+  fill: url(#grad-eternity);
+  opacity: var(--fragment-opacity);
+  stroke: rgba(255,255,255,0.05);
+  stroke-width: 1;
+}
+
+.fragments-eternity { 
+  filter: drop-shadow(0 0 8px var(--accent));
+  animation: floaty-eternity 20s ease-in-out infinite alternate;
+}
+
+@keyframes floaty-eternity {
+  from { transform: translateY(-6px) rotate(-0.3deg); }
+  to   { transform: translateY(6px) rotate(0.3deg); }
+}
+
+/* page content */
+.content-eternity {
+  position: relative;
+  z-index: 5;
+  padding: 4rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/*Title*/
+.title-eternity {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 3rem;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent), 0 0 12px var(--accent2);
+  margin-bottom: 1rem;
+}

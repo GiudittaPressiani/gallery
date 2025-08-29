@@ -2204,6 +2204,10 @@ body.eternity {
   max-width: 900px;
   margin: auto;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffffcc;
 }
 
 /*Title*/

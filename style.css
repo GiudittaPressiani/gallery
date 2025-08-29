@@ -1970,5 +1970,143 @@ body.magic{
   transition: 0.3s ease;
 }
 
+/*Trivia*/
 
+.trivia-section-magic {
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 20px;
+}
 
+/* main grid*/
+.trivia-grid-magic {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/*main card*/
+.trivia-card-magic {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #04ccfa;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 221, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.trivia-card-magic:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+}
+
+.trivia-card-magic h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #04ccfa;
+  text-shadow: 0 0 8px rgba(0, 221, 255, 0.3);
+}
+
+/* card for tmi*/
+.trivia-card-magic.personal {
+  border-color: #ffeb3b;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.3);
+}
+
+.trivia-card-magic.personal h3 {
+  color: #ffeb3b;
+  text-shadow: 0 0 8px rgba(255, 235, 59, 0.6);
+}
+
+/* List */
+.trivia-card-magic ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.trivia-card-magic ul li {
+  margin: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1rem;
+  color: #f5f5f5;
+  line-height: 1.4;
+}
+
+/* emoji, no dots */
+.trivia-card-magic ul li::before {
+  content: "🪄";   
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: #ffd700;  
+}
+
+/* Link */
+.trivia-card-magic a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #04dc8c; 
+  text-decoration: none;
+  border-bottom: 2px solid rgba(4, 220, 140, 0.6);
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.trivia-card-magic a:hover {
+  color: #00ff88;
+  border-color: rgba(4, 220, 140, 1);
+  background: rgba(6, 250, 165, 0.2);
+  border-radius: 4px;
+}
+
+/* Mini-grid inside (subcards) */
+
+.trivia-subgrid-magic {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin-top: 15px;
+}
+
+/* Subcard */
+.trivia-subcard-magic {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(4, 204, 250, 0.4);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trivia-subcard-magic:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(4, 204, 250, 0.4);
+}
+
+/* Img inside subcards */
+.trivia-subcard-magic img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Link video */
+.mv-card-magic {
+  text-decoration: none;
+  color: inherit;
+}
+.mv-card-magic p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #e0f7fa;
+}

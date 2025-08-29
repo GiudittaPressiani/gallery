@@ -2110,3 +2110,12 @@ body.magic{
   text-align: center;
   color: #e0f7fa;
 }
+.mv-card-magic video {
+  width: 100%;
+  background: #000;
+  aspect-ratio: 16 / 9; /* mantiene le proporzioni come le immagini */
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  display: block;
+  border-radius: 8px 8px 0 0; /* arrotonda solo in alto */
+}
+

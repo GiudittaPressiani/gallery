@@ -2456,3 +2456,136 @@ body.eternity {
     width: 90%; 
   }
 }
+
+/* =========================================
+        SONGS MODAL
+========================================= */
+
+/* Modal default*/
+.modal-eternity {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* block the background scroll*/
+  background: rgba(10, 0, 20, 0.75); 
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex; /* center the window */
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; /* margin around modal content */
+  box-sizing: border-box; /* ensure padding doesn't cause overflow */
+}
+
+/* Modal contents */
+.modal-content-eternity {
+  background: rgba(50, 20, 80, 0.4); 
+  border: 1px solid rgba(160, 100, 250, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;            /* take full available width */
+  max-width: 800px;       /* but don't grow too large on desktop */
+  color: #e8dfff; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6), inset 0 1px 8px rgba(255,255,255,0.08);
+  animation: fadeInScale 0.3s ease;
+
+  /* allow content to grow and scroll inside modal */
+  max-height: 90vh;       
+  overflow-y: auto;       
+
+  box-sizing: border-box; /* fix: padding included in width, prevents cut-off */
+}
+
+/* Responsive fix for small screens */
+@media (max-width: 600px) {
+  .modal-content-eternity {
+    padding: 1rem;        /* reduce padding on small screens */
+    font-size: 0.9rem;    /* slightly smaller text for better fit */
+    border-radius: 12px;  /* softer edges on small screens */
+  }
+}
+
+/*Modal titles*/
+.modal-content-eternity h2 {
+  font-size: 2.2em;
+  color: #d9a6ff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.modal-content-eternity h3 {
+  font-size: 1.8em;
+  color: #bb86fc;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid rgba(187,134,252,0.4);
+  padding-bottom: 0.3rem;
+}
+
+/*Songs description modal*/
+.modal-songs-description-eternity {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: #f0e9ff;
+  background-color: rgba(0, 255, 136, 0.1);
+  border-radius: 12px;
+  padding: 5px 5px;
+  text-align: justify;
+}
+
+.lyrics-eternity{
+  font-family: 'Nunito', monospace;
+  font-size: 1em;
+  white-space: pre-line; 
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  color: #e0d6ff;
+}
+
+/* Modal links*/
+.modal-link-eternity {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85em;
+  color: #a66bff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.modal-link-eternity:hover {
+  color: #e0b3ff;
+  text-decoration: underline;
+}
+
+/* Close button */
+.close-eternity {
+  color: #e0d6ff;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-eternity:hover {
+  color: #ff9dfc;
+  transform: scale(1.2);
+}
+
+/* Opening animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

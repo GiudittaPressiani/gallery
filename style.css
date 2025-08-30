@@ -2872,4 +2872,54 @@ body.eternity {
     width: 100%;                
   }
 }
+/* =========================================
+        OFFICIAL LINKS
+========================================= */
+#official-links-eternity {
+  padding: 3rem 1rem;
+  text-align: center;
+}
 
+/* Grid for buttons */
+.links-grid-eternity {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Album buttons */
+.album-button-eternity {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  color: #e8dfff;
+  text-decoration: none;
+  border-radius: 12px;
+  background: rgba(60, 30, 80, 0.4); /* glassy effect */
+  border: 1px solid rgba(160, 100, 250, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4), inset 0 1px 6px rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+.album-button-eternity:hover {
+  background: rgba(60, 30, 80, 0.6);
+  box-shadow: 0 6px 16px rgba(155,92,246,0.5), inset 0 1px 6px rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .links-grid-eternity {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .album-button-eternity {
+    width: 100%;
+    text-align: center;
+  }
+}

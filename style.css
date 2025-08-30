@@ -2654,6 +2654,12 @@ body.eternity {
     font-size: 0.95rem;
   }
 }
+
+@media (max-width: 768px) {
+  .mv-grid-eternity {
+  max-width: 90%;
+  }
+}
 /* =========================================
         CONCEPT PHOTOS
 ========================================= */
@@ -2726,6 +2732,7 @@ body.eternity {
   .concept-grid-eternity {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: 300px;
+    max-width: 90%;
   }
 
   .concept-card-eternity.wide {
@@ -2851,10 +2858,12 @@ body.eternity {
   .trivia-grid-eternity,
   .trivia-subgrid-eternity {
     grid-template-columns: 1fr; 
-    gap: 15px;                  
+    gap: 15px;      
+    max-width: 90%;             
   }
 
   .trivia-card-eternity {
     width: 100%;                
   }
 }
+

@@ -2590,3 +2590,67 @@ body.eternity {
     transform: scale(1);
   }
 }
+
+/* =========================================
+        MUSIC VIDEO
+========================================= */
+.mv-eternity {
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Grid dei video */
+.mv-grid-eternity {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Card video */
+.mv-card-eternity {
+  display: block;
+  background: rgba(40, 0, 60, 0.45); /* glassy purple */
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mv-card-eternity:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6);
+}
+
+/* Thumbnail */
+.mv-card-eternity img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Testo */
+.mv-card-eternity p {
+  padding: 14px 16px;
+  color: #f0eaff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.mv-card-eternity strong {
+  color: #d3b9ff; /* titolo evidenziato */
+  font-weight: 600;
+}
+
+/* Mobile fix */
+@media (max-width: 480px) {
+  .mv-eternity h2 {
+    font-size: 1.8rem;
+  }
+
+  .mv-card-eternity p {
+    font-size: 0.95rem;
+  }
+}

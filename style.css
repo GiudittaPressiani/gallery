@@ -2736,3 +2736,150 @@ body.eternity {
     grid-row: span 1;
   }
 }
+/* =========================================
+        TRIVIA SECTION
+========================================= */
+.trivia-section-eternity {
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 1200px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.trivia-grid-eternity {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Main card */
+.trivia-card-eternity {
+  background: rgba(40, 20, 60, 0.85); 
+  border-radius: 18px;
+  padding: 20px;
+  color: #f0ebff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-width: 400px;
+}
+
+.trivia-card-eternity:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.trivia-card-eternity h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #c9b6ff;
+}
+
+/*List */
+.trivia-card-eternity ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+.trivia-card-eternity ul li {
+  margin: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1rem;
+  color: #f5f5f5;
+  line-height: 1.4;
+}
+
+
+.trivia-card-eternity ul li::before {
+  content: "🪞";   
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+}
+
+/* Link */
+.trivia-card-eternity a {
+  color: #d9c7ff;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.trivia-card-eternity a:hover {
+  color: #ffffff;
+}
+
+/* Subgrid */
+.trivia-subgrid-eternity {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.trivia-subcard-eternity {
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  transition: background 0.25s ease;
+}
+
+.trivia-subcard-eternity:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.trivia-subcard-eternity p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #f8f6ff;
+}
+
+/* Media (img, video, Spotify embed) */
+.mv-card-eternity {
+  display: block;
+  margin: 12px auto;
+  text-align: center;
+  max-width: 90%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  transition: transform 0.25s ease;
+}
+
+.mv-card-eternity:hover {
+  transform: scale(1.03);
+}
+
+.mv-card-eternity img,
+.mv-card-eternity video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.mv-card-eternity p {
+  font-size: 0.9rem;
+  margin-top: 6px;
+  color: #d7caff;
+}
+
+.video-disclaimer {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .trivia-subgrid-eternity {
+    grid-template-columns: 1fr;
+  }
+
+  .mv-card-eternity {
+    max-width: 100%;
+  }
+}

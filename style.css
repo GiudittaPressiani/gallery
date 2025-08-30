@@ -2838,35 +2838,8 @@ body.eternity {
 }
 
 /* Media (img, video, Spotify embed) */
-.mv-card-eternity {
-  display: block;
-  margin: 12px auto;
-  text-align: center;
-  max-width: 90%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-  transition: transform 0.25s ease;
-}
 
-.mv-card-eternity:hover {
-  transform: scale(1.03);
-}
-
-.mv-card-eternity img,
-.mv-card-eternity video {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-}
-
-.mv-card-eternity p {
-  font-size: 0.9rem;
-  margin-top: 6px;
-  color: #d7caff;
-}
-
-.video-disclaimer {
+.video-disclaimer-eternity {
   font-size: 0.75rem;
   color: #aaa;
   margin-top: 6px;

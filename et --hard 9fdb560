@@ -1,0 +1,153 @@
+[33m9303fdf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m photos resolution changed
+[33mb202d5b[m port concept added
+[33m9fdb560[m[33m ([m[1;31morigin/main[m[33m)[m mv eternity added
+[33macecd0d[m maze in the mirror, puma, eternally modal added
+[33m8fc52a3[m fairy of shampoo modal added
+[33ma08b148[m cysm modal added, modal-eternity fixed
+[33m1ac8d09[m drama modal added
+[33m5ff2bac[m traklist added
+[33m7f0da2e[m page index added
+[33m8c43e72[m h2 title fixed, date fixed
+[33m6abf700[m added album cover and descriptions
+[33m306000d[m title added, font added to the page
+[33mdda2050[m the_dream_chapter_eternity.html added
+[33m24d7bd0[m curiosities and official links added to magic
+[33m93bd497[m starry wins and moa secrets added to the_dream_chapter_magic.html, crown japanese version added to the_dream_chapter_star.html, css added
+[33mb2010c4[m official mv added
+[33md6a8ab3[m  aspect-ratio: auto; object-fit: contain; removed, padding increased
+[33m85ce41c[m  aspect-ratio: auto; object-fit: contain; added
+[33m8fed34e[m sanctuary concept added
+[33me8ac736[m arcadia concept added
+[33ma12b35c[m all lyrics added, concepts started
+[33mf67ee7d[m magic island and cwjltma modal added
+[33mecb5679[m poppin star lyrics and translation added
+[33m7d44671[m rollercoaster lyrics and transition added
+[33mbecc7f0[m run away lyrics and translation added
+[33m1f7df4c[m run away lyrics and translation added
+[33mf1ff527[m adding lyrics to modal
+[33mf928d03[m tracklist, spotify and modals added
+[33mc6b8327[m album info and page index added
+[33m1da2442[m fixed img ratio 2
+[33m3d696de[m fixed bighit link, fixed img ratio
+[33mdcdeb19[m fixed img album cover proportions on smartphones
+[33m7cc1baa[m media query for smartphones added
+[33m5b36b2c[m album info added, css rules added
+[33m0f2182b[m the_dream_chapter_magic.html added, body and title added, stars.js for background added
+[33m78b0958[m official links added
+[33mb1814e2[m concert video added
+[33mec3e7cf[m members fave added
+[33m8cb050a[m date format changed, moa secrets added
+[33me92328f[m modal link star added for description of the songs
+[33m897605a[m gif added, descriptions of the songs in the modal added
+[33mc7f2ee5[m list symbols changed
+[33m3a1cb6a[m title font changed
+[33m2264f4a[m title style changed
+[33m6132585[m nap of a star mv added, resolution changed, css cleaned
+[33m21014dd[m index added
+[33m30cb7b5[m album info added, music video section added with css rules
+[33me73973c[m cat & dog concept photos added
+[33m5108d62[m concept 2 photos added
+[33m9aa6f6b[m concept 1 photos added
+[33mfdc2573[m concept_photos folder added, trying scrapbook on the_dream_chapter_star.html
+[33mc63d173[m spotify link substituted with a brief description of the album from bighit at the top of the page
+[33m574d448[m album-header justify-content:center added
+[33md534687[m album-header align-items changed to center
+[33m080b04e[m album cover and spotify player added
+[33m25da2ee[m nap of a star lyrics and translation added
+[33mfa580d8[m cat & dog lyrics and translation added, color modified
+[33m661b384[m our summer lyrics and translation added
+[33ma86caba[m blue orangeade lyrics and translation added
+[33m2cf691c[m stars in the background added, crown modal with lyrics and translation added
+[33mba0b86b[m song-card added, songs added to the_dream_chapter_star.html
+[33m4a6e81d[m albums folder added, the_dream_chapter_star.html added, body of the page in css file added
+[33me65ba04[m discover album section added, discover album css added
+[33m3991431[m english comments fixed
+[33m7a8b4cf[m img alt fixed
+[33m5b5da6a[m changed height to auto in .flip-card-front img
+[33m3b60fd1[m changed height to 55vw in .flip-card-front img
+[33m0d45e7d[m timeline title modified
+[33m4b95a43[m changed height to 60vw in .flip-card-front img
+[33m12ade1e[m changed height to 70vw in .flip-card-front img
+[33me521a0c[m changed min-height in .flip-card-front, .flip-card-back and flip-card to 400px
+[33m713e19c[m changed min-height in .flip-card-front, .flip-card-back
+[33m8385208[m timeline changed: every album has its card
+[33me84b783[m huening name fixed
+[33m9ae2166[m huening modal added, taehyun modal updated
+[33m8cec7d7[m webkit overflow scrolling touch added in .flip-card-front and back
+[33m26ea4b2[m relative height added in flip-car-front img
+[33m7f122d2[m taehyun modal added
+[33m77801f8[m credits to beomgyu added
+[33m457db9b[m beomgyu modal updated, border radius added to title
+[33m42ac8ed[m beomgyu modal added
+[33m2dc803f[m moa in about section added
+[33me8732c4[m soobin and yeonjun modal updated
+[33mdf81e88[m soobin modal updated
+[33md8857a5[m soobin's info added
+[33mc15c8d4[m flip card front in media -webkit-overflow-scrolling: touch; added
+[33m4b0d747[m flip card on iphone try 7
+[33m81d12c6[m flip card on iphone try 6
+[33m09c5c9c[m flip card on iphone try 5
+[33m5a48745[m flip card on iphone try 4
+[33ma4b235f[m flip card on iphone try 3
+[33m889e3cf[m flip card on iphone try 3
+[33m2f14c7c[m flip card on iphone try 2
+[33md60f62e[m flip card on iphone try 1
+[33m5e099ec[m body_pic folder added
+[33m0131ac4[m member_photo folder added
+[33m346488a[m album_cover folder added, album covers added to timeline
+[33m5af4986[m about section updated
+[33m3a127bd[m readme updated
+[33m614db3b[m yeonjun's social added, modal links css modified
+[33m3e4d629[m double flip fixed
+[33m0424343[m now cards close when tapping somewhere on the screen
+[33mee065ce[m timeline width fixed
+[33m0c6148c[m fixing width on smartphone 4
+[33mbfc75dd[m fixing width on smartphone 3
+[33m4440854[m fixing width on smartphone 2
+[33m674cba1[m fixing width on smartphone
+[33m93c8c88[m flipped card on desktop fixed
+[33m73345dd[m try 11 fix the scrollbar and the cards' flipping
+[33m367b9ea[m try 10 fix the scrollbar and the cards' flipping
+[33m5b09cd0[m try 9 fix the scrollbar and the cards' flipping
+[33m9db2418[m try 8 fix the scrollbar and the cards' flipping
+[33me62d1c6[m try 7 fix the scrollbar and the cards' flipping
+[33m3609c3c[m try 6 fix the scrollbar and the cards' flipping
+[33me7756c8[m try 5 fix the scrollbar and the cards' flipping
+[33md46618f[m try 4 fix the scrollbar and the cards' flipping
+[33mdbac71e[m try 3 fix the scrollbar and the cards' flipping
+[33m3f82971[m try 2 fix the scrollbar and the cards' flipping
+[33m4a73cf9[m try 1 fix the scrollbar and the cards' flipping
+[33m4ea4e05[m added horizontal scrolling for small screens
+[33ma402fb5[m member photos changed
+[33mb21e92f[m close color changed
+[33m7a213f7[m cursor pointer added to immagine p
+[33mb5a5ae4[m yeonjun modal updated
+[33m00b7f2d[m modal added, yeonjun info added
+[33m92413e9[m social media added
+[33m328fe86[m foto-card img height fixed
+[33m39d5e12[m min height flip-card-back and front modified
+[33m14777d8[m min height flip-card modified
+[33m5fa7335[m js modified to close the card
+[33m342b1b4[m view on ipad fixed
+[33m0a16efc[m tried to fix view from smartphone
+[33me451ed7[m Playlistcss added
+[33m1120506[m Playlist added
+[33m5cf09a6[m Title modified
+[33m166b7b2[m Credits added
+[33m145ef7a[m Timeline fixed 2
+[33me931f62[m name changed
+[33ma579db0[m Timeline Fixed
+[33m76ec648[m dot added
+[33mab30d55[m Timeline modified
+[33m9632cda[m tracklist added
+[33m67f5a37[m gui improved
+[33m47fefca[m timeline added
+[33m0ba3e60[m bug img5 corrected
+[33mf3384be[m about modified, logo added
+[33mda3cccc[m sns buttons updated
+[33m7608a03[m sns and about section added
+[33mc7f6a87[m small changes
+[33m2180603[m .immagine modified: pictures are now in row
+[33m532422b[m immagine img: hover modified
+[33m977f5d4[m First commit
+[33mef87e87[m Initial commit

@@ -2848,11 +2848,13 @@ body.eternity {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .trivia-grid-eternity,
   .trivia-subgrid-eternity {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
+    gap: 15px;                  
   }
 
-  .mv-card-eternity {
-    max-width: 100%;
+  .trivia-card-eternity {
+    width: 100%;                
   }
 }

@@ -3011,7 +3011,7 @@ body.eternity {
 .bluehour h3 {
   font-family: 'Press Start 2P', cursive;
   font-size: 1.5rem;
-  color: #ffbfa5; /* salmon inside */
+  color: #95a8eb; 
   -webkit-text-stroke: 1px #ffffff; 
   margin: 20px 0 15px 0;
 }
@@ -3243,4 +3243,67 @@ body.eternity {
   height: auto;    
   pointer-events: none;    
   z-index: 2;              
+}
+
+/* =========================================
+            TRACKLIST
+========================================= */
+
+.songs-container-bluehour {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* sempre 3 colonne se lo spazio lo permette */
+  gap: 20px;
+}
+
+.song-card-bluehour {
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;  
+
+  /* Pixel game style */
+  background: #fad1dd;  
+  border: 3px solid #ffffff; 
+  outline: 2px solid #ffa38d; 
+  border-radius: 6px; 
+  
+  padding: 15px;
+  text-align: center;
+ 
+  box-shadow: none; 
+  transition: transform 0.1s ease, background 0.1s ease, outline-color 0.1s ease;
+  cursor: pointer;
+}
+
+/* Hover*/
+.song-card-bluehour:hover {
+  transform: translateY(-2px); 
+  background: #f3b5c8; 
+  outline-color: #ffb3b3; 
+}
+
+/* Active*/
+.song-card-bluehour:active {
+  transform: translateY(1px); 
+  background: #f57ba0; 
+  outline-color: #ffa38d;
+}
+
+/* Spotify iframe */
+.song-card-bluehour iframe {
+  max-width: 100%;
+  display: block;   
+  margin: 10px 0;  
+  border-radius: 6px; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .songs-container-bluehour {
+    grid-template-columns: 1fr;
+  }
+
+  .song-card-bluehour h3 {
+    font-size: 1rem;
+  }
 }

@@ -2989,7 +2989,7 @@ body.eternity {
 /* Responsive*/
 @media (max-width: 768px) {
   .bluehour h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -3034,8 +3034,8 @@ body.eternity {
   font-family: 'Press Start 2P', cursive; 
   font-size: 0.9rem;
   color: #ffffff;                    
-  background-color: #ffc4d6;          
-  border: 2px solid #ffbfa5;          
+  background-color: #fad1dd;          
+  border: 2px solid #f4cab9;          
   border-radius: 4px;                  
   text-decoration: none;               /* no underline */
   text-align: center;
@@ -3045,7 +3045,7 @@ body.eternity {
 
 /* Hover effect: “pressed” / glow */
 .bluehour a:hover {
-  background-color: #ffbfa5;          
+  background-color: #f4cab9;          
   color: #ffffff;
   box-shadow: inset 2px 2px 0 #ffffff, 0 0 4px #ffc4d6; /* light glow effect */
   transform: translateY(1px);         /* light click effect */
@@ -3184,3 +3184,63 @@ body.eternity {
   }
 }
 
+/* =========================================
+            PAGE INDEX
+========================================= */
+
+.page-index-bluehour {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 15px 25px;
+
+  /* nuvoletta style */
+  border-radius: 16px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.page-index-bluehour ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page-index-bluehour ul li a {
+  text-decoration: none;
+  font-family: 'Press Start 2P', cursive; /* pixel font */
+  font-weight: 500;
+  color: #95a8eb;                          /* pastel blue */
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.page-index-bluehour ul li a:hover {
+  color: #ffffff;
+  background-color: rgba(193, 217, 252, 0.3); /* subtle glow */
+  box-shadow: 0 0 12px rgba(193, 217, 252, 0.5);
+  transform: translateY(-2px);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .page-index-bluehour ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* =========================================
+            STICKERSSS
+========================================= */
+
+.sticker-bluehour {      
+  width: 60px;         
+  height: auto;    
+  pointer-events: none;    
+  z-index: 2;              
+}

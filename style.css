@@ -3444,3 +3444,83 @@ body.eternity {
   margin: 15px 0;
   box-shadow: inset 0 0 6px rgba(255, 204, 225, 0.3);
 }
+
+/* =========================================
+            MUSIC VIDEO
+========================================= */
+
+/*================ MUSIC VIDEO BLUEHOUR =================*/
+.mv-section-bluehour {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.mv-grid-bluehour {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  align-items: start; /* cards take height according to content */
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #b8eaff, #ffd6e8); /* azzurro → rosa chiaro gradient */
+}
+
+.mv-card-bluehour {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.08); /* semi-transparent for videogame style */
+  border: 2px solid #ffcce1; /* pastel pink border */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(180, 180, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.mv-card-bluehour:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(200, 200, 255, 0.5);
+  border-color: #ffb6c1; /* hover light salmon border */
+}
+
+/* Image always fills top of card */
+.mv-card-bluehour img {
+  width: 100%;
+  height: 250px; /* fixed height for uniformity */
+  object-fit: cover; /* fills container, crops if needed */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: block;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+/* Info section below image */
+.mv-info-bluehour {
+  padding: 12px;
+  min-height: 60px; /* ensures minimal height for short titles */
+  background: rgba(255, 240, 250, 0.08); /* subtle pastel overlay */
+  text-align: center;
+}
+
+.mv-info-bluehour h3 {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(180, 160, 255, 0.8); /* soft glow lilac */
+  font-size: 1.2rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.mv-card-bluehour a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.mv-card-bluehour a:hover h3 {
+  color: #ffb6c1; /* pastel pink hover */
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}

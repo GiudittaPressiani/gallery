@@ -3501,13 +3501,13 @@ body.eternity {
 .mv-info-bluehour {
   padding: 12px;
   min-height: 60px; /* ensures minimal height for short titles */
-  background: rgba(255, 240, 250, 0.08); /* subtle pastel overlay */
+  background: rgba(255, 240, 250, 0.08);
   text-align: center;
 }
 
 .mv-info-bluehour h3 {
   color: #ffffff;
-  text-shadow: 0 0 8px rgba(180, 160, 255, 0.8); /* soft glow lilac */
+  text-shadow: 0 0 8px rgba(180, 160, 255, 0.8); 
   font-size: 1.2rem;
   margin: 0;
   letter-spacing: 1px;
@@ -3551,6 +3551,20 @@ body.eternity {
 
 .concept-card-bluehour.wide {
   grid-row: span 1;
+}
+
+.concept-card-bluehour.square {
+  grid-row: span 1;          
+  aspect-ratio: 1 / 1;       
+}
+
+/* Square Photo */
+.concept-card-bluehour.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         
+  border-radius: 12px;
+  display: block;
 }
 
 /* Mobile responsiveness */

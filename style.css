@@ -3489,7 +3489,7 @@ body.eternity {
 /* Image always fills top of card */
 .mv-card-bluehour img {
   width: 100%;
-  height: 250px; /* fixed height for uniformity */
+  /*height: 250px; */
   object-fit: cover; /* fills container, crops if needed */
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -3525,7 +3525,7 @@ body.eternity {
 }
 
 /* =========================================
-            MUSIC VIDEO
+            CONCEPT PHOTO
 ========================================= */
 .concept-photos-bluehour {
   margin: 60px auto;
@@ -3554,7 +3554,7 @@ body.eternity {
 }
 
 .concept-card-bluehour.square {
-  grid-row: span 1;          
+  grid-row: span 2;          
   aspect-ratio: 1 / 1;       
 }
 
@@ -3664,4 +3664,105 @@ body.eternity {
   40% { transform: translate(-3px,2px) skewX(-10deg); }
   60% { transform: translate(2px,-3px) skewX(-10deg); }
   80% { transform: translate(-4px,1px) skewX(-10deg); }
+}
+
+/* =========================================
+           TRIVIA
+========================================= */
+.trivia-section-bluehour {
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+/* main grid */
+.trivia-grid-bluehour {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* main card */
+.trivia-card-bluehour {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid #f7b3d5; /* rosa chiaro */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(186, 227, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trivia-card-bluehour:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(147, 197, 255, 0.6);
+}
+
+/* Special personal version */
+.trivia-card-bluehour.personal {
+  border-color: #ffd6a5; /* salmone chiaro */
+  box-shadow: 0 0 15px rgba(255, 214, 165, 0.4);
+}
+
+.trivia-card-bluehour.personal h3 {
+  color: #ffb3ba;
+  text-shadow: 0 0 6px rgba(255, 179, 186, 0.6);
+}
+
+/* List */
+.trivia-card-bluehour ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.trivia-card-bluehour ul li {
+  margin: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* Emoji as bullet */
+.trivia-card-bluehour ul li::before {
+  content: "🌸";   
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: #ffb3ba;  
+}
+
+/* Subgrid */
+.trivia-subgrid-bluehour {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin-top: 15px;
+}
+
+/* Subcard */
+.trivia-subcard-bluehour {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(197, 157, 255, 0.4);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trivia-subcard-bluehour:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(255, 179, 186, 0.5);
+}
+
+/* Img inside subcards */
+.trivia-subcard-bluehour img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 12px rgba(132, 202, 255, 0.3);
 }

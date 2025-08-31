@@ -3320,24 +3320,30 @@ body.eternity {
   width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.85);
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;   /* da flex-start → center */
   overflow-y: auto;
-  padding: 40px 20px;
+  padding: 20px;         /* meno padding, più respiro */
+  box-sizing: border-box;
 }
 
 .modal-content-bluehour {
-  max-width: 600px;
+  width: 100%;           /* occupa tutto lo spazio disponibile */
+  max-width: 600px;      /* limite desktop */
   max-height: 90vh;
   overflow-y: auto;
   background: #1a152b;
-  border: 3px solid #ffcce1; /* rosa chiaro */
+  border: 3px solid #ffcce1;
   border-radius: 0;
   padding: 25px;
   color: #ffffff;
   position: relative;
-  box-shadow: 0 0 15px rgba(168, 230, 255, 0.6),
-              inset 0 0 8px rgba(214, 198, 255, 0.4);
+  box-shadow: 
+    0 0 15px rgba(168, 230, 255, 0.6),
+    inset 0 0 8px rgba(214, 198, 255, 0.4);
+  box-sizing: border-box; /* così il padding non fa sbordare */
+  margin: auto;          /* sicurezza extra */
 }
+
 
 /* Close button */
 .close-bluehour {

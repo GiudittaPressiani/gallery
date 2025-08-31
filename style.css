@@ -2923,3 +2923,41 @@ body.eternity {
     text-align: center;
   }
 }
+
+/* =========== MINISODE 1: BLUE HOUR PAGE CSS =========== */
+
+/* =========================================
+   BASE LAYOUT & BACKGROUND
+========================================= */
+
+.bluehour {
+  margin: 0;
+  height: 100vh;
+  background: #c1d9fc; 
+  overflow: hidden;
+}
+
+.bluehour .cloud-bluehour {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(8, 20px);
+  grid-auto-rows: 20px;
+  animation: float-bluehour linear infinite;
+}
+
+.bluehour .pixel-bluehour {
+  width: 20px;
+  height: 20px;
+  opacity: 0.85; 
+}
+
+/* Pixel Cloud Color */
+.bluehour .c1-bluehour { background: #f5a3a3; }   
+.bluehour .c2-bluehour { background: #ffc4d6; }   
+.bluehour .c3-bluehour { background: #ffbfa5; }   
+
+/* Animation for clouds */
+@keyframes float-bluehour {
+  from { transform: translateX(-200px); }
+  to   { transform: translateX(120vw); }
+}

@@ -2932,13 +2932,14 @@ body.eternity {
 
 .bluehour {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background: #c1d9fc; 
-  overflow: hidden;
 
   font-family: 'VT323', monospace;
-  color: #333;                             
+  color: #333; 
+  font-size: 1.7rem;                            
   line-height: 1.5;
+  overflow-y: auto;
 }
 
 .bluehour .cloud-bluehour {
@@ -2974,7 +2975,8 @@ body.eternity {
   font-size: 3rem;                         
   text-align: center;
   color: #ffffff;                           /* main text color */
-  margin: 40px 0;
+  margin: 10px 0;
+  padding-top: 50px;
 
   /* Glow effect  */
   text-shadow:
@@ -3048,3 +3050,137 @@ body.eternity {
   box-shadow: inset 2px 2px 0 #ffffff, 0 0 4px #ffc4d6; /* light glow effect */
   transform: translateY(1px);         /* light click effect */
 }
+
+/* =========================================
+            ALBUM INFOS
+========================================= */
+
+/*Album Cards*/
+.album-card-bluehour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 25px;
+
+  /* Nuvoletta style */
+  background: rgba(193, 217, 252, 0.7);  
+  border-radius: 25px;                    /* rounded balloon shape */
+  border: 2px solid rgba(131, 134, 170, 0.8); /* soft darker border */
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.1),      /* soft depth shadow */
+    2px 2px 0 rgba(131, 134, 170, 0.5), /* subtle pixel outline */
+   -2px -2px 0 rgba(131, 134, 170, 0.5);
+  backdrop-filter: blur(6px);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: slight pop */
+.album-card-bluehour:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.15),
+    2px 2px 0 rgba(131, 134, 170, 0.6),
+   -2px -2px 0 rgba(131, 134, 170, 0.6);
+}
+
+/* Album image */
+.album-card-bluehour img {
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.35); 
+  aspect-ratio: 1/1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .album-card-bluehour {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+/* Text*/
+.album-info-bluehour {
+  margin-left: 30px;
+  font-family: 'VT323', monospace;
+  line-height: 1.4;
+}
+
+.album-info-bluehour p {
+  font-size: 0.75em;
+  font-weight: 300;
+}
+
+
+/* Responsive*/
+@media (max-width: 768px) {
+  .album-card-bluehour {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .album-card-bluehour img {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .album-info-bluehour {
+    text-align: center;
+  }
+
+  .album-info-bluehour h2 {
+    font-size: 1.5rem;
+  }
+
+  .album-info-bluehour p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Album 2ns infos */
+.album-info-bluehour ul {
+  list-style: none;  
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+.album-info-bluehour li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+}
+
+.album-info-bluehour li::before {
+  content: "☁"; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.3rem;
+
+  /* subtle twinkle effect */
+  animation: twinkle-bluehour 2.5s infinite ease-in-out;
+  text-shadow: 0 0 5px rgba(160, 232, 255, 0.8);
+}
+
+@keyframes twinkle-bluehour {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(160, 232, 255, 0.8);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(160, 232, 255, 1);
+  }
+}
+

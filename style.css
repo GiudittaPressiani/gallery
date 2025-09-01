@@ -3669,43 +3669,41 @@ body.eternity {
 /* =========================================
            TRIVIA
 ========================================= */
-.trivia-section-bluehour {
+.trivia-bluehour {
   margin: 50px auto;
-  max-width: 1000px;
+  max-width: 1000px;   /* limite massimo su desktop */
+  width: 80%;          /* respiro ai lati */
   padding: 20px;
 }
 
 /* main grid */
 .trivia-grid-bluehour {
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250, 1fr)); 
   gap: 25px;
 }
+
+/* cards without fixed max-width */
+.trivia-grid-bluehour > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 
 /* main card */
 .trivia-card-bluehour {
   background: rgba(255, 255, 255, 0.08);
-  border: 2px solid #f7b3d5; /* rosa chiaro */
+  border: 2px solid #f7b3d5;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 0 15px rgba(186, 227, 255, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .trivia-card-bluehour:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(147, 197, 255, 0.6);
-}
-
-/* Special personal version */
-.trivia-card-bluehour.personal {
-  border-color: #ffd6a5; /* salmone chiaro */
-  box-shadow: 0 0 15px rgba(255, 214, 165, 0.4);
-}
-
-.trivia-card-bluehour.personal h3 {
-  color: #ffb3ba;
-  text-shadow: 0 0 6px rgba(255, 179, 186, 0.6);
 }
 
 /* List */

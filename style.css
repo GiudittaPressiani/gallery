@@ -3674,6 +3674,7 @@ body.eternity {
   max-width: 1000px;   /* limite massimo su desktop */
   width: 80%;          /* respiro ai lati */
   padding: 20px;
+  
 }
 
 /* main grid */
@@ -3686,9 +3687,9 @@ body.eternity {
 /* cards without fixed max-width */
 .trivia-grid-bluehour > * {
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
-
 
 /* main card */
 .trivia-card-bluehour {

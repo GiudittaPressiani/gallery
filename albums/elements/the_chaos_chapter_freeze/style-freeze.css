@@ -1,0 +1,102 @@
+/* ==========================
+   BACKGROUND AND CANVAS
+========================== */
+body.freeze {
+  background: #1A3C6D;    
+  background-image: none; 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden; /* blocca scroll orizzontale */
+  overflow-y: auto;   /* scroll verticale normale */
+  box-sizing: border-box;
+}
+
+/* Canvas behind */
+canvas.crystals-freeze,
+canvas.cracks-freeze {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Content over canvas */
+body.freeze > *:not(canvas) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================
+   TITLES H1/H2/H3
+========================== */
+
+/* H1 - Titolo principale */
+.freeze h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 
+     0 0 8px rgba(224,247,255,0.7),
+     0 0 15px rgba(160,216,255,0.5);
+  -webkit-text-stroke: 1px rgba(160,216,255,0.6);
+
+  /* centratura e padding */
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  margin: 2rem 0; /* margine verticale */
+}
+
+/* H2 - Sottotitolo principale */
+.freeze h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #A0D8FF;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 6px rgba(224,247,255,0.5);
+  -webkit-text-stroke: 0.8px rgba(160,216,255,0.4);
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+/* H3 - Sottotitolo secondario */
+.freeze h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: #E0F7FF;
+  letter-spacing: 1px;
+  text-shadow: 0 0 4px rgba(224,247,255,0.4);
+  -webkit-text-stroke: 0.5px rgba(160,216,255,0.3);
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================
+   MEDIA QUERIES PER RESPONSIVITÀ
+========================== */
+@media (max-width: 768px) {
+  .freeze h1 { font-size: 3rem; }
+  .freeze h2 { font-size: 2rem; }
+  .freeze h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .freeze h1 { font-size: 2.5rem; }
+  .freeze h2 { font-size: 1.7rem; }
+  .freeze h3 { font-size: 1.2rem; }
+}

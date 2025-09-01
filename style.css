@@ -3767,21 +3767,3 @@ body.eternity {
 }
 
 
-
-body.freeze {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%;
-  background-color: #1A3C6D; /* Base ghiaccio */
-  position: relative;
-}
-
-canvas.crystals-freeze,
-canvas.cracks-freeze {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  pointer-events: none;
-}

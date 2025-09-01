@@ -8,9 +8,10 @@ body.freeze {
   padding: 0;
   height: 100%;
   position: relative;
-  overflow-x: hidden; /* blocca scroll orizzontale */
-  overflow-y: auto;   /* scroll verticale normale */
+  overflow-x: hidden; 
+  overflow-y: auto;   
   box-sizing: border-box;
+  font-family: 'Saira', sans-serif;
 }
 
 /* Canvas behind */
@@ -35,7 +36,7 @@ body.freeze > *:not(canvas) {
    TITLES H1/H2/H3
 ========================== */
 
-/* H1 - Titolo principale */
+/* H1 */
 .freeze h1 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 4rem;
@@ -47,31 +48,36 @@ body.freeze > *:not(canvas) {
      0 0 15px rgba(160,216,255,0.5);
   -webkit-text-stroke: 1px rgba(160,216,255,0.6);
 
-  /* centratura e padding */
+  /* title in the center and padding */
   text-align: center;
   width: 100%;
   box-sizing: border-box;
   padding: 0 1rem;
-  margin: 2rem 0; /* margine verticale */
+  margin: 2rem 0; /* vertical margin */
 }
 
-/* H2 - Sottotitolo principale */
+/* H2  */
 .freeze h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2.5rem;
-  color: #A0D8FF;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-shadow: 0 0 6px rgba(224,247,255,0.5);
-  -webkit-text-stroke: 0.8px rgba(160,216,255,0.4);
   text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 1rem;
-  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #A0D8FF, #1A3C6D, #A0D8FF);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(160, 216, 255, 0.5),
+               0 0 15px rgba(180, 140, 255, 0.4);
+  animation: shimmer 6s linear infinite;
 }
 
-/* H3 - Sottotitolo secondario */
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* H3  */
 .freeze h3 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.8rem;
@@ -86,9 +92,7 @@ body.freeze > *:not(canvas) {
   margin-bottom: 0.5rem;
 }
 
-/* ==========================
-   MEDIA QUERIES PER RESPONSIVITÀ
-========================== */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .freeze h1 { font-size: 3rem; }
   .freeze h2 { font-size: 2rem; }
@@ -99,4 +103,138 @@ body.freeze > *:not(canvas) {
   .freeze h1 { font-size: 2.5rem; }
   .freeze h2 { font-size: 1.7rem; }
   .freeze h3 { font-size: 1.2rem; }
+}
+
+/* ================= ALBUM CARD ================= */
+.album-card-freeze {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(173, 216, 230, 0.35); /* icy blue glow */
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.album-card-freeze:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(200, 240, 255, 0.7);
+}
+
+.album-card-freeze img {
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(173, 216, 230, 0.45);
+  aspect-ratio: 1/1;
+}
+
+/* ================= TEXT ================= */
+.album-info-freeze {
+  margin-left: 30px;
+  color: #eaf7ff;
+  font-family: 'Saira', sans-serif;
+  line-height: 1.6;
+}
+
+.album-info-freeze p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* ================= LINKS ================= */
+.album-button-freeze {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 0.65em 1.4em;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e0f7ff; 
+  background: linear-gradient(135deg, #7ddfff, #b0f0ff);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(150, 220, 255, 0.6);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.album-button-freeze:hover {
+  background: linear-gradient(135deg, #b0f0ff, #e0faff);
+  box-shadow: 0 0 16px rgba(200, 240, 255, 0.8);
+  transform: translateY(-2px);
+  color: #1A3C6D;
+}
+
+.album-button-freeze:active {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(160, 220, 240, 0.5);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .album-card-freeze {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .album-card-freeze img {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .album-info-freeze {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .album-info-freeze h2 {
+    font-size: 1.5rem;
+  }
+
+  .album-info-freeze p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= ALBUM SECOND INFO ================= */
+.album-info-freeze ul {
+  list-style: none;  
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #f5fcff;
+}
+
+.album-info-freeze li {
+  list-style: none;
+  margin: 0.8rem 0;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(200, 230, 255, 0.4);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 8px rgba(160, 216, 255, 0.4);
+  color: #E0F7FF;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.album-info-freeze li:hover {
+  border-color: rgba(179, 0, 134, 0.7);
+  box-shadow: 0 0 15px rgba(180, 140, 255, 0.6),
+              0 0 25px rgba(0, 180, 255, 0.4);
+  transform: scale(1.02);
 }

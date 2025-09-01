@@ -53,6 +53,52 @@
   </ul>
 </nav>
 
+<!--================ TRACKLIST ================== -->
+<section id="tracklist">
+<h2>TRACKLIST</h2>
+
+<div class="songs-container-freeze">
+    <div class="song-card-freeze" onclick="openModal('anti_romantic')">
+        <h3>ANTI-ROMANTIC</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/44tTqUi3xi7E28QLzHVdUA?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-freeze" onclick="openModal('0x1_lovesong')">
+        <h3>0X1=LOVESONG</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1Z8TPHiKeCUyClxV6WTTIf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-freeze" onclick="openModal('magic')">
+        <h3>MAGIC</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4Wh5WGtov1VJ6EJ8OQgNeS?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-freeze" onclick="openModal('ice_cream')">
+        <h3>ICE CREAM</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1DA36fEIoN6IKuDAI6oBbK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-freeze" onclick="openModal('balance_game')">
+        <h3>WHAT IF I HAD BEEN THAT PUMA</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6pU4nUCle2kZR2k3XV86YF?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+     <div class="song-card-freeze" onclick="openModal('no_rules')">
+        <h3>NO RULES</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1lb61ya67YS87CtjYN0bil?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-freeze" onclick="openModal('dear_sputnik')">
+        <h3>DEAR SPUTNIK</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7ypFllJwlotXBJfLjsXhvo?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-freeze" onclick="openModal('frost')">
+        <h3>FROST</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3Yp61j6axuQe4nxYWvbOXy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+</div>
+</section>
 
 <!-- ========================= CANVAS FOR BACKGROUND ==================== -->
 <canvas id="crystals-freeze" class="crystals-freeze"></canvas>
@@ -60,6 +106,50 @@
 
 <!-- ========================= JS FOR BACKGROUND ==================== -->
 <script src="../albums/elements/the_chaos_chapter_freeze/freeze.js"></script>
+
+<!--===== CREDITS ===== -->
+  <footer style="text-align: center; font-size: 0.8em; color: #fff; margin-top: 2em;">
+      © BigHit Music / HYBE — fan-made, non-commercial page
+  </footer>
+
+<!--========================== MODAL FOR SONG INFO JAVASCRIPT ===== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // close all modals at the page loading
+        const allModals = document.querySelectorAll('.modal');
+        allModals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+
+        // function that opens the modal
+        window.openModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // block page scroll
+            }
+        }
+
+        // function that closes the modal
+        window.closeModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // the scroll goes up after closing the modal
+            }
+        }
+
+        // close the modal clicking out of the window
+        window.addEventListener('click', function(event) {
+            allModals.forEach(modal => {
+                if(event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; //the scroll goes up after closing the modal
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

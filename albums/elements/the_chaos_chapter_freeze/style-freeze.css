@@ -722,26 +722,30 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
             TRIVIA (FREEZE)
 ========================================= */
 
+/* Sezione generale */
 .trivia-section-freeze {
   margin: 50px auto;
-  max-width: 1000px;
+  max-width: 1000px; /* limite massimo per non occupare tutta la pagina */
   padding: 20px;
-  color: #e0f0ff; 
+  color: #e0f0ff;
 }
 
+/* Card in colonna */
 .trivia-grid-freeze {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  justify-content: center; 
+  display: flex;
+  flex-direction: column;  /* colonna */
+  align-items: center;     /* centra orizzontalmente le card */
+  gap: 30px;               /* spazio tra le card */
 }
 
-/*main card*/
+/* Card principale */
 .trivia-card-freeze {
-  background: rgba(15, 30, 60, 0.6); 
-  border: 2px solid #7fdfff; 
+  background: rgba(15, 30, 60, 0.6);
+  border: 2px solid #7fdfff;
   border-radius: 16px;
   padding: 20px;
+  width: 90%;            /* non tocca i bordi */
+  max-width: 800px;      /* larghezza massima anche su desktop */
   box-shadow: 0 0 15px rgba(127, 223, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -751,7 +755,17 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   box-shadow: 0 0 25px rgba(127, 223, 255, 0.6);
 }
 
-/* List */
+/* Titolo */
+.trivia-card-freeze h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #a0dfff;
+  text-align: center; /* centrato per armonia */
+  text-shadow: 0 0 8px rgba(127, 223, 255, 0.4);
+}
+
+/* Liste */
 .trivia-card-freeze ul {
   list-style: none;
   padding-left: 0;
@@ -763,13 +777,12 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   padding-left: 28px;
   position: relative;
   font-size: 1rem;
-  color: #dbefff; 
+  color: #dbefff;
   line-height: 1.4;
 }
 
-/* emoji, no dots */
 .trivia-card-freeze ul li::before {
-  content: "❄️";   
+  content: "❄️";
   position: absolute;
   left: 0;
   top: 0;
@@ -779,6 +792,7 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
 
 /* Link */
 .trivia-card-freeze a {
+  font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   color: #7fdfff; 
@@ -795,21 +809,23 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   border-radius: 4px;
 }
 
-/* Mini-grid inside (subcards) */
+/* Subgrid */
 .trivia-subgrid-freeze {
-  display: grid;
+  display: flex;
+  flex-direction: column;  /* sempre in colonna */
+  align-items: center;
   gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   margin-top: 15px;
-  justify-content: center; 
 }
 
 /* Subcard */
 .trivia-subcard-freeze {
-  background: rgba(200, 220, 255, 0.05); 
+  background: rgba(200, 220, 255, 0.05);
   border: 1px solid rgba(127, 223, 255, 0.4);
   border-radius: 12px;
   padding: 15px;
+  width: 90%;
+  max-width: 700px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
@@ -822,52 +838,13 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   box-shadow: 0 0 12px rgba(127, 223, 255, 0.4);
 }
 
-/* Img inside subcards */
-.trivia-subcard-freeze img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-  transition: transform 0.3s ease;
-}
-
-.trivia-subcard-freeze img:hover {
-  transform: scale(1.03);
-}
-
-@media (max-width: 768px) {
-  .trivia-grid-freeze {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .trivia-subgrid-freeze {
-    grid-template-columns: 1fr; 
-    gap: 15px;
-  }
-
-  .trivia-card-freeze {
-    padding: 15px; 
-  }
-
-  .trivia-subcard-freeze {
-    padding: 12px;
-  }
-
-  .trivia-subcard-freeze img,
-  .mv-card-freeze {
-    width: 90%;
-    margin: 0 auto; 
-    display: block;
-  }
-}
-
-.mv-card-trivia-freeze {
-  display: block;
+/* Immagini e video */
+.trivia-subcard-freeze img,
+.mv-card-freeze,
+.mv-card-freeze video {
+  width: 90%;
+  max-width: 600px;
   margin: 0 auto;
-  width: 50%; 
-}
-
-.mv-card-trivia-freeze video {
-  width: 100%;
-  height: auto;
+  display: block;
+  border-radius: 10px;
 }

@@ -400,7 +400,7 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   max-width: 600px;
   max-height: 90vh;
   overflow-y: auto;
-  background: rgba(10, 20, 40, 0.95); /* sfondo ghiaccio scuro */
+  background: rgba(10, 20, 40, 0.95); 
   border: 3px solid rgba(160, 216, 255, 0.5);
   border-radius: 6px;
   padding: 25px;
@@ -420,14 +420,14 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   right: 16px;
   font-size: 32px;
   font-weight: bold;
-  color: #a0d8ff; /* azzurro ghiaccio */
+  color: #a0d8ff; 
   text-shadow: 0 0 8px rgba(160, 216, 255, 0.6);
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 .close-freeze:hover {
   transform: scale(1.2);
-  color: #b0aaff; /* tocco violaceo */
+  color: #b0aaff; 
   text-shadow: 0 0 10px rgba(180, 140, 255, 0.7);
 }
 
@@ -539,7 +539,7 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   align-items: start; /* cards take height according to content */
   padding: 20px;
   border-radius: 16px;
-  background: linear-gradient(145deg, #a2d6f9, #e0f7ff); /* azzurro freddo → ghiaccio chiaro */
+  background: linear-gradient(145deg, #a2d6f9, #e0f7ff); 
   z-index: 0;
 }
 
@@ -559,7 +559,7 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
 .mv-card-freeze:hover {
   transform: translateY(-4px);
   box-shadow: 0 0 20px rgba(180, 240, 255, 0.6);
-  border-color: #80d4ff; /* più intenso al passaggio */
+  border-color: #80d4ff; 
 }
 
 /* Image always fills top of card */
@@ -609,7 +609,7 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   text-align: center;
   padding: 0 20px;
   font-family: 'VT323', monospace;
-  color: #e0f7fa; /* azzurro molto chiaro */
+  color: #e0f7fa; 
 }
 
 /* Grid layout */
@@ -663,8 +663,8 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   justify-content: center;
   align-items: center;
 
-  background: rgba(220, 240, 255, 0.25); /* trasparente glaciale */
-  border: 2px solid #b3d9ff; /* blu ghiaccio */
+  background: rgba(220, 240, 255, 0.25); 
+  border: 2px solid #b3d9ff; 
   border-radius: 12px;
   padding: 20px 0;
   text-align: center;
@@ -678,7 +678,7 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   transform: translateY(-4px);
   box-shadow: 0 0 30px rgba(160, 200, 255, 0.6),
               0 0 20px rgba(200, 230, 255, 0.4);
-  border-color: #e0f7fa; /* ghiaccio chiaro */
+  border-color: #e0f7fa; 
 }
 
 /* Frost / ice shimmer */
@@ -716,4 +716,158 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   0% { transform: translate(0,0) rotate(25deg); }
   50% { transform: translate(10px, -10px) rotate(25deg); }
   100% { transform: translate(0,0) rotate(25deg); }
+}
+
+/* =========================================
+            TRIVIA (FREEZE)
+========================================= */
+
+.trivia-section-freeze {
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 20px;
+  color: #e0f0ff; 
+}
+
+.trivia-grid-freeze {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-content: center; 
+}
+
+/*main card*/
+.trivia-card-freeze {
+  background: rgba(15, 30, 60, 0.6); 
+  border: 2px solid #7fdfff; 
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(127, 223, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trivia-card-freeze:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(127, 223, 255, 0.6);
+}
+
+/* List */
+.trivia-card-freeze ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.trivia-card-freeze ul li {
+  margin: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1rem;
+  color: #dbefff; 
+  line-height: 1.4;
+}
+
+/* emoji, no dots */
+.trivia-card-freeze ul li::before {
+  content: "❄️";   
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: #a0e0ff;  
+}
+
+/* Link */
+.trivia-card-freeze a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #7fdfff; 
+  text-decoration: none;
+  border-bottom: 2px solid rgba(127, 223, 255, 0.5);
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.trivia-card-freeze a:hover {
+  color: #c0f0ff;
+  border-color: rgba(127, 223, 255, 0.8);
+  background: rgba(127, 223, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Mini-grid inside (subcards) */
+.trivia-subgrid-freeze {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin-top: 15px;
+  justify-content: center; 
+}
+
+/* Subcard */
+.trivia-subcard-freeze {
+  background: rgba(200, 220, 255, 0.05); 
+  border: 1px solid rgba(127, 223, 255, 0.4);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trivia-subcard-freeze:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(127, 223, 255, 0.4);
+}
+
+/* Img inside subcards */
+.trivia-subcard-freeze img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.trivia-subcard-freeze img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .trivia-grid-freeze {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .trivia-subgrid-freeze {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .trivia-card-freeze {
+    padding: 15px; 
+  }
+
+  .trivia-subcard-freeze {
+    padding: 12px;
+  }
+
+  .trivia-subcard-freeze img,
+  .mv-card-freeze {
+    width: 90%;
+    margin: 0 auto; 
+    display: block;
+  }
+}
+
+.mv-card-trivia-freeze {
+  display: block;
+  margin: 0 auto;
+  width: 50%; 
+}
+
+.mv-card-trivia-freeze video {
+  width: 100%;
+  height: auto;
 }

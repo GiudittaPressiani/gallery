@@ -722,30 +722,29 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
             TRIVIA (FREEZE)
 ========================================= */
 
-/* Sezione generale */
 .trivia-section-freeze {
   margin: 50px auto;
-  max-width: 1000px; /* limite massimo per non occupare tutta la pagina */
+  max-width: 1000px; 
   padding: 20px;
   color: #e0f0ff;
 }
 
-/* Card in colonna */
+/* Card in columns */
 .trivia-grid-freeze {
   display: flex;
-  flex-direction: column;  /* colonna */
-  align-items: center;     /* centra orizzontalmente le card */
-  gap: 30px;               /* spazio tra le card */
+  flex-direction: column;  
+  align-items: center;     
+  gap: 30px;               
 }
 
-/* Card principale */
+/* Main card */
 .trivia-card-freeze {
   background: rgba(15, 30, 60, 0.6);
   border: 2px solid #7fdfff;
   border-radius: 16px;
   padding: 20px;
-  width: 90%;            /* non tocca i bordi */
-  max-width: 800px;      /* larghezza massima anche su desktop */
+  width: 90%;            
+  max-width: 800px;      
   box-shadow: 0 0 15px rgba(127, 223, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -753,16 +752,6 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
 .trivia-card-freeze:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(127, 223, 255, 0.6);
-}
-
-/* Titolo */
-.trivia-card-freeze h3 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  color: #a0dfff;
-  text-align: center; /* centrato per armonia */
-  text-shadow: 0 0 8px rgba(127, 223, 255, 0.4);
 }
 
 /* Liste */
@@ -812,7 +801,7 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
 /* Subgrid */
 .trivia-subgrid-freeze {
   display: flex;
-  flex-direction: column;  /* sempre in colonna */
+  flex-direction: column;  /* in columns */
   align-items: center;
   gap: 15px;
   margin-top: 15px;
@@ -838,7 +827,7 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   box-shadow: 0 0 12px rgba(127, 223, 255, 0.4);
 }
 
-/* Immagini e video */
+/* Img and videos*/
 .trivia-subcard-freeze img,
 .mv-card-freeze,
 .mv-card-freeze video {

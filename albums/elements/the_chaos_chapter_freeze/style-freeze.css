@@ -2,6 +2,10 @@
    BACKGROUND AND CANVAS
 ========================== */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body.freeze {
   background: #1A3C6D;    
   background-image: none; 
@@ -586,4 +590,123 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   color: #1A3C6D; /* icy blue hover */
   transform: scale(1.03);
   transition: 0.3s ease;
+}
+
+/* =========================================
+            CONCEPT PHOTOS (FREEZE)
+========================================= */
+
+.concept-photos-freeze {
+  margin: 60px auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+  font-family: 'VT323', monospace;
+  color: #e0f7fa; /* azzurro molto chiaro */
+}
+
+/* Grid layout */
+.concept-grid-freeze {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  grid-auto-rows: 420px; 
+}
+
+/* Tall & Wide cards */
+.concept-card-freeze.tall {
+  grid-row: span 2;
+}
+
+.concept-card-freeze.wide {
+  grid-row: span 1;
+}
+
+.concept-card-freeze.square {
+  grid-row: span 2;          
+  aspect-ratio: 1 / 1;       
+}
+
+/* Square Photo */
+.concept-card-freeze.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         
+  border-radius: 12px;
+  display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .concept-grid-freeze {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .concept-card-freeze.tall,
+  .concept-card-freeze.wide {
+    grid-row: auto;
+  }
+}
+
+/* Concept card base */
+.concept-card-freeze {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(220, 240, 255, 0.25); /* trasparente glaciale */
+  border: 2px solid #b3d9ff; /* blu ghiaccio */
+  border-radius: 12px;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(180, 220, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  position: relative; 
+}
+
+.concept-card-freeze:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(160, 200, 255, 0.6),
+              0 0 20px rgba(200, 230, 255, 0.4);
+  border-color: #e0f7fa; /* ghiaccio chiaro */
+}
+
+/* Frost / ice shimmer */
+.concept-card-freeze::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  animation: frost-shimmer 6s infinite linear;
+  transform: rotate(25deg);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Image styling */
+.concept-card-freeze img {
+  max-width: 90%;
+  display: block;
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.concept-card-freeze:hover img {
+  filter: drop-shadow(0 0 20px rgba(180, 220, 255, 0.8)) 
+          drop-shadow(0 0 12px rgba(120, 180, 220, 0.5));
+  transform: scale(1.05);
+}
+
+/* Frost shimmer animation */
+@keyframes frost-shimmer {
+  0% { transform: translate(0,0) rotate(25deg); }
+  50% { transform: translate(10px, -10px) rotate(25deg); }
+  100% { transform: translate(0,0) rotate(25deg); }
 }

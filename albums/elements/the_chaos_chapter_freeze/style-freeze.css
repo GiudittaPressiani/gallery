@@ -189,6 +189,13 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   box-shadow: 0 0 10px rgba(160, 220, 240, 0.5);
 }
 
+.links-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .album-card-freeze {

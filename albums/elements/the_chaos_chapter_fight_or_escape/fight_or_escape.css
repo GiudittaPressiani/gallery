@@ -1,0 +1,52 @@
+/* Corpo principale */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* Sezione principale con sfondo blu */
+.split-diagonal-pattern {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  overflow: hidden;
+  background-color: #16315e; /* blu base */
+}
+
+/* Contenuto sopra lo sfondo */
+.split-diagonal-pattern .content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+/* Div rosa diagonale con pattern ripetuto */
+.diagonal-rosa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #ff7fa6;
+
+  /* pattern ripetuto di cuori e X/O tramite SVG inline */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><text x="0" y="25" font-size="20" fill="rgba(255,255,255,0.2)">♥</text><text x="15" y="30" font-size="20" fill="rgba(255,255,255,0.2)">X</text><text x="25" y="20" font-size="20" fill="rgba(255,255,255,0.2)">O</text></svg>');
+  background-repeat: repeat;
+  background-size: 40px 40px;
+
+  /* Clip alla diagonale pulita */
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+
+/* Mobile-friendly: riduce dimensione font del contenuto */
+@media (max-width: 600px) {
+  .split-diagonal-pattern {
+    font-size: 2rem;
+  }
+}

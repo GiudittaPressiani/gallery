@@ -1,12 +1,12 @@
-/* Corpo principale */
+/* Main */
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Special Elite', sans-serif;
   color: white;
   text-align: center;
 }
 
-/* Sezione principale con sfondo blu */
+/* Main section with blue body*/
 .split-diagonal-pattern {
   position: relative;
   min-height: 100vh;
@@ -15,17 +15,17 @@ body {
   align-items: center;
   font-size: 3rem;
   overflow: hidden;
-  background-color: #16315e; /* blu base */
+  background-color: #16315e; 
 }
 
-/* Contenuto sopra lo sfondo */
+/* content over background */
 .split-diagonal-pattern .content {
   position: relative;
   z-index: 2;
   padding: 2rem;
 }
 
-/* Div rosa diagonale con pattern ripetuto */
+/* Pink div with pattern */
 .diagonal-rosa {
   position: absolute;
   top: 0;
@@ -35,18 +35,203 @@ body {
   z-index: 1;
   background-color: #ff7fa6;
 
-  /* pattern ripetuto di cuori e X/O tramite SVG inline */
+  /* pattern: hearts and X/O with SVG inline */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><text x="0" y="25" font-size="20" fill="rgba(255,255,255,0.2)">♥</text><text x="15" y="30" font-size="20" fill="rgba(255,255,255,0.2)">X</text><text x="25" y="20" font-size="20" fill="rgba(255,255,255,0.2)">O</text></svg>');
   background-repeat: repeat;
   background-size: 40px 40px;
 
-  /* Clip alla diagonale pulita */
+  /* diagonal*/
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
 
-/* Mobile-friendly: riduce dimensione font del contenuto */
+/* Responsive*/
 @media (max-width: 600px) {
   .split-diagonal-pattern {
     font-size: 2rem;
   }
+}
+
+/* =================== TITLES ======================*/
+h1 {
+  font-family: 'Rubik Distressed', sans-serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #c1cbcc; 
+  
+  /* BORDO GREZZO */
+  -webkit-text-stroke: 2px #c1cbcc;
+  
+  /* OMBRA SPORCA tipo stencil/spray */
+  text-shadow: 4px 4px 0px #16315e, 
+               -2px -2px 0px #16315e;
+  
+  /* Effetto ribelle */
+  transform: rotate(-5deg);
+  letter-spacing: 2px;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-family: 'Road Rage', sans-serif;
+  font-size: 4rem;
+  color: #c1cbcc;
+  -webkit-text-stroke: 1px #c1cbcc;
+  text-shadow: 2px 2px 0px #ff7fa6;
+  letter-spacing: 2px;
+  margin: 0.8rem 0;
+}
+
+h3 {
+  font-family: 'Road Rage', sans-serif;
+  font-size: 3rem;
+  color: #c1cbcc;
+  -webkit-text-stroke: 1px #c1cbcc;
+  text-shadow: 1px 1px 0px #16315e;
+  margin: 0.5rem 0;
+}
+
+
+/* ================= ALBUM CARD ================= */
+.album-card-fight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 25px;
+  background: rgba(22, 49, 94, 0.8); /* blu scuro trasparente */
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 127, 166, 0.5); /* glow rosa intenso */
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(255, 127, 166, 0.4); /* bordo rosa */
+}
+
+/* Hover effect */
+.album-card-fight:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(255, 127, 166, 0.8),
+              0 0 20px rgba(22, 49, 94, 0.8);
+}
+
+.album-card-fight img {
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  aspect-ratio: 1/1;
+  border: 3px solid #ff7fa6; /* cornice rosa rock */
+}
+
+/* ================= TEXT ================= */
+.album-info-fight {
+  margin-left: 30px;
+  color: #f0f0f0;
+  font-family: 'Special Elite', cursive;
+  line-height: 1.6;
+}
+
+.album-info-fight p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* ================= LINKS ================= */
+.album-button-fight {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 0.65em 1.4em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff; 
+  background: linear-gradient(135deg, #ff7fa6, #16315e);
+  border: 2px solid #ff7fa6;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(255, 127, 166, 0.6);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.album-button-fight:hover {
+  background: linear-gradient(135deg, #16315e, #ff7fa6);
+  box-shadow: 0 0 18px rgba(255, 127, 166, 0.9),
+              0 0 28px rgba(22, 49, 94, 0.6);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.album-button-fight:active {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(22, 49, 94, 0.6);
+}
+
+.links-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .album-card-fight {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .album-card-fight img {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .album-info-fight {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .album-info-fight h2 {
+    font-size: 1.5rem;
+  }
+
+  .album-info-fight p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= ALBUM SECOND INFO ================= */
+.album-info-fight ul {
+  list-style: none;  
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #f0f0f0;
+}
+
+.album-info-fight li {
+  list-style: none;
+  margin: 0.8rem 0;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(255, 127, 166, 0.6);
+  border-radius: 8px;
+  background: rgba(22, 49, 94, 0.7);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px rgba(255, 127, 166, 0.4);
+  color: #f0f0f0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.album-info-fight li:hover {
+  border-color: #ff7fa6;
+  box-shadow: 0 0 15px rgba(255, 127, 166, 0.8),
+              0 0 25px rgba(22, 49, 94, 0.6);
+  transform: scale(1.02);
 }

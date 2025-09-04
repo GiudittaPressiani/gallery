@@ -632,3 +632,128 @@ h3 {
   transform: scale(1.05) rotate(-1deg);
   transition: 0.3s ease;
 }
+
+/* =========================================
+            CONCEPT PHOTOS 
+========================================= */
+
+.concept-photos-fight {
+  margin: 60px auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+  font-family: 'Special Elite', monospace;
+  color: #ffbcd1; /* rosa chiaro */
+}
+
+/* Grid layout */
+.concept-grid-fight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  grid-auto-rows: 420px;
+}
+
+/* Tall & Wide cards */
+.concept-card-fight.tall {
+  grid-row: span 2;
+}
+
+.concept-card-fight.wide {
+  grid-row: span 1;
+}
+
+.concept-card-fight.square {
+  grid-row: span 2;
+  aspect-ratio: 1 / 1;
+}
+
+/* Square Photo */
+.concept-card-fight.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .concept-grid-fight {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .concept-card-fight.tall,
+  .concept-card-fight.wide {
+    grid-row: auto;
+  }
+}
+
+/* Concept card base */
+.concept-card-fight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 127, 166, 0.1); /* rosa chiaro semi-trasparente */
+  border: 2px solid #ff7fa6; /* rosa acceso */
+  border-radius: 12px;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 127, 166, 0.5), 0 0 15px rgba(22, 49, 94, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.concept-card-fight:hover {
+  transform: translateY(-4px) rotate(-1deg);
+  box-shadow: 0 0 35px rgba(255, 127, 166, 0.7), 0 0 25px rgba(22, 49, 94, 0.5);
+  border-color: #ff9bb0; 
+}
+
+/* Grunge shimmer / scratch overlay */
+.concept-card-fight::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.05) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  animation: scratch-shimmer 6s infinite linear;
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+/* Image styling */
+.concept-card-fight img {
+  max-width: 90%;
+  display: block;
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.concept-card-fight:hover img {
+  filter: drop-shadow(0 0 20px rgba(255, 127, 166, 0.7))
+          drop-shadow(0 0 12px rgba(22, 49, 94, 0.5));
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* Scratch shimmer animation */
+@keyframes scratch-shimmer {
+  0% { transform: translate(0,0) rotate(25deg); }
+  50% { transform: translate(10px, -10px) rotate(25deg); }
+  100% { transform: translate(0,0) rotate(25deg); }
+}
+
+

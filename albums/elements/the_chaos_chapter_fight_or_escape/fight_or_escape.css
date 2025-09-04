@@ -313,7 +313,7 @@ h3 {
 }
 
 /* responsive */
-@media (max-width: 600px) {
+@media (max-width: 780px) {
   .page-index-fight ul {
     flex-direction: column;
     gap: 18px; 
@@ -324,5 +324,94 @@ h3 {
   .page-index-fight ul li a {
     display: block;
     padding: 10px 16px;
+  }
+}
+
+/* =========================================
+   TRACKLIST - FIGHT OR ESCAPE
+========================================= */
+
+/* Container */
+.songs-container-fight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+/* Card */
+.song-card-fight {
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;  
+
+  background: rgba(22, 49, 94, 0.85); 
+  border: 2px dashed rgba(255, 127, 166, 0.7); 
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+
+  color: #f2f2f2;
+  font-family: "Special Elite", monospace;
+
+  box-shadow: 0 0 15px rgba(255, 127, 166, 0.4),
+              0 0 25px rgba(193, 203, 204, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover */
+.song-card-fight:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: #ff7fa6;
+  box-shadow: 0 0 20px rgba(255, 127, 166, 0.8),
+              0 0 35px rgba(22, 49, 94, 0.6); 
+}
+
+/* Spotify iframe */
+.song-card-fight iframe {
+  max-width: 100%;
+  display: block;   
+  margin: 12px 0;  
+  border-radius: 12px;
+  border: 1px solid rgba(193, 203, 204, 0.4);
+  box-shadow: 0 0 10px rgba(22, 49, 94, 0.5);
+}
+
+/* Diagonal effect*/
+.song-card-fight::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0 12px,
+    rgba(255, 255, 255, 0.05) 12px 24px
+  );
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* ===================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .songs-container-fight {
+    grid-template-columns: 1fr; 
+    justify-items: center;
+  }
+
+  .song-card-fight {
+    width: 90%;  
+    border-radius: 24px;
+    padding: 22px;
+  }
+
+  .song-card-fight h3 {
+    font-size: 1.1rem;
   }
 }

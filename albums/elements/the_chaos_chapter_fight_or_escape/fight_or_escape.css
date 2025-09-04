@@ -235,3 +235,86 @@ h3 {
               0 0 25px rgba(22, 49, 94, 0.6);
   transform: scale(1.02);
 }
+
+
+/* =========================================
+        PAGE INDEX - FIGHT OR ESCAPE
+========================================= */
+.page-index-fight {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 15px 25px;
+  background: rgba(22, 49, 94, 0.6);; /* base più scura */
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 100, 150, 0.4),
+              0 0 25px rgba(100, 180, 255, 0.3); /* glow rosa + blu */
+  backdrop-filter: blur(6px);
+  border: 2px dashed rgba(180, 200, 220, 0.5); /* bordo graffiato */
+}
+
+.page-index-fight ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page-index-fight ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #f2f2f2;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(255, 100, 150, 0.6); /* bordi graffiati rosa */
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+/* effetto “graffi” diagonali */
+.page-index-fight ul li a::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0 10px,
+    rgba(255, 255, 255, 0.05) 10px 20px
+  );
+  transform: rotate(5deg);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.page-index-fight ul li a:hover {
+  color: #fff;
+  background: rgba(100, 180, 255, 0.15); /* blu in hover */
+  border-color: #ff6496; /* rosa acceso */
+  box-shadow: 0 0 12px rgba(255, 100, 150, 0.8),
+              0 0 20px rgba(100, 180, 255, 0.6);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .page-index-fight ul {
+    flex-direction: column;
+    gap: 18px; 
+  }
+  
+  .page-index-fight ul li a {
+    display: block;
+    padding: 10px 16px;
+  }
+}

@@ -1,7 +1,8 @@
 :root {
-  --wine: #62121f;   
-  --bone: #d5cfbf;   
-  --ink: #171c23;    
+  --wine: #62121f;   /* rosso scuro */
+  --bone: #d5cfbf;   /* beige chiaro */
+  --ink: #171c23;    /* nero/blu scuro */
+  --red: #de2443;
 }
 
 html {
@@ -16,55 +17,60 @@ html, body {
   overflow-x: hidden;
   position: relative;
   color: var(--bone);
+  background: var(--bone); /* beige principale */
 }
 
-/* =================== BACKGROUND ====================== */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: #e02142;
+/* =================== BACKGROUND PATTERN ====================== */
+.split-diagonal-pattern {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  overflow: hidden;
+}
 
-  z-index: -2;
-
-  justify-content: center; 
-  align-items: center;     
+/* contenuto sopra lo sfondo */
+.split-diagonal-pattern .content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
   text-align: center;
 }
 
-body::after {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+/* div diagonale rosso con pattern X e ♥ casuali */
+.diagonal-rossa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+  background-color: var(--red); 
   
-  /* overlay pattern*/
-  background: repeating-linear-gradient(
-    45deg, 
-    rgba(23,28,35,0.1) 0 2px, 
-    transparent 2px 10px
-  );
+  /* pattern SVG X nera e cuori bianchi */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><text x="0" y="25" font-size="18" fill="white" transform="rotate(-15 10 10)">♥</text><text x="15" y="30" font-size="18" fill="black" transform="rotate(10 20 20)">X</text><text x="25" y="10" font-size="18" fill="white" transform="rotate(5 30 10)">♥</text><text x="5" y="5" font-size="18" fill="black" transform="rotate(-10 5 5)">X</text></svg>');
+  background-repeat: repeat;
+  background-size: 40px 40px;
   
-  pointer-events: none;
-  z-index: -1;
+  /* diagonale */
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
+
 
 /* =================== TITLES ======================*/
 h1 {
   font-family: 'Gelasio', cursive; 
   font-size: 4rem;
   text-transform: uppercase;
-  color: var(--bone); 
+  color: var(--ink); 
   -webkit-text-stroke: 2px var(--bone);
 
-  /* shadow */
   text-shadow: 4px 4px 0px var(--ink), 
                -2px -2px 0px var(--ink),
-               2px -2px 0px #62121f;
+               2px -2px 0px var(--wine);
 
- 
   letter-spacing: 2px;
   margin: 1rem 0;
   text-align: center;
@@ -73,9 +79,9 @@ h1 {
 h2 {
   font-family: 'Gelasio', cursive;
   font-size: 3rem;
-  color: var(--bone); 
+  color: var(--ink); 
   -webkit-text-stroke: 1px var(--bone);
-  text-shadow: 2px 2px 0px #62121f, -1px -1px 0px var(--ink);
+  text-shadow: 2px 2px 0px var(--wine), -1px -1px 0px var(--ink);
   letter-spacing: 2px;
   margin: 0.8rem 0;
   text-align: center;
@@ -99,7 +105,7 @@ h3 {
   max-width: 900px;
   margin: 60px auto;
   padding: 25px;
-  background: rgba(98,18,31,0.9); 
+  background: rgba(98,18,31,0.9); /* rosso scuro trasparente */
   border-radius: 15px;
   box-shadow: 0 0 30px rgba(255, 223, 188, 0.6),
               0 0 20px rgba(23,28,35,0.6);
@@ -119,13 +125,13 @@ h3 {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.8);
   aspect-ratio: 1/1;
-  border: 3px solid #d5cfbf;
+  border: 3px solid var(--bone);
 }
 
 /* ================= TEXT ================= */
 .album-info-minisode_2 {
   margin-left: 30px;
-  color: #d5cfbf;
+  color: var(--bone);
   font-family: 'Courier Prime', monospace;
   line-height: 1.6;
 }
@@ -133,7 +139,7 @@ h3 {
 .album-info-minisode_2 p {
   font-size: 1rem;
   font-weight: 500;
-  text-shadow: 1px 1px 0px #171c23;
+  text-shadow: 1px 1px 0px var(--ink);
 }
 
 /* ================= LINKS ================= */
@@ -143,9 +149,9 @@ h3 {
   padding: 0.65em 1.4em;
   font-size: 1rem;
   font-weight: 600;
-  color: #d5cfbf; 
-  background:  #171c23;
-  border: 2px solid #d5cfbf;
+  color: var(--bone); 
+  background: var(--ink);
+  border: 2px solid var(--bone);
   border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
@@ -157,11 +163,11 @@ h3 {
 }
 
 .album-button-minisode_2:hover {
-  background: linear-gradient(135deg, #171c23, #62121f);
+  background: linear-gradient(135deg, var(--ink), var(--wine));
   box-shadow: 0 0 25px rgba(255, 223, 188, 0.9),
               0 0 35px rgba(23,28,35,0.8);
   transform: translateY(-2px);
-  color: #d5cfbf;
+  color: var(--bone);
 }
 
 .album-button-minisode_2:active {
@@ -196,7 +202,7 @@ h3 {
   }
 
   .album-info-minisode_2 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .album-info-minisode_2 p {
@@ -212,7 +218,7 @@ h3 {
   max-width: 600px;
   font-size: 1rem;
   line-height: 1.8;
-  color: #d5cfbf;
+  color: var(--bone);
 }
 
 .album-info-minisode_2 li {
@@ -224,14 +230,14 @@ h3 {
   background: rgba(98,18,31,0.85);
   backdrop-filter: blur(3px);
   box-shadow: 0 0 12px rgba(255, 223, 188, 0.5);
-  color: #d5cfbf;
+  color: var(--bone);
   font-size: 1rem;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
 
 .album-info-minisode_2 li:hover {
-  border-color: #d5cfbf;
+  border-color: var(--bone);
   box-shadow: 0 0 18px rgba(255, 223, 188, 0.8),
               0 0 28px rgba(23,28,35,0.6);
   transform: scale(1.02);

@@ -1,0 +1,245 @@
+:root {
+  --wine: #62121f;   
+  --bone: #d5cfbf;   
+  --ink: #171c23;    
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Courier Prime', monospace;
+  overflow-x: hidden;
+  position: relative;
+  color: var(--bone);
+}
+
+/* =================== BACKGROUND ====================== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e02142;
+
+  z-index: -2;
+
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  
+  /* overlay pattern*/
+  background: repeating-linear-gradient(
+    45deg, 
+    rgba(23,28,35,0.1) 0 2px, 
+    transparent 2px 10px
+  );
+  
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =================== TITLES ======================*/
+h1 {
+  font-family: 'Gelasio', cursive; 
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--bone); 
+  -webkit-text-stroke: 2px var(--bone);
+
+  /* shadow */
+  text-shadow: 4px 4px 0px var(--ink), 
+               -2px -2px 0px var(--ink),
+               2px -2px 0px #62121f;
+
+ 
+  letter-spacing: 2px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Gelasio', cursive;
+  font-size: 3rem;
+  color: var(--bone); 
+  -webkit-text-stroke: 1px var(--bone);
+  text-shadow: 2px 2px 0px #62121f, -1px -1px 0px var(--ink);
+  letter-spacing: 2px;
+  margin: 0.8rem 0;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Gelasio', cursive;
+  font-size: 2.5rem;
+  color: var(--bone); 
+  -webkit-text-stroke: 1px var(--bone);
+  text-shadow: 1px 1px 0px var(--ink);
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+/* ================= ALBUM CARD ================= */
+.album-card-minisode_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 25px;
+  background: rgba(98,18,31,0.9); 
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 223, 188, 0.6),
+              0 0 20px rgba(23,28,35,0.6);
+  backdrop-filter: blur(3px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(255, 223, 188, 0.7);
+}
+
+.album-card-minisode_2:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 45px rgba(255, 223, 188, 0.9),
+              0 0 25px rgba(23,28,35,0.8);
+}
+
+.album-card-minisode_2 img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  aspect-ratio: 1/1;
+  border: 3px solid #d5cfbf;
+}
+
+/* ================= TEXT ================= */
+.album-info-minisode_2 {
+  margin-left: 30px;
+  color: #d5cfbf;
+  font-family: 'Courier Prime', monospace;
+  line-height: 1.6;
+}
+
+.album-info-minisode_2 p {
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 0px #171c23;
+}
+
+/* ================= LINKS ================= */
+.album-button-minisode_2 {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 0.65em 1.4em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d5cfbf; 
+  background:  #171c23;
+  border: 2px solid #d5cfbf;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255, 223, 188, 0.6);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.album-button-minisode_2:hover {
+  background: linear-gradient(135deg, #171c23, #62121f);
+  box-shadow: 0 0 25px rgba(255, 223, 188, 0.9),
+              0 0 35px rgba(23,28,35,0.8);
+  transform: translateY(-2px);
+  color: #d5cfbf;
+}
+
+.album-button-minisode_2:active {
+  transform: translateY(0);
+  box-shadow: 0 0 12px rgba(23,28,35,0.6);
+}
+
+.links-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .album-card-minisode_2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .album-card-minisode_2 img {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .album-info-minisode_2 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .album-info-minisode_2 h2 {
+    font-size: 2rem;
+  }
+
+  .album-info-minisode_2 p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= ALBUM SECOND INFO ================= */
+.album-info-minisode_2 ul {
+  list-style: none;  
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #d5cfbf;
+}
+
+.album-info-minisode_2 li {
+  list-style: none;
+  margin: 0.8rem 0;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(255, 223, 188, 0.7);
+  border-radius: 6px;
+  background: rgba(98,18,31,0.85);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 12px rgba(255, 223, 188, 0.5);
+  color: #d5cfbf;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.album-info-minisode_2 li:hover {
+  border-color: #d5cfbf;
+  box-shadow: 0 0 18px rgba(255, 223, 188, 0.8),
+              0 0 28px rgba(23,28,35,0.6);
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .album-info-minisode_2 {
+    margin: 20px 10px; 
+    padding: 12px 15px; 
+  }
+}

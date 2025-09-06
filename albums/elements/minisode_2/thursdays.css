@@ -90,8 +90,8 @@ h2 {
 h3 {
   font-family: 'Saira Stencil One', cursive;
   font-size: 2.5rem;
-  color: var(--bone); 
-  -webkit-text-stroke: 1px var(--bone);
+  color: var(--wine); 
+  -webkit-text-stroke: 1px var(--red);
   text-shadow: 1px 1px 0px var(--ink);
   margin: 0.5rem 0;
   text-align: center;
@@ -622,4 +622,129 @@ h3 {
   color: #ff6666;
   transform: scale(1.05);
 }
+
+/* ========================================= CONCEPT PHOTOS ======================================= */
+
+.concept-photos-minisode_2 {
+  margin: 60px auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+  color: #f5f5f5; 
+}
+
+/* Grid layout */
+.concept-grid-minisode_2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  grid-auto-rows: 420px; 
+}
+
+/* Tall & Wide cards */
+.concept-card-minisode_2.tall {
+  grid-row: span 2;
+}
+
+.concept-card-minisode_2.wide {
+  grid-row: span 1;
+}
+
+.concept-card-minisode_2.square {
+  grid-row: span 2;          
+  aspect-ratio: 1 / 1;       
+}
+
+/* Square Photo */
+.concept-card-minisode_2.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         
+  border-radius: 12px;
+  display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .concept-grid-minisode_2 {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .concept-card-minisode_2.tall,
+  .concept-card-minisode_2.wide {
+    grid-row: auto;
+  }
+}
+
+/* Concept card base */
+.concept-card-minisode_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(20, 20, 20, 0.7); 
+  border: 2px solid #b30000; 
+  border-radius: 12px;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4),
+              inset 0 0 25px rgba(255, 50, 50, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  position: relative; 
+}
+
+.concept-card-minisode_2:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.7),
+              0 0 20px rgba(120, 0, 0, 0.6);
+  border-color: #ff1a1a; 
+}
+
+/* Glitch / static shimmer */
+.concept-card-minisode_2::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.15) 0px,
+    rgba(255, 0, 0, 0.15) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation: glitch-shimmer 3s infinite linear;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Image styling */
+.concept-card-minisode_2 img {
+  max-width: 90%;
+  display: block;
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.concept-card-minisode_2:hover img {
+  filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.8)) 
+          drop-shadow(0 0 12px rgba(200, 0, 0, 0.5));
+  transform: scale(1.07) rotate(-1deg);
+}
+
+/* Glitch shimmer animation */
+@keyframes glitch-shimmer {
+  0% { transform: translate(0,0) skewX(0deg); }
+  20% { transform: translate(10px, -5px) skewX(5deg); }
+  40% { transform: translate(-10px, 5px) skewX(-5deg); }
+  60% { transform: translate(5px, -5px) skewX(3deg); }
+  100% { transform: translate(0,0) skewX(0deg); }
+}
+
 

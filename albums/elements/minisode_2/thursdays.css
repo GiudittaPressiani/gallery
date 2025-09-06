@@ -61,7 +61,7 @@ html, body {
 
 /* =================== TITLES ======================*/
 h1 {
-  font-family: 'Gelasio', cursive; 
+  font-family: 'Saira Stencil One', cursive; 
   font-size: 4rem;
   text-transform: uppercase;
   color: var(--ink); 
@@ -77,10 +77,10 @@ h1 {
 }
 
 h2 {
-  font-family: 'Gelasio', cursive;
+  font-family: 'Saira Stencil One', cursive;
   font-size: 3rem;
-  color: var(--ink); 
-  -webkit-text-stroke: 1px var(--bone);
+  color: var(--red); 
+  -webkit-text-stroke: 1px var(--ink);
   text-shadow: 2px 2px 0px var(--wine), -1px -1px 0px var(--ink);
   letter-spacing: 2px;
   margin: 0.8rem 0;
@@ -88,7 +88,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Gelasio', cursive;
+  font-family: 'Saira Stencil One', cursive;
   font-size: 2.5rem;
   color: var(--bone); 
   -webkit-text-stroke: 1px var(--bone);
@@ -111,7 +111,7 @@ h3 {
               0 0 20px rgba(23,28,35,0.6);
   backdrop-filter: blur(3px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid rgba(255, 223, 188, 0.7);
+  border: 2px solid rgba(23,28,35,0.8);
 }
 
 .album-card-minisode_2:hover {
@@ -184,6 +184,9 @@ h3 {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+  h1{
+    font-size: 2.8rem;
+  }
   .album-card-minisode_2 {
     flex-direction: column;
     text-align: center;
@@ -225,7 +228,7 @@ h3 {
   list-style: none;
   margin: 0.8rem 0;
   padding: 0.5rem 1rem;
-  border: 2px solid rgba(255, 223, 188, 0.7);
+  border: 2px solid rgba(23,28,35,0.8);
   border-radius: 6px;
   background: rgba(98,18,31,0.85);
   backdrop-filter: blur(3px);
@@ -247,5 +250,154 @@ h3 {
   .album-info-minisode_2 {
     margin: 20px 10px; 
     padding: 12px 15px; 
+  }
+}
+
+/* =================== PAGE INDEX - MINISODE_2 ======================= */
+.page-index-minisode_2 {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 15px 25px;
+  background: rgba(98, 18, 31, 0.85);   
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(23, 28, 35, 0.7),   
+              0 0 30px rgba(213, 207, 191, 0.25); 
+  backdrop-filter: blur(6px);
+  border: 2px solid rgba(213, 207, 191, 0.3);
+}
+
+.page-index-minisode_2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page-index-minisode_2 ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--bone);
+  padding: 10px 16px;
+  border-radius: 10px;
+  background:  rgba(23, 28, 35, 0.7); 
+  border: 1px solid rgba(213, 207, 191, 0.4);
+  text-shadow: 1px 1px 0px var(--ink);
+  transition: all 0.3s ease;
+}
+
+.page-index-minisode_2 ul li a:hover {
+  color: var(--bone);
+  background: linear-gradient(135deg, var(--wine), var(--ink));
+  border-color: var(--bone);
+  box-shadow: 0 0 15px rgba(213, 207, 191, 0.8),
+              0 0 25px rgba(98, 18, 31, 0.8);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .page-index-minisode_2 ul {
+    flex-direction: column;
+    gap: 18px; 
+  }
+  
+  .page-index-minisode_2 ul li a {
+    display: block;
+    padding: 12px 18px;
+  }
+}
+
+/* ==================================== TRACKLIST ============================= */
+
+/* Container */
+.songs-container-minisode_2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+/* Card */
+.song-card-minisode_2 {
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;  
+
+  background: rgba(23, 28, 35, 0.85); 
+  border: 2px solid rgba(213, 207, 191, 0.25); 
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+
+  color: var(--bone);
+  font-family: 'Courier Prime', monospace;
+
+  box-shadow: 0 0 18px rgba(98, 18, 31, 0.5),   
+              0 0 25px rgba(23, 28, 35, 0.8);   
+  transition: transform 0.3s ease, 
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+}
+
+/* Hover */
+.song-card-minisode_2:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--bone);
+  box-shadow: 0 0 25px rgba(213, 207, 191, 0.8), 
+              0 0 40px rgba(98, 18, 31, 0.9);   
+}
+
+/* Title */
+.song-card-minisode_2 h3 {
+  margin-bottom: 12px;
+  font-family: 'Saira Stencil One', cursive;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--bone);
+  text-shadow: 2px 2px 0 var(--ink), -1px -1px 0 var(--wine);
+  letter-spacing: 1px;
+}
+
+/* Spotify iframe */
+.song-card-minisode_2 iframe {
+  max-width: 100%;
+  display: block;   
+  margin: 10px 0;  
+  border-radius: 12px;
+  border: 2px solid rgba(213, 207, 191, 0.3);
+  box-shadow: 0 0 12px rgba(98, 18, 31, 0.5);
+  transition: all 0.3s ease;
+}
+
+.song-card-minisode_2:hover iframe {
+  border-color: var(--bone);
+  box-shadow: 0 0 18px rgba(213, 207, 191, 0.6),
+              0 0 25px rgba(98, 18, 31, 0.8);
+}
+
+/* ===================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .songs-container-minisode_2 {
+    grid-template-columns: 1fr; 
+    justify-items: center;
+  }
+
+  .song-card-minisode_2 {
+    width: 92%;  
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .song-card-minisode_2 h3 {
+    font-size: 1.2rem;
   }
 }

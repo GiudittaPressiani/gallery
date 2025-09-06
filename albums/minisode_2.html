@@ -10,19 +10,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
-<!-- =================== SPLIT DIAGONALE =================== -->
+<!-- =================== DIAGONAL SPLIT =================== -->
 <div class="split-diagonal-pattern">
     <div class="diagonal-rossa"></div>
-    <div class="content">
-        <h1>Minisode 2: Thursday's Child</h1>
+<!-- ============================ *********************************************
+                                    PAGE CONTENT 
+======================================== ************************************* -->
+<div class="content">
+<h1>Minisode 2: Thursday's Child</h1>
 
-        <!-- ================= ALBUM INFO ================= -->
+<!-- ================= ALBUM INFO ================= -->
 <section class="album-card-minisode_2">
     <img src="../album_cover/minisode_2_album_cover.jpg" alt="Minisode 2: THURSDAY'S CHILD">
     <div class="album-info-minisode_2">
@@ -43,8 +46,102 @@
     <li><strong>Length:</strong> 15:05</li>
 </ul>
 </section>
+
+<!--================ PAGE INDEX ================== -->
+<h2>MENU</h2>
+<nav class="page-index-minisode_2">
+  <ul>
+    <li><a href="#tracklist">Tracklist</a></li>
+    <li><a href="#music-video">Music Videos</a></li>
+    <li><a href="#concepts">Concept Photos</a></li>
+    <li><a href="#trivia">Opinions & Curiosities</a></li>
+    <li><a href="#official-links">Official Links</a></li>
+  </ul>
+</nav>
+
+<!--================ TRACKLIST ================== -->
+<section id="tracklist">
+<h2>TRACKLIST</h2>
+
+<div class="songs-container-minisode_2">
+    <div class="song-card-minisode_2" onclick="openModal('opening_sequence')">
+        <h3>OPENING SEQUENCE</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1exxGxUMlJWD1h9YcE9YZH?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+    <div class="song-card-minisode_2" onclick="openModal('GBGB')">
+        <h3>GOOD BOY GONE BAD</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1HsSIPLTQT354yJcQGfEY3?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+    <div class="song-card-minisode_2" onclick="openModal('trust_fund_baby')">
+        <h3>TRUST FUND BABY</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/20pl0RVGT7P6L1Jr9p51nw?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+    <div class="song-card-minisode_2" onclick="openModal('lonely_boy')">
+        <h3>LONELY BOY</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6AOrC7t2WS5ykYcnoHpiS2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+    <div class="song-card-minisode_2" onclick="openModal('tchftg')">
+        <h3>THURSDAY'S CHILD HAS FAR TO GO</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/04CHEoMbrLOiX8co3EG5dO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+    
+
     </div>
+</section>
+
+
+
+
+
+
+
+
+<!--============= CREDITS ============= -->
+<footer style="text-align: center; font-size: 0.4em; color: #000; margin-top: 2em;">
+    © BigHit Music / HYBE — fan-made, non-commercial page
+</footer>
+
 </div>
+</div>
+
+<!--========================== MODAL FOR SONG INFO JAVASCRIPT ===================== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // close all modals at the page loading
+        const allModals = document.querySelectorAll('.modal-minisode_2');
+        allModals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+
+        // function that opens the modal
+        window.openModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // block page scroll
+            }
+        }
+
+        // function that closes the modal
+        window.closeModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // the scroll goes up after closing the modal
+            }
+        }
+
+        // close the modal clicking out of the window
+        window.addEventListener('click', function(event) {
+            allModals.forEach(modal => {
+                if(event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; //the scroll goes up after closing the modal
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

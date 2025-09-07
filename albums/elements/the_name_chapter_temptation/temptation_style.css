@@ -117,7 +117,7 @@ h1::after {
 /* H2*/
 h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem;
+  font-size: 3rem;
   text-align: center;
   background: linear-gradient(90deg, #355e3e, #4bb87e, #f3bbcc);
   background-size: 200% auto;
@@ -217,19 +217,6 @@ h3 {
 }
 
 /* ========================== ALBUM INFO LIST ======================= */
-.album-info-temptation h2 {
-  font-family: 'Delius Swash Caps', cursive;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #4bb87e, #ee809d, #f3bbcc);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 8s linear infinite;
-  text-shadow: 0 0 12px rgba(238, 128, 157, 0.3);
-}
 
 .album-info-temptation ul {
   list-style: none;
@@ -274,5 +261,77 @@ h3 {
 
   .album-info-temptation li {
     font-size: 0.9rem;
+  }
+}
+
+/* ========================== PAGE INDEX - TEMPTATION ========================= */
+.page-index-temptation {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  background: rgba(242, 243, 238, 0.8); 
+  border-radius: 1.5rem;
+  box-shadow: 0 0 20px rgba(75, 184, 126, 0.3),
+              0 0 35px rgba(238, 128, 157, 0.25);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+.page-index-temptation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.page-index-temptation li {
+  display: inline-block;
+}
+
+.page-index-temptation a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f3bbcc, #ee809d);
+  color: #f2f3ee;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(238, 128, 157, 0.5),
+              0 0 20px rgba(75, 184, 126, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.page-index-temptation a:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #4bb87e, #355e3e);
+  box-shadow: 0 0 20px rgba(75, 184, 126, 0.6),
+              0 0 25px rgba(238, 128, 157, 0.4);
+}
+
+/* shimmer animation */
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .page-index-temptation {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .page-index-temptation h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-index-temptation a {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
   }
 }

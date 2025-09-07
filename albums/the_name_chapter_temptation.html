@@ -28,7 +28,7 @@
 <main class="content">
 <h1>The Name Chapter: TEMPTATION</h1>
 
-<!-- =============== ALBUM INFO ================ -->
+<!-- =============== ALBUM INFO ================== -->
 <section class="album-card-temptation">
     <img src="../album_cover/temptation_album_cover.jpg" alt="The Name Chapter: TEMPTATION">
     <div class="album-info-temptation">
@@ -61,6 +61,56 @@
   </ul>
 </nav>
 
+<!--================ TRACKLIST ================== -->
+<section id="tracklist">
+<h2>TRACKLIST</h2>
+
+<div class="songs-container-temptation">
+    <div class="song-card-temptation" onclick="openModal('dbtw')">
+        <h3>Devil By The Window</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/53H3sGmqiXWO4MwuZAJfyn?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    
+    </div>
+
+    <div class="song-card-temptation" onclick="openModal('sugar_rush_ride')">
+        <h3>Sugar Rush Ride</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0rhI6gvOeCKA502RdJAbfs?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+    <div class="song-card-temptation" onclick="openModal('happy_fools')">
+        <h3>Happy Fools</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/77LZvE2XLYn2AW55UxIG8H?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+    <div class="song-card-temptation" onclick="openModal('tinnitus')">
+        <h3>Tinnitus</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0f0SbtoKGe41cX5LzlnX6X?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+    <div class="song-card-temptation" onclick="openModal('farewell_neverland')">
+        <h3>Farewell, Neverland</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/43mnNatwMMydJ4CxMdQVnJ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+</div>
+</section>
+
+<!--================ SONGS MODAL ================== -->
+<section id="modal-temptation-songs">
+
+<!--DEVIL BY THE WINDOW-->
+<div id="modal-dbtw" class="modal-temptation">
+    <div class="modal-content-temptation">
+    <span class="close-temptation" onclick="closeModal('dbtw')">&times;</span>
+    <h2>Devil By The Window</h2>
+    <p class="modal-songs-description-temptation"></p>
+    <p> <a class="modal-link-temptation" href="https://www.melon.com/album/detail.htm?albumId=10617217" target="_blank">credits: Melon</a></p>
+    
+    <h3>Lyrics</h3>  
+    <p class="lyrics-temptation"></p>
+    <p> <a class="modal-link-temptation" href="https://genius.com/Tomorrow-x-together-anti-romantic-lyrics" target="_blank">credits: Genius</a></p>
+
+    <h3>English Translation</h3>
+    <p class="lyrics-temptation"></p>
+    <p> <a class="modal-link-temptation" href="https://x.com/translatingtxt?s=21" target="_blank">credits: @translatingTXT</a></p>
+    </div>
+</div>
+</section>
+
 </main>
 
 <!-- =================================== BACKGROUND ================================ -->
@@ -68,6 +118,45 @@
 <canvas id="particles"></canvas>
 <!--JS-->
 <script src="elements/the_name_chapter_temptation/temptation_particles.js"></script>
+
+<!--========================== MODAL FOR SONG INFO JAVASCRIPT ===== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // close all modals at the page loading
+        const allModals = document.querySelectorAll('.modal-temptation');
+        allModals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+
+        // function that opens the modal
+        window.openModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // block page scroll
+            }
+        }
+
+        // function that closes the modal
+        window.closeModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // the scroll goes up after closing the modal
+            }
+        }
+
+        // close the modal clicking out of the window
+        window.addEventListener('click', function(event) {
+            allModals.forEach(modal => {
+                if(event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; //the scroll goes up after closing the modal
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

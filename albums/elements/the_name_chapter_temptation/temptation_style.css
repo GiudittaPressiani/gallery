@@ -84,6 +84,12 @@ main.content p {
   }
 }
 
+.links-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
 
 
 /* ========================== TITLES H1/H2/H3 ========================== */
@@ -123,7 +129,7 @@ h1::after {
 /* H2*/
 h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: center;
   background: linear-gradient(90deg, #355e3e, #4bb87e, #f3bbcc);
   background-size: 200% auto;
@@ -661,7 +667,7 @@ h3 {
 }
 
 
-/* ======================================== CONCEPT PHOTOS (TEMPTATION) ===================================== */
+/* ======================================== CONCEPT PHOTOS ===================================== */
 
 .concept-photos-temptation {
   margin: 60px auto;
@@ -788,16 +794,206 @@ h3 {
   100% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
 }
 
-/* === Fix mobile Safari overflow issue === */
-@supports (-webkit-touch-callout: none) {
-  html, body {
-    overflow-x: hidden !important;
-    max-width: 100% !important;
-  }
+/* ========================================= TRIVIA ========================================= */
 
-  .blob, canvas {
-    max-width: 100% !important;
-    transform: translate3d(0,0,0);
+.trivia-section-temptation {
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 20px;
+  color: #355e3e; 
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+/* Card in columns */
+.trivia-grid-temptation {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+  gap: 30px;               
+}
+
+/* Main card */
+.trivia-card-temptation {
+  background: rgba(242, 243, 238, 0.7); 
+  border: 2px solid #f3bbcc; 
+  border-radius: 18px;
+  padding: 20px;
+  width: 90%;            
+  max-width: 800px; 
+  text-align: justify;     
+  box-shadow: 0 0 15px rgba(238, 128, 157, 0.3), 
+              0 0 10px rgba(75, 184, 126, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trivia-card-temptation h3 {
+  color: #ee809d;
+  font-size: 2rem;
+}
+
+.trivia-card-temptation:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 0 25px rgba(238, 128, 157, 0.5),
+              0 0 20px rgba(75, 184, 126, 0.3);
+}
+
+/* List */
+.trivia-card-temptation ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.trivia-card-temptation ul li {
+  margin: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1rem;
+  color: #355e3e;
+  line-height: 1.5;
+}
+
+.trivia-card-temptation ul li::before {
+  content: "🌸"; /* fiorellino invece di ❄️ */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: #ee809d;  
+}
+
+/* Link */
+.trivia-card-temptation a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4bb87e; 
+  text-decoration: none;
+  border-bottom: 2px solid rgba(75, 184, 126, 0.5);
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+.trivia-card-temptation a:hover {
+  color: #ee809d;
+  border-color: rgba(238, 128, 157, 0.7);
+  background: rgba(238, 128, 157, 0.1);
+  border-radius: 4px;
+}
+
+/* Subgrid */
+.trivia-subgrid-temptation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  color: #355e3e;
+}
+
+/* Subcard */
+.trivia-subcard-temptation {
+  background: rgba(243, 187, 204, 0.25); 
+  border: 1px solid #ee809d;
+  border-radius: 16px;
+  padding: 15px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(238, 128, 157, 0.25),
+              0 2px 6px rgba(75, 184, 126, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trivia-subcard-temptation:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(238, 128, 157, 0.5),
+              0 0 12px rgba(75, 184, 126, 0.3);
+}
+
+/* Img, video, iframe styling */
+.trivia-subcard-temptation img,
+.mv-card-trivia-temptation,
+.mv-card-trivia-temptation video {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(238, 128, 157, 0.25),
+              0 0 8px rgba(75, 184, 126, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trivia-subcard-temptation img:hover,
+.mv-card-trivia-temptation:hover,
+.mv-card-trivia-temptation video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 22px rgba(238, 128, 157, 0.5),
+              0 0 18px rgba(75, 184, 126, 0.35);
+}
+
+.iframe-temptation {
+  width: 100%;
+  height: 400px; 
+  border: 2px solid #f3bbcc; 
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(238, 128, 157, 0.3),
+              0 0 10px rgba(75, 184, 126, 0.2);
+  background: rgba(242, 243, 238, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.iframe-temptation:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 28px rgba(238, 128, 157, 0.5),
+              0 0 15px rgba(75, 184, 126, 0.35);
+}
+
+@media (max-width: 600px){
+  .iframe-temptation{
+    height: 315px;
   }
 }
 
+/*============= MEMBERS JAM LIS T================== */
+.trivia-card-temptation .dreamy-list-temptation {
+  list-style: none;  
+  padding: 0;
+  margin: 15px auto;
+  max-width: 550px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #355e3e;
+}
+
+.trivia-card-temptation .dreamy-list-temptation li {
+  margin: 0.7rem 0;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(238, 128, 157, 0.4);
+  border-radius: 10px;
+  background: rgba(243, 187, 204, 0.2);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px rgba(238, 128, 157, 0.3),
+              0 0 8px rgba(75, 184, 126, 0.2);
+  color: #355e3e;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover list items */
+.trivia-card-temptation .dreamy-list-temptation li:hover {
+  border-color: #ee809d;
+  box-shadow: 0 0 15px rgba(238, 128, 157, 0.5),
+              0 0 20px rgba(75, 184, 126, 0.35);
+  transform: scale(1.02);
+}
+
+/* Disattivo icona 🌸 */
+.trivia-card-temptation .dreamy-list-temptation li::before {
+  content: none;
+}

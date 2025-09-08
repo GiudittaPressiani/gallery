@@ -1,4 +1,8 @@
 /* ================== BODY AND BACKGROUND ===================== */
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -644,3 +648,128 @@ h3 {
   color: #ee809d; 
   transform: scale(1.05);
 }
+
+/* ======================================== CONCEPT PHOTOS (TEMPTATION) ===================================== */
+
+.concept-photos-temptation {
+  margin: 60px auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+  font-family: 'Delius Swash Caps', cursive;
+  color: #355e3e; 
+}
+
+.concept-photos-temptation h3 {
+  color:#355e3e;
+  font-size: 2.5em;
+  margin-top: 15px;
+}
+
+/* Grid layout */
+.concept-grid-temptation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  grid-auto-rows: 350px; 
+}
+
+/* Tall & Wide cards */
+.concept-card-temptation.tall {
+  grid-row: span 2;
+}
+
+.concept-card-temptation.wide {
+  grid-row: span 1;
+}
+
+.concept-card-temptation.square {
+  grid-row: span 2;          
+  aspect-ratio: 1 / 1;       
+}
+
+/* Square Photo */
+.concept-card-temptation.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         
+  border-radius: 14px;
+  display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .concept-grid-temptation {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .concept-card-temptation.tall,
+  .concept-card-temptation.wide {
+    grid-row: auto;
+  }
+}
+
+/* Concept card base */
+.concept-card-temptation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(243, 243, 238, 0.6); 
+  border: 2px solid #f3bbcc; 
+  border-radius: 16px;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(238, 128, 157, 0.3), 
+              0 0 12px rgba(75, 184, 126, 0.25); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  position: relative; 
+}
+
+.concept-card-temptation:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 28px rgba(238, 128, 157, 0.6),
+              0 0 18px rgba(75, 184, 126, 0.4);
+  border-color: #ee809d; 
+}
+
+/* Fairy shimmer */
+.concept-card-temptation::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(circle, rgba(243, 187, 204, 0.25) 0%, transparent 70%);
+  animation: fairy-shimmer 8s infinite ease-in-out;
+  transform: rotate(25deg);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Image styling */
+.concept-card-temptation img {
+  max-width: 90%;
+  display: block;
+  margin: 10px 0;
+  border-radius: 14px;
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.concept-card-temptation:hover img {
+  filter: drop-shadow(0 0 20px rgba(243, 187, 204, 0.8)) 
+          drop-shadow(0 0 12px rgba(75, 184, 126, 0.5));
+  transform: scale(1.07);
+}
+
+/* Fairy shimmer animation */
+@keyframes fairy-shimmer {
+  0% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
+  50% { transform: translate(15px, -15px) rotate(25deg); opacity: 0.8; }
+  100% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
+}
+

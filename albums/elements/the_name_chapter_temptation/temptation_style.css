@@ -788,11 +788,21 @@ h3 {
   100% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
 }
 
-/* ===== DEBUG: evidenzia chi sfora ===== */
-body {
-  background: #fffbe6; /* sfondo chiaro per contrasto */
-}
-
-* {
-  outline: 1px solid red !important; /* mostra i bordi */
+/* === Fix mobile Safari overflow issue === */
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    position: fixed;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100vw !important;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none;
+  }
+  .blob, canvas {
+    transform: translate3d(0,0,0);
+  }
 }

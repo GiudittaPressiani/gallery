@@ -156,6 +156,9 @@ h3 {
    h1 { font-size: 2.8rem; }
    h2 { font-size: 1.8rem; }
    h3 { font-size: 1.4rem; }
+   body{
+    max-width: 100%;
+   }
 }
 
 @media (max-width: 480px) {
@@ -652,6 +655,7 @@ h3 {
 @media (max-width: 480px) {
   .mv-grid-temptation {
     grid-template-columns: 1fr;
+    max-width: 100%;
   }
 }
 

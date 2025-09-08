@@ -84,6 +84,8 @@ main.content p {
   }
 }
 
+
+
 /* ========================== TITLES H1/H2/H3 ========================== */
 /* H1 */
 h1 {
@@ -655,7 +657,6 @@ h3 {
 @media (max-width: 480px) {
   .mv-grid-temptation {
     grid-template-columns: 1fr;
-    max-width: 100%;
   }
 }
 
@@ -787,3 +788,11 @@ h3 {
   100% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
 }
 
+/* ===== DEBUG: evidenzia chi sfora ===== */
+body {
+  background: #fffbe6; /* sfondo chiaro per contrasto */
+}
+
+* {
+  outline: 1px solid red !important; /* mostra i bordi */
+}

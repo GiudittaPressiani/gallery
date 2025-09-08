@@ -791,18 +791,13 @@ h3 {
 /* === Fix mobile Safari overflow issue === */
 @supports (-webkit-touch-callout: none) {
   html, body {
-    position: fixed;
     overflow-x: hidden !important;
     max-width: 100% !important;
-    width: 100vw !important;
   }
-  body::before {
-    content: "";
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    pointer-events: none;
-  }
+
   .blob, canvas {
+    max-width: 100% !important;
     transform: translate3d(0,0,0);
   }
 }
+

@@ -649,6 +649,13 @@ h3 {
   transform: scale(1.05);
 }
 
+@media (max-width: 480px) {
+  .mv-grid-temptation {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* ======================================== CONCEPT PHOTOS (TEMPTATION) ===================================== */
 
 .concept-photos-temptation {
@@ -704,6 +711,7 @@ h3 {
   .concept-grid-temptation {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
+    max-width: 100%;
   }
 
   .concept-card-temptation.tall,

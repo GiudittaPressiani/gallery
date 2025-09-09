@@ -328,7 +328,7 @@ body::before {
 
 .page-index-freefall a:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #262c46, #988a7d);
+  background: linear-gradient(135deg, #262c46, #0f01ae);
   box-shadow: 0 0 20px rgba(15,1,174,0.6), 0 0 25px rgba(235,236,230,0.3);
 }
 
@@ -346,5 +346,116 @@ body::before {
   .page-index-freefall a {
     font-size: 1rem;
     padding: 0.7rem 1rem;
+  }
+}
+
+/* ========================== TRACKLIST - FREEFALL ========================== */
+
+/* Container */
+.songs-container-freefall {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 2rem;
+}
+
+/* Card */
+.song-card-freefall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(38, 44, 70, 0.85); 
+  border: 1px solid rgba(15,1,174,0.3); 
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+
+  color: #ebece6; 
+  font-family: 'Montserrat', sans-serif;
+
+  box-shadow: 0 0 20px rgba(15,1,174,0.25),
+              0 0 25px rgba(235,236,230,0.2);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect*/
+.song-card-freefall:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0,191,255,0.5),
+              0 0 35px rgba(235,236,230,0.3);
+  background: rgba(15,1,174,0.6); 
+}
+
+/* Song title */
+.song-card-freefall h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #988a7d, #a79fa3, #dbdbfb); 
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+  text-shadow: 0 0 8px rgba(15,1,174,0.35);
+}
+
+/* Spotify iframe */
+.song-card-freefall iframe {
+  max-width: 100%;
+  display: block;
+  margin: 10px 0;
+  border-radius: 16px;
+  border: 1px solid rgba(15,1,174,0.3);
+  box-shadow: 0 0 12px rgba(235,236,230,0.25);
+}
+
+/* shimmer animation */
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/*rain effect*/
+.song-card-freefall::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(235,236,230,0.05) 1px, transparent 1px);
+  background-size: 3px 10px;
+  animation: rain 1s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes rain {
+  0% { background-position: 0 -10px; }
+  100% { background-position: 0 10px; }
+}
+
+/* ===================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .songs-container-freefall {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .song-card-freefall {
+    width: 90%;
+    border-radius: 24px; 
+    padding: 24px;
+  }
+
+  .song-card-freefall h3 {
+    font-size: 1.5rem;
   }
 }

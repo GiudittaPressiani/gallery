@@ -958,7 +958,7 @@ h3 {
   }
 }
 
-/*============= MEMBERS JAM LIS T================== */
+/*============= MEMBERS JAM LIS ================== */
 .trivia-card-temptation .dreamy-list-temptation {
   list-style: none;  
   padding: 0;
@@ -993,7 +993,47 @@ h3 {
   transform: scale(1.02);
 }
 
-/* Disattivo icona 🌸 */
+/* No 🌸 */
 .trivia-card-temptation .dreamy-list-temptation li::before {
   content: none;
 }
+
+.tweet-temptation {
+  background: rgba(242, 243, 238, 0.7); 
+  border: 2px solid #f3bbcc;            
+  border-radius: 16px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(238, 128, 157, 0.3),
+              0 0 10px rgba(75, 184, 126, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tweet-temptation:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 0 25px rgba(238, 128, 157, 0.5),
+              0 0 20px rgba(75, 184, 126, 0.35);
+}
+
+/* Align the embed */
+.tweet-temptation blockquote {
+  margin: 0 !important;
+  font-family: 'Delius Swash Caps', cursive;
+  color: #355e3e; 
+  line-height: 1.5;
+}
+
+/* Link inside tweet */
+.tweet-temptation a {
+  color: #4bb87e; 
+  text-decoration: none;
+  border-bottom: 1px solid rgba(75, 184, 126, 0.4);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.tweet-temptation a:hover {
+  color: #ee809d; 
+  border-color: rgba(238, 128, 157, 0.6);
+}
+

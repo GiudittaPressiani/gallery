@@ -128,7 +128,7 @@ body::before {
   text-transform: uppercase;
   letter-spacing: 2px;
   
-  /* effetto neon glow */
+  /* neon glow */
   text-shadow: 
     0 0 5px #ebece6,
     0 0 10px #ebece6,
@@ -141,13 +141,14 @@ body::before {
 
 }
 
-.content h2 {
+ h2 {
   font-family: 'Lacquer', Arial, sans-serif;
   font-size: 3rem;
   font-weight: 600;
   color: #dbdbfb;
   margin-bottom: 15px;
   text-shadow: 0 0 5px rgba(219,219,251,0.5);
+  text-align: center;
 }
 
 .content h3 {
@@ -156,4 +157,194 @@ body::before {
   font-weight: 400;
   color: #988a7d;
   margin-bottom: 10px;
+}
+
+/* ========================== ALBUM CARD - FREEFALL ========================= */
+.album-card-freefall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(38, 44, 70, 0.85); 
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 0 25px rgba(15,1,174,0.3),   
+              0 0 40px rgba(235,236,230,0.2); 
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-card-freefall:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(15,1,174,0.5),
+              0 0 50px rgba(235,236,230,0.3);
+}
+
+.album-card-freefall img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(15,1,174,0.4); 
+  margin-bottom: 1rem;
+}
+
+.album-info-freefall {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ebece6; 
+}
+
+/* ================== BUTTON ================== */
+.album-button-freefall {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0f01ae, #262c46);
+  color: #ebece6;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(15,1,174,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-button-freefall:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(15,1,174,0.7);
+}
+
+/* ========================== ALBUM INFO LIST ======================= */
+.album-info-freefall ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.album-info-freefall li {
+  background: rgba(38,44,70,0.6); 
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #ebece6; 
+  box-shadow: 0 0 10px rgba(15,1,174,0.2); 
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.album-info-freefall li:hover {
+  background: rgba(15,1,174,0.6); 
+  transform: translateX(5px);
+}
+
+/* ================== shimmer  ================= */
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ========================== RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .album-card-freefall {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .album-info-freefall h2 {
+    font-size: 1.6rem;
+  }
+
+  .album-info-freefall li {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================== PAGE INDEX - FREEFALL ========================= */
+.page-index-freefall {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  background: rgba(38, 44, 70, 0.85); 
+  border-radius: 1.5rem;
+  box-shadow: 0 0 20px rgba(15,1,174,0.3), 0 0 35px rgba(235,236,230,0.15);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ebece6;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-index-freefall ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative; 
+  z-index: 1;
+}
+
+.page-index-freefall li {
+  display: inline-block;
+}
+
+.page-index-freefall a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #dbdbfb, #262c46);
+  color: #ebece6;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(15,1,174,0.5), 0 0 20px rgba(38,44,70,0.25);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* rain when hovering */
+.page-index-freefall a::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(to bottom, rgba(219,219,251,0.1) 0%, rgba(219,219,251,0.2) 50%, rgba(219,219,251,0.1) 100%);
+  transform: skewY(-20deg);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.page-index-freefall a:hover::after {
+  top: 0;
+}
+
+.page-index-freefall a:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #262c46, #988a7d);
+  box-shadow: 0 0 20px rgba(15,1,174,0.6), 0 0 25px rgba(235,236,230,0.3);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .page-index-freefall {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .page-index-freefall h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-index-freefall a {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
 }

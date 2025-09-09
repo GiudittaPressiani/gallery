@@ -1,4 +1,4 @@
-// ================== CREA GOCCE DINAMICHE ==================
+// ================== DROPS ==================
 const rainContainer = document.getElementById('rain');
 const dropsCount = 200;
 
@@ -19,12 +19,12 @@ for (let i = 0; i < dropsCount; i++) {
   rainContainer.appendChild(drop);
 }
 
-// ================== CREA NEON LIGHTS ==================
+// ================== NEON LIGHTS ==================
 const neonCount = 40;
 for(let i=0;i<neonCount;i++){
   const neon = document.createElement('div');
   neon.classList.add('neon');
-  if(Math.random() < 0.3) neon.classList.add('sand'); // 30% sabbia
+  if(Math.random() < 0.3) neon.classList.add('sand'); // 30% sand
   
   neon.style.left = Math.random()*100 + 'vw';
   neon.style.top = Math.random()*100 + 'vh';

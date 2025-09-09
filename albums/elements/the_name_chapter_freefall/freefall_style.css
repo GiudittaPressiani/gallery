@@ -8,7 +8,11 @@ body {
   overflow-x: hidden;
 }
 
-/* ================== MATTONI ================== */
+hml{
+    scroll-behavior: smooth;
+}
+
+/* ================== BRICK-WALL ================== */
 body::before {
   content: '';
   position: fixed;
@@ -47,7 +51,7 @@ body::before {
   100% { opacity: 0.3; transform: scale(0.8); }
 }
 
-/* ================== PIoggia ================== */
+/* ================== RAIN ================== */
 .rain {
   position: fixed;
   top:0;
@@ -76,13 +80,14 @@ body::before {
   100% { transform: translateY(110vh); }
 }
 
-/* ================== CONTENUTO ================== */
+/* ================== CONTENT ================== */
 .content {
   position: relative;
   z-index: 3;
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .content h1 {
@@ -97,7 +102,7 @@ body::before {
   line-height: 1.6;
 }
 
-/* ================== MEDIA QUERY PER MOBILE ================== */
+/* ================== MEDIA QUERY ================== */
 @media (max-width: 600px) {
   .content {
     max-width: 90%;
@@ -111,4 +116,44 @@ body::before {
   .content p {
     font-size: 1rem;
   }
+}
+
+/* ================== TITLES ================== */
+
+.content h1 {
+  font-family: 'Rubik Glitch', Arial Black, sans-serif;
+  font-size: 4.4rem;  
+  font-weight: 300;             
+  color: #988a7d;                
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  /* effetto neon glow */
+  text-shadow: 
+    0 0 5px #ebece6,
+    0 0 10px #ebece6,
+    0 0 20px #ebece6,
+    0 0 30px rgba(15,1,174,0.7);
+
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+
+}
+
+.content h2 {
+  font-family: 'Lacquer', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #dbdbfb;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px rgba(219,219,251,0.5);
+}
+
+.content h3 {
+  font-family: 'Lacquer', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #988a7d;
+  margin-bottom: 10px;
 }

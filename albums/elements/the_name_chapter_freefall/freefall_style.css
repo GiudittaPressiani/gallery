@@ -1,0 +1,114 @@
+/* ================== BODY ================== */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #ebece6;
+  background-color: #262c46;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ================== MATTONI ================== */
+body::before {
+  content: '';
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events: none;
+  background-image: url('https://www.transparenttextures.com/patterns/brick-wall.png');
+  background-size: 200px 100px;
+  opacity: 0.25;
+  z-index: 1;
+}
+
+/* ================== NEON LIGHTS ================== */
+.neon {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #dbdbfb;
+  box-shadow: 0 0 10px #dbdbfb, 0 0 20px #dbdbfb;
+  pointer-events: none;
+  animation: blink 2s infinite alternate;
+  z-index: 1;
+}
+
+.neon.sand {
+  background-color: #988a7d;
+  box-shadow: 0 0 8px #988a7d, 0 0 16px #988a7d;
+}
+
+@keyframes blink {
+  0% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.3; transform: scale(0.8); }
+}
+
+/* ================== PIoggia ================== */
+.rain {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.drop {
+  position: absolute;
+  width: 2px;
+  background: rgba(235,236,230,0.3);
+  bottom: 100%;
+  filter: blur(0.5px);
+  border-radius: 50%;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(110vh); }
+}
+
+/* ================== CONTENUTO ================== */
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  color: #dbdbfb;
+  text-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #ebece6;
+  line-height: 1.6;
+}
+
+/* ================== MEDIA QUERY PER MOBILE ================== */
+@media (max-width: 600px) {
+  .content {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}

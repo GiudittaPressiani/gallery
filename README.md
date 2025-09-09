@@ -1,50 +1,15 @@
-Welcome to my TXT fan gallery/portfolio! ✨
-This page is all about TXT, with timelines, albums, and fun content presented in a clean style.
+# Page Project
 
-🖤 **Sections**
+Questo è un **progetto personale** creato a scopo di studio e pratica nell'utilizzo di **HTML, CSS e JavaScript**.  
 
-About TXT – Info about the members and my favorite moments.
+## Avvertenze
+- Tutti i contenuti testuali e multimediali presenti sono usati a **scopo educativo e non commerciale**.  
+- Non viene rivendicato alcun **copyright** sui materiali di qualsiasi proprietà .  
+- Il progetto serve esclusivamente come **esercizio di sviluppo web personale** e non per scopi di lucro.
 
-Timeline – Scrollable timeline with important events, releases, and highlights.
+## Note tecniche
+- Il codice è pensato per **apprendere, testare e migliorare** competenze nel frontend web.  
+- È libero di essere **visualizzato, modificato e studiato**, ma ogni uso commerciale o distribuzione dei contenuti multimediali originali non è consentito.
 
-Discography – Album covers, titles, and release years.
+---
 
-Socials – Links to official TXT profiles and content.
-
-💻 **Technologies**
-
-HTML5 – Page structure & content.
-
-CSS3 – Styling, gradients, animations, and responsive design.
-
-JavaScript – Modals, flip cards, and interactive features.
-
-Responsive Design – Works beautifully on desktop and mobile.
-
-🔎 **How to View**
-
-Clone or download the repo:
-
-git clone https://github.com/giudittapressiani/gallery.git
-
-
-Open index.html in your browser.
-
-Or check the live demo here
- 🌐
-
-📝 **Credits**
-
-All images, album covers, and official content are from BigHit / HYBE and other official TXT sources.
-
-This project is a personal fan page for practice and enjoyment – no copyright infringement intended.
-
-All ideas, layout, and code are my own work.
-
-✨ **Notes**
-
-This is a personal fan project to showcase my love for TXT and practice web design.
-
-Easy to update with new albums, events, or content.
-
-Interactive and visually appealing, made for fellow fans to enjoy! 🎶💜

@@ -1,0 +1,55 @@
+/* =============== BACKGROUND AND BODY =============== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #fbf3f0, #fe552a, #3a3645);
+  color: #fbf3f0;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Canvas*/
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  z-index: 1;
+}
+
+/* Main content*/
+main {
+  position: relative; 
+  z-index: 10;
+  padding: 50px 20px; 
+  max-width: 1200px;  
+  margin: 0 auto;     
+  box-sizing: border-box;
+}
+
+/*Responsive */
+h1, h2, h3, p {
+  margin: 0 0 20px 0;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 30px 15px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}

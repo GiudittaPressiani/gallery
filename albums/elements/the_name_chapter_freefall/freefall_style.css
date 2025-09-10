@@ -592,7 +592,7 @@ body::before {
   font-size: 1.1rem;
   line-height: 1.5;
   color: #dbdbfb;
-  background: rgba(38,44,70,0.2);
+  background: rgba(190, 198, 239, 0.2);
   border: 2px dashed rgba(0,191,255,0.3);
   padding: 10px 15px;
   margin: 15px 0;

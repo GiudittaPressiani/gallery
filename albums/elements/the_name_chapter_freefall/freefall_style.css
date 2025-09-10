@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
 }
 
-hml{
+html{
     scroll-behavior: smooth;
 }
 
@@ -681,5 +681,145 @@ body::before {
 @media (max-width: 480px) {
   .mv-grid-freefall {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================== CONCEPT PHOTOS FREEFALL ===================================== */
+
+.concept-photos-freefall {
+  margin: 60px auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+  color: #ebece6; 
+}
+
+.concept-photos-freefall h2 {
+  margin-bottom: 30px;
+  color: #dbdbfb;
+  text-shadow: 2px 2px 8px rgba(15, 1, 174, 0.7);
+}
+
+.concept-photos-freefall h3 {
+  color: #ebece6;
+  font-size: 2.4rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.concept-grid-freefall {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  grid-auto-rows: auto; 
+}
+
+/* Tall & Wide & Square cards */
+.concept-card-freefall.tall {
+  grid-row: span 2;
+}
+
+.concept-card-freefall.wide {
+  grid-row: span 1;
+}
+
+.concept-card-freefall.square {
+  grid-row: span 2;
+  aspect-ratio: 1 / 1;
+}
+
+/* Concept card base */
+.concept-card-freefall {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  background: rgba(38, 44, 70, 0.75); 
+  border: 2px solid rgba(152, 138, 125, 0.4); 
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(15, 1, 174, 0.35), 
+              0 0 12px rgba(167, 159, 163, 0.25); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: visible; 
+  position: relative; 
+}
+
+/* Hover */
+.concept-card-freefall:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 28px rgba(15, 1, 174, 0.6),
+              0 0 18px rgba(219, 219, 251, 0.4);
+  border-color: #0f01ae; 
+}
+
+/* Img */
+.concept-card-freefall img {
+  width: 100%;
+ 
+  object-fit: cover; 
+  border-radius: 14px;
+  transition: filter 0.5s ease, transform 0.5s ease;
+  margin-bottom: 10px; 
+}
+
+
+.concept-card-freefall h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #ebece6;
+  text-shadow: 1px 1px 4px rgba(15, 1, 174, 0.6);
+}
+
+/* Hover */
+.concept-card-freefall:hover img {
+  filter: drop-shadow(0 0 16px rgba(15, 1, 174, 0.5)) 
+          drop-shadow(0 0 8px rgba(219, 219, 251, 0.4));
+  transform: scale(1.05);
+}
+
+/* Rain */
+.concept-card-freefall::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(219, 219, 251, 0.15) 0%, transparent 70%);
+  animation: rain-shimmer 6s infinite ease-in-out;
+  transform: rotate(25deg);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Rain Animation */
+@keyframes rain-shimmer {
+  0% { transform: translate(0,0) rotate(25deg); opacity: 0.4; }
+  50% { transform: translate(10px, -10px) rotate(25deg); opacity: 0.7; }
+  100% { transform: translate(0,0) rotate(25deg); opacity: 0.4; }
+}
+
+/* Square*/
+.concept-card-freefall.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         
+  border-radius: 14px;
+  display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .concept-grid-freefall {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    max-width: 100%;
+  }
+
+  .concept-card-freefall.tall,
+  .concept-card-freefall.wide {
+    grid-row: auto;
   }
 }

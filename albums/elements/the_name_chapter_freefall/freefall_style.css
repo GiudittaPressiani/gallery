@@ -159,6 +159,13 @@ body::before {
   margin-bottom: 10px;
 }
 
+.links-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ========================== ALBUM CARD - FREEFALL ========================= */
 .album-card-freefall {
   display: flex;

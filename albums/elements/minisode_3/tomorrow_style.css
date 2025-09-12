@@ -32,6 +32,7 @@ main {
   max-width: 1200px;  
   margin: 0 auto;     
   box-sizing: border-box;
+  font-family: 'Handlee', sans-serif;
 }
 
 /*Responsive */
@@ -52,4 +53,251 @@ p {
   p {
     font-size: 0.9rem;
   }
+}
+
+/* ========== TITOLI ========== */
+
+h1 {
+  font-family: 'Dynalight', cursive;
+  font-size: 7rem;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 100%;
+  margin: 2.5rem 0;
+  padding: 0 1rem;
+
+  color: #f3d7cd; 
+  text-shadow: 
+    0 0 8px rgba(254, 85, 42, 0.6),   
+    0 0 20px rgba(147, 97, 96, 0.6),  
+    0 0 35px rgba(58, 54, 69, 0.8);   
+
+  -webkit-text-stroke: 1px rgba(58, 54, 69, 0.8); 
+  animation: dreamyPulse 5s ease-in-out infinite;
+}
+
+/* Glow*/
+@keyframes dreamyPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 8px rgba(254, 85, 42, 0.6),
+      0 0 20px rgba(147, 97, 96, 0.6),
+      0 0 35px rgba(58, 54, 69, 0.8);
+  }
+  50% {
+    text-shadow:
+      0 0 12px rgba(252, 172, 116, 0.9), 
+      0 0 28px rgba(254, 85, 42, 0.7), 
+      0 0 45px rgba(58, 54, 69, 1);
+  }
+}
+
+
+/*H2*/
+
+h2 {
+  font-family: 'Charm', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  color: #fe552a;
+  text-shadow:
+    0 0 5px rgba(254, 85, 42, 0.7),
+    0 0 15px rgba(252, 172, 116, 0.6),
+    0 0 25px rgba(58, 54, 69, 0.5);
+  animation: burning-glow 4s ease-in-out infinite;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@keyframes burning-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 5px rgba(254, 85, 42, 0.7),
+      0 0 15px rgba(252, 172, 116, 0.6),
+      0 0 25px rgba(58, 54, 69, 0.5);
+    color: #fe552a;
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(252, 172, 116, 0.9),
+      0 0 25px rgba(254, 85, 42, 0.7),
+      0 0 40px rgba(147, 97, 96, 0.6);
+    color: #fcac74;
+  }
+}
+
+/* H3*/
+h3 {
+  font-family: 'Charm', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+
+  color: #936160; 
+  text-shadow: 
+    0 0 5px rgba(252, 172, 116, 0.5),  
+    0 0 10px rgba(58, 54, 69, 0.6);    
+}
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .tomorrow h1 { font-size: 3rem; }
+  .tomorrow h2 { font-size: 2rem; }
+  .tomorrow h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .tomorrow h1 { font-size: 2.3rem; }
+  .tomorrow h2 { font-size: 1.6rem; }
+  .tomorrow h3 { font-size: 1.2rem; }
+}
+
+/* ==========================
+      ALBUM INFOS - TOMORROW
+========================== */
+
+/* ================= ALBUM CARD ================= */
+.album-card-tomorrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 25px;
+  background: rgba(58, 54, 69, 0.7); 
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(254, 85, 42, 0.35);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.album-card-tomorrow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(252, 172, 116, 0.7); 
+}
+
+.album-card-tomorrow img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(147, 97, 96, 0.6); 
+  aspect-ratio: 1/1;
+}
+
+/* ================= TEXT ================= */
+.album-info-tomorrow {
+  margin-left: 30px;
+  color: #fbf3f0; 
+  font-family: 'Handlee', cursive;
+  line-height: 1.7;
+}
+
+.album-info-tomorrow p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fcac74; 
+}
+
+/* ================= LINKS ================= */
+.album-button-tomorrow {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 0.65em 1.4em;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fbf3f0;
+  background: linear-gradient(135deg, #fe552a, #936160);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(254, 85, 42, 0.6);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.album-button-tomorrow:hover {
+  background: linear-gradient(135deg, #fcac74, #fe552a);
+  box-shadow: 0 0 16px rgba(254, 85, 42, 0.8),
+              0 0 25px rgba(147, 97, 96, 0.6);
+  transform: translateY(-2px);
+  color: #3a3645; 
+}
+
+.album-button-tomorrow:active {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(252, 172, 116, 0.6);
+}
+
+.links-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .album-card-tomorrow {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .album-card-tomorrow img {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .album-info-tomorrow {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .album-info-tomorrow h2 {
+    font-size: 1.5rem;
+  }
+
+  .album-info-tomorrow p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= ALBUM SECOND INFO ================= */
+.album-info-tomorrow ul {
+  list-style: none;  
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #fbf3f0;
+}
+
+.album-info-tomorrow li {
+  list-style: none;
+  margin: 0.8rem 0;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(254, 85, 42, 0.4); 
+  border-radius: 8px;
+  background: rgba(58, 54, 69, 0.5); 
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 8px rgba(147, 97, 96, 0.4); 
+  color: #fcac74;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.album-info-tomorrow li:hover {
+  border-color: #fe552a;
+  box-shadow: 0 0 15px rgba(254, 85, 42, 0.6),
+              0 0 25px rgba(252, 172, 116, 0.5);
+  transform: scale(1.02);
 }

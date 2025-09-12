@@ -55,9 +55,54 @@
   </ul>
 </nav>
 
+<!--================ TRACKLIST ================== -->
+<section id="tracklist">
+<h2>Tracklist</h2>
+
+<div class="songs-container-tomorrow">
+    <div class="song-card-tomorrow" onclick="openModal('ilsytt')">
+        <h3>I'll see you there tomorrow</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0bMWoFtQIrnW5YyNMc4aKQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-tomorrow" onclick="openModal('tomorrow')">
+        <h3>(Tomorrow)</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0XohGAl3aTq0it8LrItbeB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-tomorrow" onclick="openModal('dejavu')">
+        <h3>Deja Vu</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3aAnwyBJY9OLNLqSgd4fZU?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-tomorrow" onclick="openModal('miracle')">
+        <h3>Miracle</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3FAmnX3nUGsue2TcNEnq0t?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-tomorrow" onclick="openModal('the_killa')">
+        <h3>The Killa (I Belong to You)</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/33RfPb7Vca7s2x5xzXR5E3?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-tomorrow" onclick="openModal('quarter_life')">
+        <h3>Quarter Life</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0Dv0R4tfRj5jy8e8CF3JB9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-tomorrow" onclick="openModal('dejavu')">
+        <h3>Deja Vu (Anemoia)</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0m5FEDhEXHx1ZUNabbnX4l?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+ </div>
+</section>
 
 
 
+<!--===== CREDITS ===== -->
+  <footer style="text-align: center; font-size: 0.8em; color: #fff; margin-top: 2em;">
+      © BigHit Music / HYBE — fan-made, non-commercial page
+  </footer>
 
 
 
@@ -75,5 +120,45 @@
 <!--========================================= JS BACKGROUND =========================================-->
 <canvas id="particlesCanvas"></canvas>
 <script src="elements/minisode_3/fireworks.js"></script>
+
+<!--========================== MODAL FOR SONG INFO JAVASCRIPT ===== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // close all modals at the page loading
+        const allModals = document.querySelectorAll('.modal-tomorrow');
+        allModals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+
+        // function that opens the modal
+        window.openModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // block page scroll
+            }
+        }
+
+        // function that closes the modal
+        window.closeModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // the scroll goes up after closing the modal
+            }
+        }
+
+        // close the modal clicking out of the window
+        window.addEventListener('click', function(event) {
+            allModals.forEach(modal => {
+                if(event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; //the scroll goes up after closing the modal
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>

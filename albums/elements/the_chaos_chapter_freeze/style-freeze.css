@@ -264,11 +264,11 @@ body.freeze > *:not(canvas):not(.modal-freeze) {
   max-width: 900px;
   margin: 40px auto;
   padding: 15px 25px;
-  background: rgba(255, 255, 255, 0.05);   /* vetro ghiacciato */
+  background: rgba(255, 255, 255, 0.05);   
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 0 20px rgba(160, 216, 255, 0.4),
-              0 0 30px rgba(180, 140, 255, 0.3); /* azzurro + violetto */
+              0 0 30px rgba(180, 140, 255, 0.3); 
   backdrop-filter: blur(6px);
 }
 

@@ -112,3 +112,107 @@ a:hover {
   color: #fe7dc1;
   text-shadow: 0 0 6px rgba(254,125,193,0.6);
 }
+
+/* ========================== ALBUM CARD - SANCTUARY ========================= */
+.album-card-sanctuary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 246, 251, 0.85); 
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 
+    0 0 25px rgba(176, 243, 240, 0.3),
+    0 0 40px rgba(238, 190, 225, 0.25);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-card-sanctuary:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 0 35px rgba(176, 243, 240, 0.5),
+    0 0 50px rgba(238, 190, 225, 0.4);
+}
+
+.album-card-sanctuary img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(176, 243, 240, 0.4);
+  margin-bottom: 1rem;
+}
+
+/* ========================== ALBUM INFO - SANCTUARY ========================= */
+.album-info-sanctuary {
+  text-align: center;
+  font-family: 'Cookie', cursive;
+  color: #677fad;
+}
+
+.album-button-sanctuary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #b0f3f0, #94cafd, #deb7f6);
+  color: #fff6fb;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(176, 243, 240, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-button-sanctuary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(176, 243, 240, 0.7);
+}
+
+/* ========================== ALBUM INFO LIST - SANCTUARY ======================= */
+.album-info-sanctuary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.album-info-sanctuary li {
+  background: rgba(255, 246, 251, 0.6);
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  color: #677fad;
+  box-shadow: 0 0 10px rgba(176, 243, 240, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.album-info-sanctuary li:hover {
+  background: rgba(238, 190, 225, 0.6);
+  transform: translateX(5px);
+}
+
+/* shimmer anim */
+@keyframes shimmer-sanctuary {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .album-card-sanctuary {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .album-info-sanctuary h2 {
+    font-size: 1.6rem;
+  }
+
+  .album-info-sanctuary li {
+    font-size: 0.9rem;
+  }
+}

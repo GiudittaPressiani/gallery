@@ -216,3 +216,67 @@ a:hover {
     font-size: 0.9rem;
   }
 }
+
+/* ========================== PAGE INDEX - SANCTUARY ========================= */
+.page-index-sanctuary {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  background: rgba(255, 246, 251, 0.8); 
+  border-radius: 1.5rem;
+  box-shadow: 0 0 25px rgba(148, 202, 253, 0.35),   
+              0 0 40px rgba(222, 183, 246, 0.25);   
+  backdrop-filter: blur(8px);
+  text-align: center;
+  color: #677fad; 
+}
+
+.page-index-sanctuary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.page-index-sanctuary li {
+  display: inline-block;
+}
+
+.page-index-sanctuary a {
+  display: block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #94cafd, #deb7f6, #b0f3f0); 
+  color: #fff6fb;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(148, 202, 253, 0.6),
+              0 0 25px rgba(254, 125, 193, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.page-index-sanctuary a:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #fe7dc1, #eebee1, #94cafd); 
+  box-shadow: 0 0 25px rgba(222, 183, 246, 0.6),
+              0 0 35px rgba(148, 202, 253, 0.5);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .page-index-sanctuary {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .page-index-sanctuary h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-index-sanctuary a {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+}

@@ -56,10 +56,86 @@
   </ul>
 </nav>
 
+<!--================ TRACKLIST ================== -->
+<section id="tracklist">
+<h2>TRACKLIST</h2>
+
+<div class="songs-container-sanctuary">
+    <div class="song-card-sanctuary" onclick="openModal('heaven')">
+        <h3>Heaven</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4Wm7m3zaXN3nPNAzQ0nINf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    
+    </div>
+
+    <div class="song-card-sanctuary" onclick="openModal('over_the_moon')">
+        <h3>Over The Moon</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6ZpoRaO2cfXR1dti2N4TLs?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-sanctuary" onclick="openModal('danger')">
+        <h3>Danger</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1EGJkCqwJLOviThbopmtgx?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-sanctuary" onclick="openModal('resist')">
+        <h3>Resist</h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4LjwN7AJrUoPG9Ugsq9V7J?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-sanctuary" onclick="openModal('forty_one_winks')">
+        <h3>Forty One Winks</h3>
+       <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/71KCbsNcVP40HbTziKyjqS?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="song-card-sanctuary" onclick="openModal('higher_than_heaven')">
+        <h3>Higher Than Heaven</h3>
+       <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3Xsc6Csv8OWOwbA3H1MgGh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+</div>
+</section>
+
 </main>
 
 <!--===================================== JS BACKGROUND ========================================== -->
 <script src="elements/the_star_chapter_sanctuary/sanctuary.js"></script>
+
+<!--========================== MODAL FOR SONG INFO JAVASCRIPT ==================================== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // close all modals at the page loading
+        const allModals = document.querySelectorAll('.modal-sanctuary');
+        allModals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+
+        // function that opens the modal
+        window.openModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // block page scroll
+            }
+        }
+
+        // function that closes the modal
+        window.closeModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // the scroll goes up after closing the modal
+            }
+        }
+
+        // close the modal clicking out of the window
+        window.addEventListener('click', function(event) {
+            allModals.forEach(modal => {
+                if(event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; //the scroll goes up after closing the modal
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

@@ -877,3 +877,217 @@ h3 {
   50% { transform: translate(12px, -12px) rotate(25deg); opacity: 1; }
   100% { transform: translate(0,0) rotate(25deg); opacity: 0.6; }
 }
+
+/* ========================================= TRIVIA ========================================= */
+
+.trivia-section-tomorrow {
+  margin: 50px auto;
+  max-width: 1000px; 
+  padding: 20px;
+  color: #fbf3f0; 
+}
+
+.trivia-card-tomorrow h3 {
+  color: #f3d7cd;
+}
+
+/* Grid */
+.trivia-grid-tomorrow {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+  gap: 30px;               
+}
+
+/* Main card */
+.trivia-card-tomorrow {
+  background: rgba(58, 54, 69, 0.9); 
+  border: 2px solid #fe552a; 
+  border-radius: 16px;
+  padding: 20px;
+  width: 90%;            
+  max-width: 800px;      
+  box-shadow: 0 0 20px rgba(254, 85, 42, 0.5),
+              0 0 40px rgba(250, 172, 116, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  font-size: 1.3rem;
+}
+
+.trivia-card-tomorrow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(254, 85, 42, 0.8),
+              0 0 60px rgba(250, 172, 116, 0.4);
+}
+
+/* Liste */
+.trivia-card-tomorrow ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.trivia-card-tomorrow ul li {
+  margin: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1.3rem;
+  color: #fbf3f0; 
+  line-height: 1.5;
+}
+
+.trivia-card-tomorrow ul li::before {
+  content: "🔥";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.3rem;
+  color: #fe552a;  
+}
+
+/* Link */
+.trivia-card-tomorrow a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fcac74; 
+  text-decoration: none;
+  border-bottom: 2px solid rgba(252, 172, 116, 0.6);
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  padding-bottom: 2px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.trivia-card-tomorrow a:hover {
+  color: #fe552a;
+  border-color: rgba(254, 85, 42, 0.8);
+  background: rgba(254, 85, 42, 0.15);
+  border-radius: 4px;
+}
+
+/* Subgrid */
+.trivia-subgrid-tomorrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  color: #fbf3f0;
+}
+
+/* Subcard */
+.trivia-subcard-tomorrow {
+  background: rgba(147, 97, 96, 0.2); 
+  border: 1px solid rgba(252, 172, 116, 0.5); 
+  border-radius: 12px;
+  padding: 15px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 2px 8px rgba(116, 132, 143, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1.3rem;
+}
+
+.trivia-subcard-tomorrow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(254, 85, 42, 0.6),
+              0 0 25px rgba(252, 172, 116, 0.4);
+}
+
+/* Media content */
+.trivia-subcard-tomorrow img,
+.mv-card-tomorrow,
+.mv-card-tomorrow video {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Iframe */
+.iframe-tomorrow {
+  width: 100%;
+  height: 400px; 
+  border: 2px solid #936160; 
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(252, 172, 116, 0.4);
+  background: rgba(147, 97, 96, 0.15); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.iframe-tomorrow:hover {
+  transform: scale(1.02);
+  border-color: #fe552a;
+  box-shadow: 0 0 28px rgba(254, 85, 42, 0.7),
+              0 0 18px rgba(252, 172, 116, 0.5);
+}
+
+@media (max-width: 600px){
+  .iframe-tomorrow {
+    height: 315px;
+  }
+}
+
+/* Img inside trivia */
+.img-tomorrow {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #936160; 
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(116, 132, 143, 0.4);
+  background: rgba(147, 97, 96, 0.15); 
+  display: block;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, filter 0.3s ease;
+}
+
+.img-tomorrow:hover {
+  transform: scale(1.03);
+  border-color: #fe552a;
+  box-shadow: 0 0 30px rgba(254, 85, 42, 0.7),
+              0 0 20px rgba(252, 172, 116, 0.5);
+  filter: brightness(1.08);
+}
+
+/*============= MEMBERS LIST================== */
+.trivia-card-tomorrow .burning-list {
+  list-style: none;  
+  padding: 0;
+  margin: 15px auto;
+  max-width: 550px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #fbf3f0;
+}
+
+.trivia-card-tomorrow .burning-list li {
+  margin: 0.7rem 0;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(254, 85, 42, 0.5);
+  border-radius: 8px;
+  background: rgba(254, 85, 42, 0.1);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 12px rgba(252, 172, 116, 0.4);
+  color: #fbf3f0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover*/
+.trivia-card-tomorrow .burning-list li:hover {
+  border-color: #fe552a;
+  box-shadow: 0 0 18px rgba(254, 85, 42, 0.8),
+              0 0 25px rgba(252, 172, 116, 0.5);
+  transform: scale(1.03);
+}
+
+/* No 🔥 */
+.trivia-card-tomorrow .burning-list li::before {
+  content: none;
+}

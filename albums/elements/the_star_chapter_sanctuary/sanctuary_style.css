@@ -9,8 +9,10 @@ body {
   min-height: 100vh;
   background: linear-gradient(180deg, #d4dce9, #deb7f6, #94cafd);
   background-attachment: fixed; 
-  font-family: sans-serif;
-  color: #333;
+  font-family: 'Cookie', cursive;
+  color: #677fad;
+  font-size: 2rem;
+  text-align: center;
 }
 
 canvas {
@@ -30,17 +32,6 @@ main.content {
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
 /* Responsive*/
 @media (max-width: 600px) {
   h1 {
@@ -52,4 +43,72 @@ p {
   main.content {
     padding: 15px;
   }
+}
+
+/* =============== TITLES =============== */
+
+/* H1 */
+h1 {
+  font-family: 'Birthstone', cursive;
+  font-size: 5.7rem;
+  text-align: center;
+  background: linear-gradient(90deg,  #677fad,#94cafd, #677fad);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255,246,251,0.5);
+  letter-spacing: 3px;
+  margin: 2rem 0;
+}
+
+/* H2 */
+h2 {
+  font-family: 'Quintessential', cursive;
+  font-size: 3rem;
+  text-align: center;
+  background: linear-gradient(90deg, #d4dce9, #b0f3f0, #677fad);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 8s ease infinite;
+  margin: 1.5rem 0;
+  text-shadow: 0 0 8px rgba(255,246,251,0.5);
+}
+@keyframes gradientFlow {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* H3*/
+h3 {
+  font-family: 'Quintessential', cursive;
+  font-size: 2.3rem;
+  text-align: center;
+  color: #fff6fb;
+  letter-spacing: 1px;
+  text-shadow: 
+    0 0 6px rgba(238,190,225,0.5),
+    0 0 12px rgba(176,243,240,0.4);
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs and text*/
+p, li, span, a {
+  font-family: 'Cookie', cursive;
+  color: #677fad;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Link*/
+a {
+  color: #94cafd;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #fe7dc1;
+  text-shadow: 0 0 6px rgba(254,125,193,0.6);
 }

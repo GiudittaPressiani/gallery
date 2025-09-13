@@ -1,0 +1,9 @@
+#fe552a arancio
+#3a3645 blu scuro
+#fbf3f0 panna
+#936160 marrone
+
+
+altri colori:
+#fcac74 arancio chiaro
+#74848f grigio

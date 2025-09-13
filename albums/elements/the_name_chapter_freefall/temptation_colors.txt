@@ -1,0 +1,5 @@
+#355e3e verde scuro 
+#4bb87e verde chiaro
+#ee809d rosa 
+#f3bbcc rosa chiaro
+#f2f3ee panna

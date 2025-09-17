@@ -507,3 +507,91 @@ a:hover {
   box-shadow: inset 0 0 6px rgba(148, 202, 253, 0.25);
   border-radius: 8px;
 }
+
+/* ====================================  MUSIC VIDEO SANCTUARY ======================================= */
+
+.mv-section-sanctuary {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.mv-grid-sanctuary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+  align-items: start;
+  padding: 25px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #d4dce9, #deb7f6, #94cafd);
+  box-shadow: inset 0 0 25px rgba(164, 185, 244, 0.25),
+              inset 0 0 15px rgba(158, 204, 251, 0.2);
+  z-index: 0;
+}
+
+.mv-card-sanctuary {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: rgba(255, 246, 251, 0.7); 
+  border: 2px solid rgba(208, 188, 246, 0.5); 
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 14px rgba(222, 183, 246, 0.4),
+              0 0 8px rgba(148, 202, 253, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.mv-card-sanctuary:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(254, 125, 193, 0.5),
+              0 0 14px rgba(176, 243, 240, 0.4);
+  border-color: #94cafd; 
+}
+
+.mv-card-sanctuary img {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  display: block;
+  border-bottom: 2px solid rgba(148, 202, 253, 0.3);
+}
+
+.mv-info-sanctuary {
+  padding: 16px;
+  min-height: 65px;
+  background: rgba(212, 220, 233, 0.4); 
+  text-align: center;
+}
+
+.mv-info-sanctuary h3 {
+  color: #677fad; 
+  text-shadow: 0 0 8px rgba(255, 246, 251, 0.7),
+               0 0 5px rgba(238, 190, 225, 0.5);
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mv-card-sanctuary a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mv-card-sanctuary a:hover h3 {
+  color: #fe7dc1; 
+  transform: scale(1.07);
+}
+
+@media (max-width: 480px) {
+  .mv-grid-sanctuary {
+    grid-template-columns: 1fr;
+  }
+}
+

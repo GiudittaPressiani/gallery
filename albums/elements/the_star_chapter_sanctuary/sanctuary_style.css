@@ -434,7 +434,7 @@ a:hover {
 
 /* Song description */
 .modal-songs-description-sanctuary {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   color: #677fad;
   margin: 15px 0 20px 0;
@@ -473,7 +473,7 @@ a:hover {
 
 /* Links */
 .modal-link-sanctuary {
-  font-size: 0.85rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #677fad;             
   text-decoration: none;
@@ -497,7 +497,7 @@ a:hover {
 
 /* Notes */
 .modal-note-sanctuary {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   color: #94cafd;
   background: rgba(212, 220, 233, 0.2);

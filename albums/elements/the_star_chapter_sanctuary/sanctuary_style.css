@@ -595,3 +595,129 @@ a:hover {
   }
 }
 
+/* ======================================== CONCEPT PHOTOS SANCTUARY ===================================== */
+
+.concept-photos-sanctuary {
+  margin: 60px auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+  color: #677fad; 
+}
+
+.concept-photos-sanctuary h3 {
+  color: #677fad;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(238, 190, 225, 0.6),
+               0 0 5px rgba(148, 202, 253, 0.5);
+}
+
+/* Grid layout */
+.concept-grid-sanctuary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  grid-auto-rows: 370px; 
+}
+
+/* Tall & Wide cards */
+.concept-card-sanctuary.tall {
+  grid-row: span 2;
+}
+
+.concept-card-sanctuary.wide {
+  grid-row: span 1;
+}
+
+.concept-card-sanctuary.square {
+  grid-row: span 2;          
+  aspect-ratio: 1 / 1;       
+}
+
+/* Square Photo */
+.concept-card-sanctuary.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         
+  border-radius: 14px;
+  display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .concept-grid-sanctuary {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    max-width: 100%;
+  }
+
+  .concept-card-sanctuary.tall,
+  .concept-card-sanctuary.wide {
+    grid-row: auto;
+  }
+}
+
+/* Concept card base */
+.concept-card-sanctuary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 246, 251, 0.65); 
+  border: 2px solid #deb7f6; 
+  border-radius: 16px;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(212, 220, 233, 0.5), 
+              0 0 14px rgba(148, 202, 253, 0.35); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  position: relative; 
+}
+
+.concept-card-sanctuary:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 0 30px rgba(238, 190, 225, 0.6),
+              0 0 18px rgba(176, 243, 240, 0.5);
+  border-color: #94cafd; 
+}
+
+/* Dreamy shimmer */
+.concept-card-sanctuary::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(circle, rgba(174, 216, 255, 0.25) 0%, transparent 70%);
+  animation: dreamy-shimmer 9s infinite ease-in-out;
+  transform: rotate(25deg);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Img*/
+.concept-card-sanctuary img {
+  max-width: 90%;
+  display: block;
+  margin: 10px 0;
+  border-radius: 14px;
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.concept-card-sanctuary:hover img {
+  filter: drop-shadow(0 0 22px rgba(238, 190, 225, 0.8)) 
+          drop-shadow(0 0 14px rgba(148, 202, 253, 0.5));
+  transform: scale(1.08);
+}
+
+/* Dreamy animation */
+@keyframes dreamy-shimmer {
+  0% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
+  50% { transform: translate(18px, -18px) rotate(25deg); opacity: 0.85; }
+  100% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
+}

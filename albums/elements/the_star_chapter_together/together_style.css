@@ -1,3 +1,8 @@
+/* =============== BACKGROUND AND BODY =============== */
+html{
+    scroll-behavior: smooth;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -24,6 +29,14 @@ canvas {
   max-width: 800px;
   margin: 0 auto;
 }
+
+.links-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* ================= TITLES ============================*/
 body, p, a, li {

@@ -74,6 +74,7 @@ h1::after {
 h2 {
   font-family: 'Itim', cursive;
   font-size: 3rem;
+  text-align: center;
   margin-top: 2.5rem;
   color: #bfe4f8;
   text-shadow: 
@@ -209,3 +210,92 @@ h3::before {
   }
 }
 
+/* ========================== PAGE INDEX - TOGETHER ========================= */
+.page-index-together {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  background: rgba(16, 54, 243, 0.15); 
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 0 25px rgba(123, 225, 249, 0.3),   
+    0 0 40px rgba(196, 185, 235, 0.25);  
+  backdrop-filter: blur(10px);
+  text-align: center;
+  color: #ffffff; 
+  border: 1px solid rgba(191, 228, 248, 0.4); 
+}
+
+.page-index-together h2 {
+  font-family: 'Itim', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #7be1f9; 
+  text-shadow: 
+    0 0 6px #1973f8,   
+    0 0 15px #6aa5f3;  
+}
+
+.page-index-together ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.page-index-together li {
+  display: inline-block;
+}
+
+.page-index-together a {
+  display: block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg, 
+    #1036f3,  
+    #1973f8,  
+    #7be1f9   
+  );
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Coiny', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 
+    0 0 12px rgba(123, 225, 249, 0.7),
+    0 0 20px rgba(16, 54, 243, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.4s ease;
+}
+
+.page-index-together a:hover {
+  transform: scale(1.1);
+  background: linear-gradient(
+    135deg,
+    #7be1f9,  
+    #6aa5f3,  
+    #c4b9eb   
+  );
+  box-shadow: 
+    0 0 18px rgba(191, 228, 248, 0.9),
+    0 0 30px rgba(196, 185, 235, 0.7);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .page-index-together {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .page-index-together h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-index-together a {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+}

@@ -721,3 +721,246 @@ a:hover {
   50% { transform: translate(18px, -18px) rotate(25deg); opacity: 0.85; }
   100% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
 }
+
+/* ========================================= TRIVIA - SANCTUARY ========================================= */
+
+.trivia-section-sanctuary {
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 20px;
+  color: #677fad; 
+}
+
+/* Card in columns */
+.trivia-grid-sanctuary {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+  gap: 30px;               
+}
+
+/* Main card */
+.trivia-card-sanctuary {
+  background: rgba(255, 246, 251, 0.8); 
+  border: 2px solid #deb7f6; 
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;            
+  max-width: 800px; 
+  text-align: justify;    
+  box-shadow: 0 0 20px rgba(148, 202, 253, 0.3), 
+              0 0 15px rgba(174, 183, 246, 0.25); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trivia-card-sanctuary h3 {
+  color: #fe7dc1; 
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.trivia-card-sanctuary:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 0 30px rgba(176, 243, 240, 0.6),
+              0 0 25px rgba(148, 202, 253, 0.5);
+}
+
+/* List */
+.trivia-card-sanctuary ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.trivia-card-sanctuary ul li {
+  margin: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1.7rem;
+  color: #677fad;
+  line-height: 1.5;
+}
+
+.trivia-card-sanctuary ul li::before {
+  content: "🫧"; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.8rem;
+  color: #94cafd;  
+}
+
+/* Link */
+.trivia-card-sanctuary a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #94cafd; 
+  text-decoration: none;
+  border-bottom: 2px solid rgba(148, 202, 253, 0.4);
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+.trivia-card-sanctuary a:hover {
+  color: #fe7dc1;
+  border-color: rgba(222, 183, 246, 0.7);
+  background: rgba(222, 183, 246, 0.15);
+  border-radius: 4px;
+}
+
+/* Subgrid */
+.trivia-subgrid-sanctuary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  color: #677fad;
+}
+
+/* Subcard */
+.trivia-subcard-sanctuary {
+  background: rgba(212, 220, 233, 0.3); 
+  border: 1px solid #94cafd;
+  border-radius: 16px;
+  padding: 15px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(148, 202, 253, 0.25),
+              0 2px 8px rgba(176, 243, 240, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trivia-subcard-sanctuary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(148, 202, 253, 0.5),
+              0 0 15px rgba(176, 243, 240, 0.35);
+}
+
+/* Img, video, iframe styling */
+.trivia-subcard-sanctuary img,
+.mv-card-trivia-sanctuary,
+.mv-card-trivia-sanctuary video {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(222, 183, 246, 0.3),
+              0 0 10px rgba(148, 202, 253, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trivia-subcard-sanctuary img:hover,
+.mv-card-trivia-sanctuary:hover,
+.mv-card-trivia-sanctuary video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(148, 202, 253, 0.5),
+              0 0 20px rgba(176, 243, 240, 0.4);
+}
+
+.iframe-sanctuary {
+  width: 100%;
+  height: 400px; 
+  border: 2px solid #deb7f6; 
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(148, 202, 253, 0.35),
+              0 0 12px rgba(176, 243, 240, 0.3);
+  background: rgba(255, 246, 251, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.iframe-sanctuary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(148, 202, 253, 0.55),
+              0 0 18px rgba(176, 243, 240, 0.4);
+}
+
+@media (max-width: 600px){
+  .iframe-sanctuary{
+    height: 315px;
+  }
+}
+
+/*============= MEMBERS JAM LIST ================== */
+.trivia-card-sanctuary .dreamy-list-sanctuary {
+  list-style: none;  
+  padding: 0;
+  margin: 15px auto;
+  max-width: 550px;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: #677fad;
+}
+
+.trivia-card-sanctuary .dreamy-list-sanctuary li {
+  margin: 0.7rem 0;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(222, 183, 246, 0.5);
+  border-radius: 12px;
+  background: rgba(212, 220, 233, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 12px rgba(148, 202, 253, 0.3),
+              0 0 8px rgba(176, 243, 240, 0.25);
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover list items */
+.trivia-card-sanctuary .dreamy-list-sanctuary li:hover {
+  border-color: #94cafd;
+  box-shadow: 0 0 18px rgba(148, 202, 253, 0.6),
+              0 0 22px rgba(176, 243, 240, 0.45);
+  transform: scale(1.02);
+}
+
+/* No ❄️ */
+.trivia-card-sanctuary .dreamy-list-sanctuary li::before {
+  content: none;
+}
+
+/* Tweet embed */
+.tweet-sanctuary {
+  background: rgba(255, 246, 251, 0.8); 
+  border: 2px solid #deb7f6;            
+  border-radius: 16px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 0 18px rgba(148, 202, 253, 0.3),
+              0 0 12px rgba(176, 243, 240, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tweet-sanctuary:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 0 28px rgba(148, 202, 253, 0.5),
+              0 0 22px rgba(176, 243, 240, 0.4);
+}
+
+/* Align the embed */
+.tweet-sanctuary blockquote {
+  margin: 0 !important;
+  color: #677fad; 
+  line-height: 1.5;
+}
+
+/* Link inside tweet */
+.tweet-sanctuary a {
+  color: #94cafd; 
+  text-decoration: none;
+  border-bottom: 1px solid rgba(148, 202, 253, 0.4);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.tweet-sanctuary a:hover {
+  color: #fe7dc1; 
+  border-color: rgba(222, 183, 246, 0.6);
+}

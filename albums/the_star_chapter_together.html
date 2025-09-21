@@ -52,9 +52,94 @@
     <li><a href="#official-links">Official Links</a></li>
   </ul>
 </nav>
-  
+
+<!--================ TRACKLIST ================== -->
+<section id="tracklist">
+<h2>TRACKLIST</h2>
+
+<div class="songs-container-together">
+<div class="song-card-together" onclick="openModal('upside_down_kiss')">
+    <h3>Upside Down Kiss</h3>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6bp3UWuLklGIK8VgkRUKkP?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+<div class="song-card-together" onclick="openModal('beautiful_strangers')">
+    <h3>Beautiful Strangers</h3>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6IYvOX6K6tbBmj00JRU5Rw?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+
+<div class="song-card-together" onclick="openModal('ghost_girl')">
+    <h3>Ghost Girl</h3>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5voKDnuTGXBnIZbAqWnb8R?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+
+<div class="song-card-together" onclick="openModal('sunday_driver')">
+    <h3>Sunday Driver</h3>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4QfHWIOU5nh4yBdYSnt1AE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+
+<div class="song-card-together" onclick="openModal('dance_with_you')">
+    <h3>Dance With You</h3>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7a9q19sVTEAq0SzgUZvbSy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+
+<div class="song-card-together" onclick="openModal('take_my_half')">
+    <h3>Take My Half</h3>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/13tz8REkfaAuQrmKQwbToR?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+
+<div class="song-card-together" onclick="openModal('bird_of_night')">
+    <h3>Bird Of Night</h3>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/73TsDyUBDWG2KnCZuLM7KB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+
+<div class="song-card-together" onclick="openModal('song_of_the_stars')">
+    <h3>Song of the Stars</h3>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1Kv0G4eKjJ4ysGRXlHvQCm?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+
+</div>
+</section>
+
+
+<!--===== CREDITS ===== -->
+<footer style="text-align: center; font-size: 0.8em; color: #fff; margin-top: 2em;">
+    © BigHit Music / HYBE — fan-made, non-commercial page
+</footer>
 </main>
 
+<!--===================================== JS BACKGROUND ========================================== -->
 <script src="elements/the_star_chapter_together/stars_together.js"></script>
+
+<!--========================== MODAL FOR SONG INFO JAVASCRIPT ==================================== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // close all modals at the page loading
+        const allModals = document.querySelectorAll('.modal-together');
+        allModals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+
+        // function that opens the modal
+        window.openModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // block page scroll
+            }
+        }
+
+        // function that closes the modal
+        window.closeModal = function(name) {
+            const modal = document.getElementById('modal-' + name);
+            if(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // the scroll goes up after closing the modal
+            }
+        }
+
+        // close the modal clicking out of the window
+        window.addEventListener('click', function(event) {
+            allModals.forEach(modal => {
+                if(event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; //the scroll goes up after closing the modal
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

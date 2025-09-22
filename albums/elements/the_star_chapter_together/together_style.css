@@ -561,3 +561,91 @@ h3::before {
   box-shadow: inset 0 0 8px rgba(123, 225, 249, 0.3);
   border-radius: 10px;
 }
+
+/* ====================================  MUSIC VIDEO TOGETHER ======================================= */
+
+.mv-section-together {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.mv-grid-together {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+  align-items: start;
+  padding: 25px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #1036f3, #1973f8, #6aa5f3, #7be1f9, #c4b9eb);
+  box-shadow: inset 0 0 25px rgba(191, 228, 248, 0.25),
+              inset 0 0 15px rgba(122, 225, 249, 0.2);
+  z-index: 0;
+}
+
+.mv-card-together {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.85); 
+  border: 2px solid rgba(191, 228, 248, 0.6); 
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 14px rgba(106, 165, 243, 0.4),
+              0 0 8px rgba(123, 225, 249, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.mv-card-together:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(16, 54, 243, 0.6),
+              0 0 16px rgba(123, 225, 249, 0.6);
+  border-color: #6aa5f3; 
+}
+
+.mv-card-together img {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  display: block;
+  border-bottom: 2px solid rgba(106, 165, 243, 0.3);
+}
+
+.mv-info-together {
+  padding: 16px;
+  min-height: 65px;
+  background: rgba(191, 228, 248, 0.35); 
+  text-align: center;
+}
+
+.mv-info-together h3 {
+  color: #1036f3; 
+  text-shadow: 0 0 10px rgba(191, 228, 248, 0.8),
+               0 0 6px rgba(196, 185, 235, 0.6);
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mv-card-together a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mv-card-together a:hover h3 {
+  color: #7be1f9; 
+  transform: scale(1.07);
+}
+
+@media (max-width: 480px) {
+  .mv-grid-together {
+    grid-template-columns: 1fr;
+  }
+}
+

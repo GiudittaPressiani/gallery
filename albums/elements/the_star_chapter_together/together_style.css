@@ -649,3 +649,119 @@ h3::before {
   }
 }
 
+/* ========================== CONCEPT PHOTOS TOGETHER ========================== */
+
+.concept-photos-together {
+  margin: 60px auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+.concept-photos-together h3 {
+  color: #bfe4f8;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(123, 225, 249, 0.7),
+               0 0 5px rgba(196, 185, 235, 0.6);
+}
+
+/* ===== Grid layout ===== */
+.concept-grid-together {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* more flexible than 400px */
+  gap: 20px;
+  grid-auto-rows: auto; /* cards adapt to content height */
+}
+
+/* ===== Card types (span rows if needed) ===== */
+.concept-card-together.tall {
+  grid-row: span 2;
+}
+
+.concept-card-together.wide {
+  grid-row: span 1;
+}
+
+.concept-card-together.square {
+  aspect-ratio: 1 / 1; /* keep square proportion */
+}
+
+/* ===== Card base ===== */
+.concept-card-together {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* text always visible */
+  align-items: center;
+
+  background: rgba(16, 54, 243, 0.2);
+  border: 2px solid #6aa5f3;
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(123, 225, 249, 0.5), 
+              0 0 14px rgba(191, 228, 248, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.concept-card-together:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 0 30px rgba(16, 54, 243, 0.7),
+              0 0 20px rgba(123, 225, 249, 0.6);
+  border-color: #1973f8;
+}
+
+/* ===== Decorative shimmer effect ===== */
+.concept-card-together::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(circle, rgba(191, 228, 248, 0.25) 0%, transparent 70%);
+  animation: starry-shimmer 9s infinite ease-in-out;
+  transform: rotate(25deg);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ===== Images inside cards ===== */
+.concept-card-together img {
+  width: 100%;           /* fill the card width */
+  height: auto;          /* keep proportions */
+  border-radius: 14px;
+  margin-bottom: 10px;   /* keep space for the name */
+  object-fit: cover;     /* prevent distortion */
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.concept-card-together:hover img {
+  filter: drop-shadow(0 0 22px rgba(123, 225, 249, 0.8)) 
+          drop-shadow(0 0 14px rgba(196, 185, 235, 0.6));
+  transform: scale(1.08);
+}
+
+/* ===== Responsive behavior for small screens ===== */
+@media (max-width: 600px) {
+  .concept-grid-together {
+    grid-template-columns: 1fr; /* single column */
+    grid-auto-rows: auto;
+    max-width: 100%;
+  }
+
+  .concept-card-together.tall,
+  .concept-card-together.wide {
+    grid-row: auto;
+  }
+}
+
+/* ===== Starry shimmer animation ===== */
+@keyframes starry-shimmer {
+  0% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
+  50% { transform: translate(18px, -18px) rotate(25deg); opacity: 0.85; }
+  100% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
+}

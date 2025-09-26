@@ -57,3 +57,124 @@ body::before {
     padding: 1rem;
   }
 }
+
+/* === MAIN CONTENT === */
+main#content {
+  position: relative;
+  z-index: 1; 
+  color: #fff;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main#content h1 {
+  margin-bottom: 1rem;
+}
+
+main#content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsive per mobile */
+@media (max-width: 600px) {
+  main#content h1 {
+    font-size: 2.5rem;
+  }
+  main#content p {
+    font-size: 1rem;
+  }
+}
+
+/* === GRID LINK / OPTIONAL === */
+.links-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+/* ========================== TITLES H1/H2/H3 ========================== */
+
+/* H1 */
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  text-align: center;
+  color: #fff; 
+  text-shadow: 
+    0 0 8px rgba(250,31,39,0.5),
+    0 0 16px rgba(237,98,55,0.4),
+    0 0 24px rgba(240,230,192,0.3); 
+  letter-spacing: 2px;
+  margin: 2rem 0;
+  position: relative;
+}
+
+/* Glow line h1 */
+h1::after {
+  content: "";
+  position: absolute;
+  left: 50%; bottom: -0.3em;
+  transform: translateX(-50%);
+  width: 6em; height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #fa1f27, #ed6237, #f0e6c0);
+  filter: blur(2px);
+  animation: shimmerLine 5s ease-in-out infinite alternate;
+}
+@keyframes shimmerLine {
+  from { opacity: 0.4; }
+  to   { opacity: 1; }
+}
+
+/* H2*/
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  text-align: center;
+  background: linear-gradient(90deg, #fa1f27, #ed6237, #f0e6c0);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 8s ease infinite;
+  margin: 1.5rem 0;
+  text-shadow: 0 0 6px rgba(232,232,230,0.5);
+}
+@keyframes gradientFlow {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* H3 */
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: #f0e6c0; 
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 
+    0 0 6px rgba(237,98,55,0.3),
+    0 0 10px rgba(250,31,39,0.2);
+  margin-bottom: 1rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+   h1 { font-size: 3rem; }
+   h2 { font-size: 2rem; }
+   h3 { font-size: 1.4rem; }
+}
+
+@media (max-width: 480px) {
+   h1 { font-size: 2.2rem; }
+   h2 { font-size: 1.5rem; }
+   h3 { font-size: 1.2rem; }
+}
+

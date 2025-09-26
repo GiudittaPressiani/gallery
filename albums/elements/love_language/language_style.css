@@ -178,3 +178,196 @@ h3 {
    h3 { font-size: 1.2rem; }
 }
 
+/* ========================== ALBUM CARD - LOVE LANGUAGE ========================= */
+.album-card-love {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(240, 230, 192, 0.25); /* crema trasparente */
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  box-shadow: 
+    0 0 25px rgba(250,31,39,0.4),   /* rosso glow */
+    0 0 40px rgba(237,98,55,0.3);    /* arancio glow */
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.4rem;
+}
+
+.album-card-love:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 0 35px rgba(250,31,39,0.7),
+    0 0 60px rgba(237,98,55,0.6);
+}
+
+.album-card-love img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(250,31,39,0.5);
+  margin-bottom: 1rem;
+}
+
+/* ========================== ALBUM INFO - LOVE LANGUAGE ========================= */
+.album-info-love {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #e8e8e6; 
+  margin-top: 1rem;
+}
+
+
+/* Button */
+.album-button-love {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fa1f27, #ed6237, #f0e6c0);
+  color: #e8e8e6;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(250,31,39,0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-button-love:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(237,98,55,0.8);
+}
+
+/* ========================== ALBUM INFO LIST - LOVE LANGUAGE ======================= */
+.album-info-love ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.album-info-love li {
+  background: rgba(240,230,192,0.3); 
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  color: #fa1f27; 
+  box-shadow: 0 0 12px rgba(237,98,55,0.3);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.album-info-love li:hover {
+  background: rgba(237,98,55,0.4); 
+  color: #e8e8e6; 
+  transform: translateX(5px);
+  box-shadow: 0 0 15px rgba(237,98,55,0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .album-card-love {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .album-info-love h2 {
+    font-size: 1.8rem;
+  }
+
+  .album-info-love li {
+    font-size: 1.2rem;
+  }
+}
+
+/* ========================== PAGE INDEX - LOVE LANGUAGE ========================= */
+.page-index-love {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  background: rgba(240, 230, 192, 0.25); /* crema trasparente */
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 0 25px rgba(250,31,39,0.3),   /* rosso glow */
+    0 0 40px rgba(237,98,55,0.25);  /* arancio glow */
+  backdrop-filter: blur(10px);
+  text-align: center;
+  color: #e8e8e6; /* bianco */
+  border: 1px solid rgba(240,230,192,0.4);
+}
+
+.page-index-love h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #fa1f27; /* rosso acceso */
+  text-shadow: 
+    0 0 6px rgba(250,31,39,0.5),   
+    0 0 12px rgba(237,98,55,0.4);
+}
+
+.page-index-love ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.page-index-love li {
+  display: inline-block;
+}
+
+.page-index-love a {
+  display: block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg, 
+    #fa1f27,  
+    #ed6237,  
+    #f0e6c0
+  );
+  color: #e8e8e6; /* bianco */
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  box-shadow: 
+    0 0 12px rgba(250,31,39,0.6),
+    0 0 20px rgba(237,98,55,0.4);
+  transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.4s ease;
+}
+
+.page-index-love a:hover {
+  transform: scale(1.1);
+  background: linear-gradient(
+    135deg,
+    #ed6237,  
+    #fa1f27,  
+    #f0e6c0
+  );
+  box-shadow: 
+    0 0 18px rgba(250,31,39,0.9),
+    0 0 30px rgba(237,98,55,0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-index-love {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .page-index-love h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-index-love a {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+}

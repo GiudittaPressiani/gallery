@@ -585,3 +585,119 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+/* ========================== CONCEPT PHOTOS LOVE ========================== */
+
+.concept-photos-love {
+  margin: 60px auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+  color: #e8e8e6;
+}
+
+.concept-photos-love h3 {
+  color: #f0e6c0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(237, 98, 55, 0.7),
+               0 0 5px rgba(240, 230, 192, 0.7);
+}
+
+/*Grid layout */
+.concept-grid-love {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  grid-auto-rows: auto;
+}
+
+/* Card types*/
+.concept-card-love.tall {
+  grid-row: span 2;
+}
+
+.concept-card-love.wide {
+  grid-row: span 1;
+}
+
+.concept-card-love.square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Card base */
+.concept-card-love {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background: rgba(250, 31, 39, 0.15);
+  border: 2px solid #ed6237;
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(250, 31, 39, 0.45),
+              0 0 14px rgba(240, 230, 192, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.concept-card-love:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 0 30px rgba(237, 98, 55, 0.6),
+              0 0 20px rgba(250, 31, 39, 0.6);
+  border-color: #fa1f27;
+}
+
+/* Decorative shimmer effect */
+.concept-card-love::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(circle, rgba(240, 230, 192, 0.25) 0%, transparent 70%);
+  animation: romantic-shimmer 9s infinite ease-in-out;
+  transform: rotate(25deg);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/*Images inside cards*/
+.concept-card-love img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.concept-card-love:hover img {
+  filter: drop-shadow(0 0 22px rgba(237, 98, 55, 0.8)) 
+          drop-shadow(0 0 14px rgba(250, 31, 39, 0.6));
+  transform: scale(1.08);
+}
+
+/*Responsive behavior for small screens*/
+@media (max-width: 600px) {
+  .concept-grid-love {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    max-width: 100%;
+  }
+
+  .concept-card-love.tall,
+  .concept-card-love.wide {
+    grid-row: auto;
+  }
+}
+
+/* Romantic shimmer animation*/
+@keyframes romantic-shimmer {
+  0% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
+  50% { transform: translate(18px, -18px) rotate(25deg); opacity: 0.85; }
+  100% { transform: translate(0,0) rotate(25deg); opacity: 0.5; }
+}

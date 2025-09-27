@@ -287,14 +287,14 @@ h3 {
   margin: 2rem auto;
   max-width: 600px;
   padding: 1.5rem;
-  background: rgba(240, 230, 192, 0.25); /* crema trasparente */
+  background: rgba(240, 230, 192, 0.25); 
   border-radius: 1.5rem;
   box-shadow: 
-    0 0 25px rgba(250,31,39,0.3),   /* rosso glow */
-    0 0 40px rgba(237,98,55,0.25);  /* arancio glow */
+    0 0 25px rgba(250,31,39,0.3),   
+    0 0 40px rgba(237,98,55,0.25);  
   backdrop-filter: blur(10px);
   text-align: center;
-  color: #e8e8e6; /* bianco */
+  color: #e8e8e6; 
   border: 1px solid rgba(240,230,192,0.4);
 }
 
@@ -302,7 +302,7 @@ h3 {
   font-family: 'Dancing Script', cursive;
   font-size: 2rem;
   margin-bottom: 1.2rem;
-  color: #fa1f27; /* rosso acceso */
+  color: #fa1f27;
   text-shadow: 
     0 0 6px rgba(250,31,39,0.5),   
     0 0 12px rgba(237,98,55,0.4);
@@ -319,6 +319,7 @@ h3 {
 
 .page-index-love li {
   display: inline-block;
+    font-size: 1.4rem;
 }
 
 .page-index-love a {
@@ -331,7 +332,7 @@ h3 {
     #ed6237,  
     #f0e6c0
   );
-  color: #e8e8e6; /* bianco */
+  color: #e8e8e6; 
   text-decoration: none;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
@@ -369,5 +370,218 @@ h3 {
   .page-index-love a {
     font-size: 1rem;
     padding: 0.7rem 1rem;
+  }
+}
+
+/* ========================== LYRICS SECTION - LOVE ========================= */
+.lyrics-section-love {
+  font-family: 'Playfair Display', serif;
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 2rem;
+  background: rgba(240, 230, 192, 0.4); 
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 0 20px rgba(250, 31, 39, 0.3),   
+    0 0 35px rgba(237, 98, 55, 0.25);  
+  backdrop-filter: blur(8px);
+  text-align: center;
+  border: 1px solid rgba(250, 31, 39, 0.3);
+}
+
+.lyrics-section-love h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fa1f27; 
+  text-shadow: 
+    0 0 6px rgba(237, 98, 55, 0.6),
+    0 0 12px rgba(240, 230, 192, 0.7);
+}
+
+/* Card  */
+.lyrics-card-love {
+  background: #ed6237;
+  font-family: 'Playfair Display', serif;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 
+    0 6px 15px rgba(0,0,0,0.15),
+    0 0 20px rgba(237, 98, 55, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Layout*/
+.lyrics-columns {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lyrics-columns div {
+  flex: 1 1 45%;
+  min-width: 280px;
+  text-align: left;
+}
+
+.lyrics-columns h3 {
+  font-size: 1.6rem;
+  color: #ed6237; 
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(250, 31, 39, 0.4);
+}
+
+.lyrics-columns p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+  background: rgba(232, 232, 230, 0.5); 
+  padding: 1rem;
+  border-radius: 0.8rem;
+  box-shadow: inset 0 0 8px rgba(237, 98, 55, 0.2);
+
+
+  white-space: pre-line;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lyrics-section-love {
+    padding: 1.5rem;
+  }
+
+  .lyrics-section-love h2 {
+    font-size: 2rem;
+  }
+
+  .lyrics-card-love {
+    padding: 1.5rem;
+  }
+
+  .lyrics-columns {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .lyrics-columns div {
+    min-width: 100%;
+  }
+}
+
+/* Links */
+.lyrics-source-love {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.lyrics-source-love a {
+  font-family: 'Playfair Display', serif;
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #fa1f27; 
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fa1f27, #ed6237);
+  color: #fff;
+  box-shadow: 0 0 8px rgba(237, 98, 55, 0.4);
+  transition: all 0.25s ease;
+}
+
+.lyrics-source-love a:hover {
+  background: linear-gradient(135deg, #ed6237, #fa1f27);
+  box-shadow: 0 0 12px rgba(250, 31, 39, 0.6);
+  transform: scale(1.05);
+}
+
+/* ====================================  MUSIC VIDEO LOVE ======================================= */
+
+.mv-section-love {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.mv-grid-love {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+  align-items: start;
+  padding: 25px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #fa1f27, #ed6237, #f0e6c0ff);
+  box-shadow: inset 0 0 25px rgba(250, 31, 39, 0.25),
+              inset 0 0 15px rgba(237, 98, 55, 0.2);
+  z-index: 0;
+}
+
+.mv-card-love {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.9); 
+  border: 2px solid rgba(240, 230, 192, 0.6); 
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 14px rgba(250, 31, 39, 0.3),
+              0 0 10px rgba(237, 98, 55, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.mv-card-love:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(250, 31, 39, 0.5),
+              0 0 16px rgba(237, 98, 55, 0.5);
+  border-color: #fa1f27; 
+}
+
+.mv-card-love img {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  display: block;
+  border-bottom: 2px solid rgba(237, 98, 55, 0.3);
+}
+
+.mv-info-love {
+  padding: 16px;
+  min-height: 65px;
+  background: rgba(240, 230, 192, 0.35); 
+  text-align: center;
+}
+
+.mv-info-love h3 {
+  color: #ed6237; 
+  text-shadow: 0 0 10px rgba(250, 31, 39, 0.5),
+               0 0 6px rgba(240, 230, 192, 0.7);
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mv-card-love a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mv-card-love a:hover h3 {
+  color: #fa1f27; 
+  transform: scale(1.07);
+}
+
+@media (max-width: 480px) {
+  .mv-grid-love {
+    grid-template-columns: 1fr;
   }
 }
